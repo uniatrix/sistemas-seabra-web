@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "title": "Seabra Solutions - Precision Livestock Technology",
+    "description": "Custom systems for herd management. Cattle and small ruminants for dairy and beef."
+  },
+  "header": {
+    "about": "About",
+    "solutions": "Solutions",
+    "cases": "Cases",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "segments": {
+    "cattleDairy": "Dairy Cattle",
+    "cattleBeef": "Beef Cattle",
+    "smallRuminantsDairy": "Small Ruminants - Dairy",
+    "smallRuminantsBeef": "Small Ruminants - Beef"
+  },
+  "hero": {
+    "headline": "Precision livestock technology",
+    "subheadline": "Custom systems that evolve with your herd. From diagnosis to complete implementation, you have online and offline support.",
+    "bullet1": "Works offline and online",
+    "bullet2": "Customized for your operation",
+    "bullet3": "Continuous evolution with your business",
+    "cta": "Talk on WhatsApp"
+  },
+  "logos": {
+    "title": "Companies that trust Seabra Solutions"
+  },
+  "segmentsSection": {
+    "title": "Choose your segment",
+    "subtitle": "Every operation is unique. Our systems are adapted to meet the specific needs of your production type."
+  },
+  "process": {
+    "title": "How we implement",
+    "subtitle": "A structured process to ensure results from day one.",
+    "step1": {
+      "title": "Diagnosis",
+      "description": "We understand your operation, challenges and objectives to design the ideal solution."
+    },
+    "step2": {
+      "title": "MVP",
+      "description": "We develop an initial version to validate and adjust to your real needs."
+    },
+    "step3": {
+      "title": "Implementation + Training",
+      "description": "We install the system and train your entire team for daily use."
+    },
+    "step4": {
+      "title": "Evolution",
+      "description": "We continuously monitor and improve as your operation grows."
+    }
+  },
+  "proofs": {
+    "title": "See it in practice",
+    "subtitle": "Real screenshots and videos of the system in action."
+  },
+  "ctaSection": {
+    "title": "Ready to transform your management?",
+    "subtitle": "Get in touch and discover how we can help your operation achieve new results.",
+    "cta": "Talk on WhatsApp"
+  },
+  "footer": {
+    "description": "Precision livestock technology. Custom systems for herd management.",
+    "solutions": "Solutions",
+    "company": "Company",
+    "about": "About",
+    "cases": "Cases",
+    "blog": "Blog",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  },
+  "whatsapp": {
+    "defaultMessage": "Hello! I want to know more about Seabra Solutions.",
+    "segmentMessage": "Hello! I want a demo of the {segment} solution."
+  },
+  "landing": {
+    "heroSubtitle": "Complete system for managing your herd, from handling to financial control.",
+    "pains": {
+      "title": "Do you face these challenges?",
+      "pain1": "Difficulty controlling herd information",
+      "pain2": "Disorganized spreadsheets and lost data",
+      "pain3": "Lack of visibility on costs and productivity",
+      "pain4": "Team without access to information in the field",
+      "pain5": "Decisions based on guesswork, not data"
+    },
+    "benefits": {
+      "title": "What you get",
+      "benefit1": "Total herd control in one place",
+      "benefit2": "Offline access in the field, syncs when connected",
+      "benefit3": "Automatic productivity and cost reports",
+      "benefit4": "Complete history of each animal",
+      "benefit5": "System that evolves with your operation"
+    },
+    "modules": {
+      "title": "Available modules"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "Does the system work without internet?",
+      "a1": "Yes! The system was designed to work offline. Data syncs automatically when there's a connection.",
+      "q2": "How is the implementation done?",
+      "a2": "We do an initial diagnosis, develop a customized version, implement and train your team.",
+      "q3": "Can I access from any device?",
+      "a3": "Yes, the system is responsive and works on computers, tablets and phones.",
+      "q4": "How long does implementation take?",
+      "a4": "It depends on the complexity of the operation, but usually between 2 to 4 weeks for the initial version.",
+      "q5": "Is there technical support?",
+      "a5": "Yes, we offer continuous support via WhatsApp, email and video calls."
+    },
+    "cta": {
+      "title": "Start now",
+      "subtitle": "Schedule a free demo and see how we can transform your management.",
+      "button": "Schedule demo"
+    }
+  },
+  "cases": {
+    "title": "Success stories",
+    "subtitle": "Learn real stories from producers who transformed their operations."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles and news about livestock management and technology."
+  },
+  "contactPage": {
+    "title": "Get in touch",
+    "subtitle": "We're ready to help you transform your operation.",
+    "whatsapp": "WhatsApp",
+    "email": "Email"
+  }
+}

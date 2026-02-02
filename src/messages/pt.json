@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "title": "Seabra Solutions - Tecnologia para Pecuária de Precisão",
+    "description": "Sistemas sob medida para gestão de rebanhos. Bovinos e pequenos ruminantes de leite e corte."
+  },
+  "header": {
+    "about": "Sobre",
+    "solutions": "Soluções",
+    "cases": "Cases",
+    "blog": "Blog",
+    "contact": "Contato"
+  },
+  "segments": {
+    "cattleDairy": "Bovinos de Leite",
+    "cattleBeef": "Bovinos de Corte",
+    "smallRuminantsDairy": "Pequenos Ruminantes - Leite",
+    "smallRuminantsBeef": "Pequenos Ruminantes - Corte"
+  },
+  "hero": {
+    "headline": "Tecnologia para pecuária de precisão",
+    "subheadline": "Sistemas sob medida que evoluem com o seu rebanho. Do diagnóstico à implantação completa, você tem suporte online e offline.",
+    "bullet1": "Funciona offline e online",
+    "bullet2": "Personalizado para sua operação",
+    "bullet3": "Evolução contínua com seu negócio",
+    "cta": "Falar no WhatsApp"
+  },
+  "logos": {
+    "title": "Empresas que confiam na Seabra Solutions"
+  },
+  "segmentsSection": {
+    "title": "Escolha seu segmento",
+    "subtitle": "Cada operação é única. Nossos sistemas são adaptados para atender às necessidades específicas do seu tipo de produção."
+  },
+  "process": {
+    "title": "Como implantamos",
+    "subtitle": "Um processo estruturado para garantir resultados desde o primeiro dia.",
+    "step1": {
+      "title": "Diagnóstico",
+      "description": "Entendemos sua operação, desafios e objetivos para desenhar a solução ideal."
+    },
+    "step2": {
+      "title": "MVP",
+      "description": "Desenvolvemos uma versão inicial para validar e ajustar às suas necessidades reais."
+    },
+    "step3": {
+      "title": "Implantação + Treino",
+      "description": "Instalamos o sistema e capacitamos toda sua equipe para uso no dia a dia."
+    },
+    "step4": {
+      "title": "Evolução",
+      "description": "Acompanhamos e aprimoramos continuamente conforme sua operação cresce."
+    }
+  },
+  "proofs": {
+    "title": "Veja na prática",
+    "subtitle": "Prints e vídeos reais do sistema em funcionamento."
+  },
+  "ctaSection": {
+    "title": "Pronto para transformar sua gestão?",
+    "subtitle": "Entre em contato e descubra como podemos ajudar sua operação a alcançar novos resultados.",
+    "cta": "Falar no WhatsApp"
+  },
+  "footer": {
+    "description": "Tecnologia para pecuária de precisão. Sistemas sob medida para gestão de rebanhos.",
+    "solutions": "Soluções",
+    "company": "Empresa",
+    "about": "Sobre",
+    "cases": "Cases",
+    "blog": "Blog",
+    "contact": "Contato",
+    "rights": "Todos os direitos reservados."
+  },
+  "whatsapp": {
+    "defaultMessage": "Olá! Quero saber mais sobre as soluções da Seabra Solutions.",
+    "segmentMessage": "Olá! Quero uma demonstração da solução para {segment}."
+  },
+  "landing": {
+    "heroSubtitle": "Sistema completo para gestão do seu rebanho, do manejo ao controle financeiro.",
+    "pains": {
+      "title": "Você enfrenta esses desafios?",
+      "pain1": "Dificuldade em controlar informações do rebanho",
+      "pain2": "Planilhas desorganizadas e dados perdidos",
+      "pain3": "Falta de visibilidade sobre custos e produtividade",
+      "pain4": "Equipe sem acesso às informações no campo",
+      "pain5": "Decisões baseadas em achismo, não em dados"
+    },
+    "benefits": {
+      "title": "O que você ganha",
+      "benefit1": "Controle total do rebanho em um só lugar",
+      "benefit2": "Acesso offline no campo, sincroniza quando conectar",
+      "benefit3": "Relatórios automáticos de produtividade e custos",
+      "benefit4": "Histórico completo de cada animal",
+      "benefit5": "Sistema que evolui com sua operação"
+    },
+    "modules": {
+      "title": "Módulos disponíveis"
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "q1": "O sistema funciona sem internet?",
+      "a1": "Sim! O sistema foi projetado para funcionar offline. Os dados são sincronizados automaticamente quando houver conexão.",
+      "q2": "Como é feita a implantação?",
+      "a2": "Fazemos um diagnóstico inicial, desenvolvemos uma versão personalizada, implantamos e treinamos sua equipe.",
+      "q3": "Posso acessar de qualquer dispositivo?",
+      "a3": "Sim, o sistema é responsivo e funciona em computadores, tablets e celulares.",
+      "q4": "Quanto tempo leva para implantar?",
+      "a4": "Depende da complexidade da operação, mas normalmente entre 2 a 4 semanas para a versão inicial.",
+      "q5": "Tem suporte técnico?",
+      "a5": "Sim, oferecemos suporte contínuo via WhatsApp, email e chamadas de vídeo."
+    },
+    "cta": {
+      "title": "Comece agora",
+      "subtitle": "Agende uma demonstração gratuita e veja como podemos transformar sua gestão.",
+      "button": "Agendar demonstração"
+    }
+  },
+  "cases": {
+    "title": "Cases de sucesso",
+    "subtitle": "Conheça histórias reais de produtores que transformaram suas operações."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artigos e novidades sobre gestão pecuária e tecnologia."
+  },
+  "contactPage": {
+    "title": "Entre em contato",
+    "subtitle": "Estamos prontos para ajudar você a transformar sua operação.",
+    "whatsapp": "WhatsApp",
+    "email": "Email"
+  }
+}

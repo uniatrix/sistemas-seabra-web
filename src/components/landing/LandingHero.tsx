@@ -1,0 +1,77 @@
+'use client';
+
+import { useTranslations, useLocale } from 'next-intl';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { ArrowRight, Zap } from 'lucide-react';
+import { buildWhatsAppUrl } from '@/lib/whatsapp';
+import { type Locale } from '@/i18n/config';
+
+interface LandingHeroProps {
+  segmentKey: string;
+  segmentSlug: string;
+}
+
+export function LandingHero({ segmentKey, segmentSlug }: LandingHeroProps) {
+  const t = useTranslations();
+  const locale = useLocale() as Locale;
+
+  const whatsappUrl = buildWhatsAppUrl({ locale, segment: segmentSlug });
+
+  return (
+    <section className="relative min-h-[70vh] flex items-center pt-28 pb-20 overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-radial-top pointer-events-none" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none" />
+
+      {/* Blur blobs */}
+      <div className="blur-blob blur-blob-primary w-[500px] h-[500px] -top-32 left-1/2 -translate-x-1/2 opacity-30" />
+
+      <div className="container-tight relative z-10 text-center space-y-10">
+        {/* Badge */}
+        <Badge
+          variant="outline"
+          className="px-4 py-1.5 rounded-full border-white/[0.15] bg-white/[0.03] backdrop-blur-sm text-white/80 font-medium"
+        >
+          <Zap className="h-3.5 w-3.5 mr-2 text-primary" />
+          Sistema especializado
+        </Badge>
+
+        {/* Headline */}
+        <div className="space-y-6">
+          <h1 className="heading-display text-gradient-subtle max-w-4xl mx-auto">
+            {t(`segments.${segmentKey}`)}
+          </h1>
+          <p className="body-large max-w-2xl mx-auto">
+            {t('landing.heroSubtitle')}
+          </p>
+        </div>
+
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <Button
+              size="lg"
+              className="btn-modern rounded-full px-8 h-14 text-base gap-3"
+            >
+              {t('hero.cta')}
+              <ArrowRight className="h-5 w-5" />
+            </Button>
+          </a>
+          <Button
+            variant="outline"
+            size="lg"
+            className="btn-ghost-modern rounded-full px-8 h-14 text-base"
+          >
+            Ver demonstração
+          </Button>
+        </div>
+
+        {/* Trust text */}
+        <p className="text-sm text-white/40">
+          +150 produtores confiam na Seabra Solutions
+        </p>
+      </div>
+    </section>
+  );
+}
