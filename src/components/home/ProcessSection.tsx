@@ -85,58 +85,45 @@ export function ProcessSection() {
                 )}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardContent className="p-6 text-center">
-                  {/* Icon circle with number badge */}
-                  <div className="relative inline-flex mb-6">
+                <CardContent className="p-6">
+                  {/* Step label */}
+                  <span className={cn(
+                    'text-xs font-bold uppercase tracking-wider',
+                    colors.icon
+                  )}>
+                    Passo {step.number}
+                  </span>
+
+                  {/* Icon */}
+                  <div className="mt-4 mb-5">
                     <div
                       className={cn(
-                        'relative h-20 w-20 rounded-full flex items-center justify-center',
+                        'h-14 w-14 rounded-2xl flex items-center justify-center',
                         'transition-all duration-300',
                         colors.bg,
                         colors.hoverBg,
                         'group-hover:scale-110'
                       )}
                     >
-                      {/* Glow effect behind icon */}
-                      <div className={cn(
-                        'absolute inset-0 rounded-full blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300',
-                        colors.bg
-                      )} />
-
                       <step.icon
                         className={cn(
-                          'h-9 w-9 relative z-10 transition-transform duration-300',
+                          'h-7 w-7 transition-transform duration-300',
                           colors.icon,
                           'group-hover:scale-110'
                         )}
                       />
                     </div>
-
-                    {/* Number badge */}
-                    <div className={cn(
-                      'absolute -top-1 -right-1 h-8 w-8 rounded-xl text-gray-900 text-xs font-bold flex items-center justify-center',
-                      'transition-transform duration-300 group-hover:scale-110',
-                      colors.numberBg
-                    )}>
-                      {step.number}
-                    </div>
                   </div>
 
                   {/* Content */}
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
                       {t(`${step.key}.title`)}
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {t(`${step.key}.description`)}
                     </p>
                   </div>
-
-                  {/* Decorative corner accent */}
-                  <div className={cn(
-                    'absolute top-0 right-0 w-20 h-20 rounded-bl-full opacity-0 group-hover:opacity-5 transition-opacity duration-300',
-                    colors.bg
-                  )} />
                 </CardContent>
               </Card>
             );
