@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import { Link, usePathname } from '@/i18n/routing';
+import { Link, usePathname, useRouter } from '@/i18n/routing';
 import { Menu, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -19,8 +19,10 @@ import { cn } from '@/lib/utils';
 const solutions = [
   { href: '/solucoes/bovinos/leite', key: 'cattleDairy' },
   { href: '/solucoes/bovinos/corte', key: 'cattleBeef' },
-  { href: '/solucoes/pequenos-ruminantes/leite', key: 'smallRuminantsDairy' },
-  { href: '/solucoes/pequenos-ruminantes/corte', key: 'smallRuminantsBeef' },
+  { href: '/solucoes/caprinos/leite', key: 'goatDairy' },
+  { href: '/solucoes/caprinos/corte', key: 'goatBeef' },
+  { href: '/solucoes/ovinos/leite', key: 'sheepDairy' },
+  { href: '/solucoes/ovinos/corte', key: 'sheepBeef' },
 ] as const;
 
 export function Header() {
@@ -37,6 +39,8 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const router = useRouter();
+
   const navItems = [
     { href: '/#about', label: t('header.about') },
     { href: '/cases', label: t('header.cases') },
@@ -47,6 +51,33 @@ export function Header() {
     if (href.startsWith('/#')) return false;
     return pathname === href || pathname.startsWith(href + '/');
   };
+
+  const handleHashClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      const hash = href.split('#')[1];
+      if (!hash) return;
+
+      // If already on home page, just scroll
+      if (pathname === '/') {
+        e.preventDefault();
+        const el = document.getElementById(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+          window.history.replaceState(null, '', `#${hash}`);
+        }
+      } else {
+        // Navigate to home, then scroll after load
+        e.preventDefault();
+        router.push(`/#${hash}`);
+        // Allow time for navigation, then scroll
+        setTimeout(() => {
+          const el = document.getElementById(hash);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 500);
+      }
+    },
+    [pathname, router]
+  );
 
   return (
     <header
@@ -80,6 +111,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={item.href.includes('#') ? (e: React.MouseEvent<HTMLAnchorElement>) => handleHashClick(e, item.href) : undefined}
               className={cn(
                 'px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full',
                 'hover:bg-white/[0.06] hover:text-white',
@@ -199,6 +231,10 @@ export function Header() {
                     <SheetClose asChild key={item.href}>
                       <Link
                         href={item.href}
+                        onClick={item.href.includes('#') ? (e: React.MouseEvent<HTMLAnchorElement>) => {
+                          setIsOpen(false);
+                          handleHashClick(e, item.href);
+                        } : undefined}
                         className="block text-lg font-medium text-white/70 hover:text-white transition-colors"
                       >
                         {item.label}

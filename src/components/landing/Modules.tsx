@@ -8,7 +8,7 @@ import {
   DollarSign,
   Users,
   FileText,
-  Sparkles,
+  Package,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
@@ -78,7 +78,7 @@ export function Modules() {
       <div className="container-wide relative">
         <div className="text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-            <Sparkles className="h-4 w-4 text-primary" />
+            <Package className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">Recursos Completos</span>
           </div>
 

@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { Button } from '@/components/ui/button';
-import { Sparkles } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import { type Locale } from '@/i18n/config';
 
@@ -32,7 +32,7 @@ export function CTASection() {
         <div className="max-w-3xl mx-auto text-center space-y-10">
           {/* Icon */}
           <div className="inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-primary/20 border border-primary/30 animate-pulse-glow">
-            <Sparkles className="h-8 w-8 text-primary" />
+            <ArrowUpRight className="h-8 w-8 text-primary" />
           </div>
 
           {/* Content */}

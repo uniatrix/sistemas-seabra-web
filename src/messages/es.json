@@ -13,8 +13,10 @@
   "segments": {
     "cattleDairy": "Bovinos de Leche",
     "cattleBeef": "Bovinos de Carne",
-    "smallRuminantsDairy": "Pequeños Rumiantes - Leche",
-    "smallRuminantsBeef": "Pequeños Rumiantes - Carne"
+    "goatDairy": "Caprinos Lecheros",
+    "goatBeef": "Caprinos de Carne",
+    "sheepDairy": "Ovinos Lecheros",
+    "sheepBeef": "Ovinos de Carne"
   },
   "hero": {
     "headline": "Tecnología para ganadería de precisión",
@@ -50,6 +52,14 @@
       "title": "Evolución",
       "description": "Acompañamos y mejoramos continuamente según crece tu operación."
     }
+  },
+  "about": {
+    "badge": "Sobre Nosotros",
+    "title": "Tecnología nacida en el campo",
+    "p1": "Nacimos de la vivencia directa en el campo. Con experiencia en medicina veterinaria y ganadería desde 2011, entendemos que las decisiones precisas dependen de datos confiables — y que la mayoría de los productores aún opera sin las herramientas adecuadas para obtenerlos.",
+    "p2": "Seabra Solutions desarrolla sistemas de gestión ganadera a medida, diseñados para la realidad de cada operación. Nuestro software transforma el registro de datos en algo práctico y rápido, y devuelve indicadores de desempeño con la precisión que el sector exige.",
+    "p3": "Cada sistema se construye a partir del diagnóstico de tu operación. No ofrecemos soluciones genéricas — entregamos tecnología que se adapta a tu proceso, funciona offline en el campo y evoluciona junto con tu negocio.",
+    "vision": "Nuestra visión es consolidar a Seabra Solutions como referencia en tecnología para ganadería de precisión en América Latina."
   },
   "proofs": {
     "title": "Mira en la práctica",

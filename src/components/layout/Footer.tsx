@@ -10,8 +10,10 @@ import { cn } from '@/lib/utils';
 const solutions = [
   { href: '/solucoes/bovinos/leite', key: 'cattleDairy' },
   { href: '/solucoes/bovinos/corte', key: 'cattleBeef' },
-  { href: '/solucoes/pequenos-ruminantes/leite', key: 'smallRuminantsDairy' },
-  { href: '/solucoes/pequenos-ruminantes/corte', key: 'smallRuminantsBeef' },
+  { href: '/solucoes/caprinos/leite', key: 'goatDairy' },
+  { href: '/solucoes/caprinos/corte', key: 'goatBeef' },
+  { href: '/solucoes/ovinos/leite', key: 'sheepDairy' },
+  { href: '/solucoes/ovinos/corte', key: 'sheepBeef' },
 ];
 
 const socialLinks = [

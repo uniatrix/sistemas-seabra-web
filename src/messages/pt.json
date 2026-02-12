@@ -11,10 +11,12 @@
     "contact": "Contato"
   },
   "segments": {
-    "cattleDairy": "Bovinos de Leite",
+    "cattleDairy": "Bovinos Leiteiros",
     "cattleBeef": "Bovinos de Corte",
-    "smallRuminantsDairy": "Pequenos Ruminantes - Leite",
-    "smallRuminantsBeef": "Pequenos Ruminantes - Corte"
+    "goatDairy": "Caprinos Leiteiros",
+    "goatBeef": "Caprinos de Corte",
+    "sheepDairy": "Ovinos Leiteiros",
+    "sheepBeef": "Ovinos de Corte"
   },
   "hero": {
     "headline": "Tecnologia para pecuária de precisão",
@@ -50,6 +52,14 @@
       "title": "Evolução",
       "description": "Acompanhamos e aprimoramos continuamente conforme sua operação cresce."
     }
+  },
+  "about": {
+    "badge": "Sobre Nós",
+    "title": "Tecnologia nascida no campo",
+    "p1": "Nascemos da vivência direta no campo. Com experiência em medicina veterinária e pecuária desde 2011, entendemos que decisões precisas dependem de dados confiáveis — e que a maioria dos produtores ainda opera sem as ferramentas certas para obtê-los.",
+    "p2": "A Seabra Solutions desenvolve sistemas de gestão pecuária sob medida, projetados para a realidade de cada operação. Nossos softwares transformam o lançamento de dados em algo prático e rápido, e devolvem indicadores de desempenho com a precisão que o setor exige.",
+    "p3": "Cada sistema é construído a partir do diagnóstico da sua operação. Não oferecemos soluções genéricas — entregamos tecnologia que se adapta ao seu processo, funciona offline no campo e evolui junto com o seu negócio.",
+    "vision": "Nossa visão é consolidar a Seabra Solutions como referência em tecnologia para pecuária de precisão na América Latina."
   },
   "proofs": {
     "title": "Veja na prática",

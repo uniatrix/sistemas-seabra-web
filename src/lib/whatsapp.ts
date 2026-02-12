@@ -36,22 +36,28 @@ const messages: Record<Locale, { default: string; segment: string }> = {
 
 const segmentNames: Record<Locale, Record<string, string>> = {
   pt: {
-    'bovinos-leite': 'Bovinos de Leite',
+    'bovinos-leite': 'Bovinos Leiteiros',
     'bovinos-corte': 'Bovinos de Corte',
-    'pequenos-ruminantes-leite': 'Pequenos Ruminantes de Leite',
-    'pequenos-ruminantes-corte': 'Pequenos Ruminantes de Corte',
+    'caprinos-leite': 'Caprinos Leiteiros',
+    'caprinos-corte': 'Caprinos de Corte',
+    'ovinos-leite': 'Ovinos Leiteiros',
+    'ovinos-corte': 'Ovinos de Corte',
   },
   es: {
     'bovinos-leite': 'Bovinos de Leche',
     'bovinos-corte': 'Bovinos de Carne',
-    'pequenos-ruminantes-leite': 'Pequeños Rumiantes de Leche',
-    'pequenos-ruminantes-corte': 'Pequeños Rumiantes de Carne',
+    'caprinos-leite': 'Caprinos Lecheros',
+    'caprinos-corte': 'Caprinos de Carne',
+    'ovinos-leite': 'Ovinos Lecheros',
+    'ovinos-corte': 'Ovinos de Carne',
   },
   en: {
     'bovinos-leite': 'Dairy Cattle',
     'bovinos-corte': 'Beef Cattle',
-    'pequenos-ruminantes-leite': 'Dairy Small Ruminants',
-    'pequenos-ruminantes-corte': 'Beef Small Ruminants',
+    'caprinos-leite': 'Dairy Goats',
+    'caprinos-corte': 'Meat Goats',
+    'ovinos-leite': 'Dairy Sheep',
+    'ovinos-corte': 'Meat Sheep',
   },
 };
 

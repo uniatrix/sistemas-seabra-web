@@ -8,8 +8,8 @@ import { LandingProofs } from '@/components/landing/LandingProofs';
 import { FAQ } from '@/components/landing/FAQ';
 import { LandingCTA } from '@/components/landing/LandingCTA';
 
-const SEGMENT_KEY = 'smallRuminantsBeef';
-const SEGMENT_SLUG = 'pequenos-ruminantes-corte';
+const SEGMENT_KEY = 'sheepDairy';
+const SEGMENT_SLUG = 'ovinos-leite';
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
-export default async function PequenosRuminantesCortePage({ params }: PageProps) {
+export default async function OvinosLeitePage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 

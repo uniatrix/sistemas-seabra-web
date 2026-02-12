@@ -1,7 +1,7 @@
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, Sparkles, TrendingUp } from 'lucide-react';
+import { ArrowRight, Trophy, TrendingUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface PageProps {
@@ -29,7 +29,7 @@ const cases = [
   {
     id: 3,
     title: 'Ranch Valley Farm',
-    segment: 'Pequenos Ruminantes',
+    segment: 'Caprinos Leiteiros',
     result: 'Controle total do rebanho',
     image: '/images/cases/case-3.jpg',
     color: 'emerald',
@@ -79,7 +79,7 @@ export default async function CasesPage({ params }: PageProps) {
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-            <Sparkles className="h-4 w-4 text-primary" />
+            <Trophy className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">Casos de Sucesso</span>
           </div>
 

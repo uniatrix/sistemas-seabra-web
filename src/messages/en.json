@@ -13,8 +13,10 @@
   "segments": {
     "cattleDairy": "Dairy Cattle",
     "cattleBeef": "Beef Cattle",
-    "smallRuminantsDairy": "Small Ruminants - Dairy",
-    "smallRuminantsBeef": "Small Ruminants - Beef"
+    "goatDairy": "Dairy Goats",
+    "goatBeef": "Meat Goats",
+    "sheepDairy": "Dairy Sheep",
+    "sheepBeef": "Meat Sheep"
   },
   "hero": {
     "headline": "Precision livestock technology",
@@ -50,6 +52,14 @@
       "title": "Evolution",
       "description": "We continuously monitor and improve as your operation grows."
     }
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Technology born in the field",
+    "p1": "We were born from direct field experience. With a background in veterinary medicine and livestock farming since 2011, we understand that precise decisions depend on reliable data — and that most producers still operate without the right tools to obtain them.",
+    "p2": "Seabra Solutions develops custom livestock management systems designed for the reality of each operation. Our software turns data entry into something practical and fast, delivering performance indicators with the precision the industry demands.",
+    "p3": "Each system is built from a diagnosis of your operation. We don't offer generic solutions — we deliver technology that adapts to your process, works offline in the field, and evolves alongside your business.",
+    "vision": "Our vision is to establish Seabra Solutions as a reference in precision livestock technology across Latin America."
   },
   "proofs": {
     "title": "See it in practice",

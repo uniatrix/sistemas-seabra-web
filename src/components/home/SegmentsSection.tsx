@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { ArrowRight, Milk, Beef, Sparkles } from 'lucide-react';
+import { ArrowRight, Milk, Beef, Layers } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -28,8 +28,8 @@ const segments = [
     glowColor: 'group-hover:shadow-red-500/10',
   },
   {
-    key: 'smallRuminantsDairy',
-    href: '/solucoes/pequenos-ruminantes/leite',
+    key: 'goatDairy',
+    href: '/solucoes/caprinos/leite',
     icon: Milk,
     iconColor: 'text-emerald-500',
     iconBg: 'bg-emerald-500/10',
@@ -38,14 +38,34 @@ const segments = [
     glowColor: 'group-hover:shadow-emerald-500/10',
   },
   {
-    key: 'smallRuminantsBeef',
-    href: '/solucoes/pequenos-ruminantes/corte',
+    key: 'goatBeef',
+    href: '/solucoes/caprinos/corte',
     icon: Beef,
     iconColor: 'text-orange-500',
     iconBg: 'bg-orange-500/10',
     hoverBg: 'group-hover:bg-orange-500/20',
     borderAccent: 'group-hover:border-orange-500/30',
     glowColor: 'group-hover:shadow-orange-500/10',
+  },
+  {
+    key: 'sheepDairy',
+    href: '/solucoes/ovinos/leite',
+    icon: Milk,
+    iconColor: 'text-purple-500',
+    iconBg: 'bg-purple-500/10',
+    hoverBg: 'group-hover:bg-purple-500/20',
+    borderAccent: 'group-hover:border-purple-500/30',
+    glowColor: 'group-hover:shadow-purple-500/10',
+  },
+  {
+    key: 'sheepBeef',
+    href: '/solucoes/ovinos/corte',
+    icon: Beef,
+    iconColor: 'text-amber-500',
+    iconBg: 'bg-amber-500/10',
+    hoverBg: 'group-hover:bg-amber-500/20',
+    borderAccent: 'group-hover:border-amber-500/30',
+    glowColor: 'group-hover:shadow-amber-500/10',
   },
 ];
 
@@ -60,7 +80,7 @@ export function SegmentsSection() {
       <div className="container-wide relative">
         <div className="text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-            <Sparkles className="h-4 w-4 text-primary" />
+            <Layers className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">Soluções Especializadas</span>
           </div>
 
@@ -72,7 +92,7 @@ export function SegmentsSection() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {segments.map((segment, index) => (
             <Link
               key={segment.key}

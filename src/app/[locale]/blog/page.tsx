@@ -1,7 +1,7 @@
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, Calendar } from 'lucide-react';
+import { ArrowRight, Calendar, FileText } from 'lucide-react';
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -85,7 +85,7 @@ export default async function BlogPage({ params }: PageProps) {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center space-y-2">
                     <div className="h-16 w-16 mx-auto rounded bg-muted flex items-center justify-center">
-                      <span className="text-3xl">📰</span>
+                      <FileText className="h-8 w-8 text-muted-foreground" />
                     </div>
                     <p className="text-xs text-muted-foreground">Post image</p>
                   </div>

@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import { Check, TrendingUp, Award } from 'lucide-react';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import { type Locale } from '@/i18n/config';
 
@@ -77,7 +77,7 @@ export function HeroSection() {
                     <p className="text-sm text-white/50">Produtividade média</p>
                   </div>
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <span className="text-xl">📈</span>
+                    <TrendingUp className="h-6 w-6 text-primary" />
                   </div>
                 </div>
 
@@ -101,7 +101,7 @@ export function HeroSection() {
                     <p className="text-sm text-white/50">No mercado</p>
                   </div>
                   <div className="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center">
-                    <span className="text-xl">⭐</span>
+                    <Award className="h-6 w-6 text-purple-400" />
                   </div>
                 </div>
               </div>
