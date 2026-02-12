@@ -5,7 +5,6 @@ import { LogosSection } from '@/components/home/LogosSection';
 import { SegmentsSection } from '@/components/home/SegmentsSection';
 import { AboutSection } from '@/components/home/AboutSection';
 import { ProcessSection } from '@/components/home/ProcessSection';
-import { TestimonialsSection } from '@/components/home/TestimonialsSection';
 import { ProofsSection } from '@/components/home/ProofsSection';
 import { CTASection } from '@/components/home/CTASection';
 
@@ -34,7 +33,6 @@ export default async function HomePage({ params }: HomePageProps) {
       <SegmentsSection />
       <AboutSection />
       <ProcessSection />
-      <TestimonialsSection />
       <ProofsSection />
       <CTASection />
     </>

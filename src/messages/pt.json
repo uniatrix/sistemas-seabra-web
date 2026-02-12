@@ -139,7 +139,14 @@
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "Artigos e novidades sobre gestão pecuária e tecnologia."
+    "subtitle": "Artigos e novidades sobre gestão pecuária e tecnologia.",
+    "readMore": "Ler artigo",
+    "backToList": "Voltar ao blog",
+    "source": "Fonte",
+    "empty": "Nenhum artigo disponível ainda.",
+    "ctaTitle": "Quer organizar o manejo reprodutivo do seu rebanho?",
+    "ctaDescription": "Conheça nosso sistema de gestão pecuária sob medida. Registre protocolos, acompanhe indicadores e tome decisões com base em dados.",
+    "ctaButton": "Falar no WhatsApp"
   },
   "contactPage": {
     "title": "Entre em contato",

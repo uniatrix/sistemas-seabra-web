@@ -1,0 +1,154 @@
+import { setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { Link } from '@/i18n/routing';
+import { ArrowLeft, Calendar, Clock, ExternalLink } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { blogPosts, getPostBySlug } from '@/data/blog-posts';
+import { WHATSAPP_NUMBER } from '@/lib/whatsapp';
+
+interface PageProps {
+  params: Promise<{ locale: string; slug: string }>;
+}
+
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({ slug: post.slug }));
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+
+  if (!post) return {};
+
+  return {
+    title: `${post.title} | Seabra Solutions`,
+    description: post.excerpt,
+  };
+}
+
+function formatDate(dateString: string, locale: string) {
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat(
+    locale === 'pt' ? 'pt-BR' : locale === 'es' ? 'es-ES' : 'en-US',
+    { year: 'numeric', month: 'long', day: 'numeric' }
+  ).format(date);
+}
+
+export default async function BlogPostPage({ params }: PageProps) {
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+
+  const post = getPostBySlug(slug);
+  if (!post) notFound();
+
+  const t = await getTranslations({ locale, namespace: 'blog' });
+  const tWhatsapp = await getTranslations({ locale, namespace: 'whatsapp' });
+
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(tWhatsapp('defaultMessage'))}`;
+
+  return (
+    <div className="section-padding">
+      <div className="max-w-3xl mx-auto px-4">
+        {/* Back link */}
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          {t('backToList')}
+        </Link>
+
+        {/* Header */}
+        <header className="space-y-4 mb-10">
+          <div className="flex items-center gap-3 text-sm text-muted-foreground">
+            <span className="text-primary font-medium uppercase tracking-wide">
+              {post.category}
+            </span>
+            <span>·</span>
+            <span className="flex items-center gap-1">
+              <Calendar className="h-3.5 w-3.5" />
+              {formatDate(post.date, locale)}
+            </span>
+            <span>·</span>
+            <span className="flex items-center gap-1">
+              <Clock className="h-3.5 w-3.5" />
+              {post.readTime} min
+            </span>
+          </div>
+
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
+            {post.title}
+          </h1>
+
+          <p className="text-lg text-muted-foreground">
+            {post.excerpt}
+          </p>
+        </header>
+
+        {/* Content */}
+        <article className="prose prose-gray max-w-none prose-headings:text-gray-900 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600 prose-strong:text-gray-900 prose-ul:space-y-1">
+          {post.content.split('\n').map((line, i) => {
+            const trimmed = line.trim();
+
+            if (trimmed.startsWith('## ')) {
+              return <h2 key={i}>{trimmed.replace('## ', '')}</h2>;
+            }
+
+            if (trimmed.startsWith('- **')) {
+              const match = trimmed.match(/^- \*\*(.+?)\*\*:?\s*(.*)$/);
+              if (match) {
+                return (
+                  <div key={i} className="flex gap-2 ml-4 mb-2">
+                    <span className="text-primary mt-1">·</span>
+                    <p className="text-gray-600 m-0">
+                      <strong className="text-gray-900">{match[1]}</strong>
+                      {match[2] ? `: ${match[2]}` : ''}
+                    </p>
+                  </div>
+                );
+              }
+            }
+
+            if (trimmed.length === 0) return null;
+
+            return <p key={i}>{trimmed}</p>;
+          })}
+        </article>
+
+        {/* Source */}
+        {post.source && (
+          <div className="mt-10 p-4 rounded-xl bg-gray-50 border border-gray-100">
+            <p className="text-sm text-muted-foreground">
+              {t('source')}:{' '}
+              <a
+                href={post.source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline inline-flex items-center gap-1"
+              >
+                {post.source.name}
+                <ExternalLink className="h-3 w-3" />
+              </a>
+            </p>
+          </div>
+        )}
+
+        {/* CTA */}
+        <div className="mt-12 p-8 rounded-2xl bg-primary/5 border border-primary/10 text-center space-y-4">
+          <h3 className="text-xl font-semibold text-gray-900">
+            {t('ctaTitle')}
+          </h3>
+          <p className="text-muted-foreground max-w-lg mx-auto">
+            {t('ctaDescription')}
+          </p>
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <Button className="rounded-full gap-2 mt-2">
+              {t('ctaButton')}
+            </Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}

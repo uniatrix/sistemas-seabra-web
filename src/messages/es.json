@@ -139,7 +139,14 @@
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "Artículos y novedades sobre gestión ganadera y tecnología."
+    "subtitle": "Artículos y novedades sobre gestión ganadera y tecnología.",
+    "readMore": "Leer artículo",
+    "backToList": "Volver al blog",
+    "source": "Fuente",
+    "empty": "No hay artículos disponibles aún.",
+    "ctaTitle": "¿Quieres organizar el manejo reproductivo de tu rebaño?",
+    "ctaDescription": "Conoce nuestro sistema de gestión ganadera a medida. Registra protocolos, acompaña indicadores y toma decisiones basadas en datos.",
+    "ctaButton": "Hablar por WhatsApp"
   },
   "contactPage": {
     "title": "Contáctanos",

@@ -139,7 +139,14 @@
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "Articles and news about livestock management and technology."
+    "subtitle": "Articles and news about livestock management and technology.",
+    "readMore": "Read article",
+    "backToList": "Back to blog",
+    "source": "Source",
+    "empty": "No articles available yet.",
+    "ctaTitle": "Want to organize your herd's reproductive management?",
+    "ctaDescription": "Discover our custom livestock management system. Record protocols, track indicators and make data-driven decisions.",
+    "ctaButton": "Talk on WhatsApp"
   },
   "contactPage": {
     "title": "Get in touch",
