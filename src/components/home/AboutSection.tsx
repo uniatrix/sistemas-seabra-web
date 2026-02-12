@@ -14,13 +14,15 @@ export function AboutSection() {
       <div className="container-tight relative">
         <div className="space-y-8">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
-            <Building2 className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">{t('badge')}</span>
+          <div className="flex justify-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+              <Building2 className="h-4 w-4 text-primary" />
+              <span className="text-sm font-medium text-primary">{t('badge')}</span>
+            </div>
           </div>
 
           {/* Title */}
-          <h2 className="heading-2 text-white">
+          <h2 className="heading-2 text-white text-center">
             {t('title')}
           </h2>
 

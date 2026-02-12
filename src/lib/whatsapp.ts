@@ -14,8 +14,7 @@ export interface WhatsAppMessageConfig {
   utm?: UTMParams;
 }
 
-// Placeholder - update with actual WhatsApp number
-export const WHATSAPP_NUMBER = '5511999999999';
+export const WHATSAPP_NUMBER = '5521999366784';
 
 const messages: Record<Locale, { default: string; segment: string }> = {
   pt: {
