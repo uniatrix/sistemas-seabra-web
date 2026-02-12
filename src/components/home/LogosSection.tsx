@@ -12,6 +12,7 @@ const logos = [
   { name: 'Caprigen', src: '/images/logos/caprigen.png' },
   { name: '3 Irmãos', src: '/images/logos/3-irmaos.png' },
   { name: 'Lá do Alto', src: '/images/logos/la-do-alto.png' },
+  { name: 'Bonito', src: '/images/logos/bonito.png' },
 ];
 
 export function LogosSection() {
