@@ -76,7 +76,7 @@ export function ProcessSection() {
               <Card
                 key={step.key}
                 className={cn(
-                  'group h-full border-gray-200 bg-white shadow-sm',
+                  'group h-full border-gray-200 bg-white shadow-sm overflow-visible',
                   'transition-all duration-300 ease-out',
                   'hover:scale-[1.02] hover:-translate-y-1',
                   'hover:shadow-xl',
@@ -85,9 +85,17 @@ export function ProcessSection() {
                 )}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardContent className="p-6 text-center">
-                  {/* Icon circle with number badge */}
-                  <div className="relative inline-flex mb-6">
+                <CardContent className="p-6 pt-8 text-center relative overflow-visible">
+                  {/* Number badge - top left overlapping border */}
+                  <div className={cn(
+                    'absolute -top-4 left-4 h-8 w-8 rounded-xl text-white text-xs font-bold flex items-center justify-center shadow-md',
+                    colors.numberBg
+                  )}>
+                    {step.number}
+                  </div>
+
+                  {/* Icon circle */}
+                  <div className="inline-flex mb-6">
                     <div
                       className={cn(
                         'relative h-20 w-20 rounded-full flex items-center justify-center',
@@ -109,15 +117,6 @@ export function ProcessSection() {
                           'group-hover:scale-110'
                         )}
                       />
-                    </div>
-
-                    {/* Number badge */}
-                    <div className={cn(
-                      'absolute -top-1 -right-1 h-8 w-8 rounded-xl text-gray-900 text-xs font-bold flex items-center justify-center',
-                      'transition-transform duration-300 group-hover:scale-110',
-                      colors.numberBg
-                    )}>
-                      {step.number}
                     </div>
                   </div>
 
