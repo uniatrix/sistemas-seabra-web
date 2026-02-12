@@ -30,9 +30,9 @@ export function LanguageSwitcher() {
           size="sm"
           className={cn(
             'gap-2 rounded-full px-3',
-            'bg-white/[0.03] border border-white/[0.08]',
-            'hover:bg-white/[0.08] hover:border-white/[0.15]',
-            'text-white/70 hover:text-white',
+            'bg-gray-100 border border-gray-200',
+            'hover:bg-gray-200 hover:border-gray-300',
+            'text-gray-600 hover:text-gray-900',
             'transition-all duration-300'
           )}
         >
@@ -42,7 +42,7 @@ export function LanguageSwitcher() {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="bg-black/90 backdrop-blur-2xl border-white/[0.1] p-1.5 min-w-[140px]"
+        className="bg-white backdrop-blur-2xl border-gray-200 shadow-lg p-1.5 min-w-[140px]"
       >
         {locales.map((loc) => (
           <DropdownMenuItem
@@ -50,8 +50,8 @@ export function LanguageSwitcher() {
             onClick={() => handleLocaleChange(loc)}
             className={cn(
               'rounded-md px-3 py-2 cursor-pointer transition-all duration-200',
-              'text-white/70 hover:text-white hover:bg-white/[0.08]',
-              locale === loc && 'bg-white/[0.06] text-white'
+              'text-gray-600 hover:text-gray-900 hover:bg-gray-100',
+              locale === loc && 'bg-gray-100 text-gray-900'
             )}
           >
             <span className="mr-2.5 text-base">

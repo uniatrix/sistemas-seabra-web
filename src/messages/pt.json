@@ -59,7 +59,16 @@
     "p1": "Nascemos da vivência direta no campo. Com experiência em medicina veterinária e pecuária desde 2011, entendemos que decisões precisas dependem de dados confiáveis — e que a maioria dos produtores ainda opera sem as ferramentas certas para obtê-los.",
     "p2": "A Seabra Solutions desenvolve sistemas de gestão pecuária sob medida, projetados para a realidade de cada operação. Nossos softwares transformam o lançamento de dados em algo prático e rápido, e devolvem indicadores de desempenho com a precisão que o setor exige.",
     "p3": "Cada sistema é construído a partir do diagnóstico da sua operação. Não oferecemos soluções genéricas — entregamos tecnologia que se adapta ao seu processo, funciona offline no campo e evolui junto com o seu negócio.",
+    "highlightExperience": "No campo desde",
+    "highlightOffline": "Funciona offline",
+    "highlightSupport": "Suporte rápido",
+    "visionLabel": "Nossa Visão",
     "vision": "Nossa visão é consolidar a Seabra Solutions como referência em tecnologia para pecuária de precisão na América Latina."
+  },
+  "testimonials": {
+    "badge": "Depoimentos",
+    "title": "O que nossos clientes dizem",
+    "subtitle": "Produtores reais compartilham como a tecnologia transformou a gestão dos seus rebanhos."
   },
   "proofs": {
     "title": "Veja na prática",
@@ -136,6 +145,34 @@
     "title": "Entre em contato",
     "subtitle": "Estamos prontos para ajudar você a transformar sua operação.",
     "whatsapp": "WhatsApp",
-    "email": "Email"
+    "whatsappDesc": "Resposta rápida e direta",
+    "whatsappButton": "Iniciar conversa",
+    "email": "Email",
+    "emailButton": "Enviar email",
+    "form": {
+      "formTitle": "Envie uma mensagem",
+      "formSubtitle": "Preencha o formulário abaixo e entraremos em contato via WhatsApp.",
+      "name": "Nome",
+      "namePlaceholder": "Seu nome completo",
+      "email": "Email",
+      "emailPlaceholder": "seu@email.com",
+      "phone": "Telefone",
+      "phonePlaceholder": "(00) 00000-0000",
+      "segment": "Segmento",
+      "segmentPlaceholder": "Selecione seu segmento",
+      "segmentCattleDairy": "Bovinos Leiteiros",
+      "segmentCattleBeef": "Bovinos de Corte",
+      "segmentGoatDairy": "Caprinos Leiteiros",
+      "segmentGoatBeef": "Caprinos de Corte",
+      "segmentSheepDairy": "Ovinos Leiteiros",
+      "segmentSheepBeef": "Ovinos de Corte",
+      "message": "Mensagem",
+      "messagePlaceholder": "Conte-nos sobre sua operação e como podemos ajudar...",
+      "submit": "Enviar via WhatsApp",
+      "disclaimer": "Ao enviar, você será redirecionado para o WhatsApp com sua mensagem pré-preenchida.",
+      "successTitle": "Mensagem enviada!",
+      "successMessage": "Você foi redirecionado para o WhatsApp. Responderemos em até 24h.",
+      "sendAnother": "Enviar outra mensagem"
+    }
   }
 }

@@ -72,8 +72,6 @@ export function Modules() {
 
   return (
     <section className="section-padding relative overflow-hidden">
-      {/* Background gradient effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background/0 pointer-events-none" />
 
       <div className="container-wide relative">
         <div className="text-center space-y-4 mb-16">
@@ -82,7 +80,7 @@ export function Modules() {
             <span className="text-sm font-medium text-primary">Recursos Completos</span>
           </div>
 
-          <h2 className="heading-2 text-white">
+          <h2 className="heading-2 text-gray-900">
             {t('title')}
           </h2>
         </div>
@@ -94,7 +92,7 @@ export function Modules() {
               <Card
                 key={index}
                 className={cn(
-                  'group h-full border-border/50 bg-card/50 backdrop-blur-sm',
+                  'group h-full border-gray-200 bg-white shadow-sm',
                   'transition-all duration-300 ease-out',
                   'hover:scale-[1.02] hover:-translate-y-1',
                   'hover:shadow-xl',

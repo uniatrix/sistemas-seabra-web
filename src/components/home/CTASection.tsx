@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowUpRight } from 'lucide-react';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import { type Locale } from '@/i18n/config';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 // WhatsApp SVG Icon
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -25,11 +26,12 @@ export function CTASection() {
   const locale = useLocale() as Locale;
 
   const whatsappUrl = buildWhatsAppUrl({ locale });
+  const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-24 md:py-32" ref={ref}>
       <div className="container-tight">
-        <div className="max-w-3xl mx-auto text-center space-y-10">
+        <div className={`max-w-3xl mx-auto text-center space-y-10 scroll-fade-up ${isVisible ? 'visible' : ''}`}>
           {/* Icon */}
           <div className="inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-primary/20 border border-primary/30 animate-pulse-glow">
             <ArrowUpRight className="h-8 w-8 text-primary" />
@@ -37,7 +39,7 @@ export function CTASection() {
 
           {/* Content */}
           <div className="space-y-6">
-            <h2 className="heading-1 text-white">
+            <h2 className="heading-1 text-gray-900">
               {t('title')}
             </h2>
             <p className="body-large max-w-xl mx-auto">
@@ -59,7 +61,7 @@ export function CTASection() {
           </div>
 
           {/* Trust text */}
-          <p className="text-sm text-white/40">
+          <p className="text-sm text-gray-400">
             Sem compromisso. Resposta em até 24h.
           </p>
         </div>

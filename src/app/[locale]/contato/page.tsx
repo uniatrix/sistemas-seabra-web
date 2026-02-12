@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { MessageCircle, Mail, ArrowRight } from 'lucide-react';
 import { WHATSAPP_NUMBER } from '@/lib/whatsapp';
+import { ContactForm } from '@/components/ContactForm';
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -33,7 +34,7 @@ export default async function ContatoPage({ params }: PageProps) {
       <div className="container-tight">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-gray-900">
             {t('title')}
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -42,24 +43,24 @@ export default async function ContatoPage({ params }: PageProps) {
         </div>
 
         {/* Contact Options */}
-        <div className="grid gap-6 md:grid-cols-2 max-w-2xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 max-w-2xl mx-auto mb-16">
           {/* WhatsApp */}
-          <Card className="border-border hover:border-primary/50 transition-colors">
+          <Card className="border-gray-200 hover:border-[#25D366]/50 transition-colors hover:shadow-md">
             <CardContent className="p-8 text-center space-y-6">
               <div className="h-16 w-16 mx-auto rounded-2xl bg-[#25D366]/10 flex items-center justify-center">
                 <MessageCircle className="h-8 w-8 text-[#25D366]" />
               </div>
               <div className="space-y-2">
-                <h2 className="text-xl font-semibold text-foreground">
+                <h2 className="text-xl font-semibold text-gray-900">
                   {t('whatsapp')}
                 </h2>
                 <p className="text-sm text-muted-foreground">
-                  Resposta rápida e direta
+                  {t('whatsappDesc')}
                 </p>
               </div>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <Button className="btn-pill gap-2 w-full bg-[#25D366] hover:bg-[#20BA5C]">
-                  Iniciar conversa
+                <Button className="rounded-full gap-2 w-full bg-[#25D366] hover:bg-[#20BA5C] text-white">
+                  {t('whatsappButton')}
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </a>
@@ -67,13 +68,13 @@ export default async function ContatoPage({ params }: PageProps) {
           </Card>
 
           {/* Email */}
-          <Card className="border-border hover:border-primary/50 transition-colors">
+          <Card className="border-gray-200 hover:border-primary/50 transition-colors hover:shadow-md">
             <CardContent className="p-8 text-center space-y-6">
               <div className="h-16 w-16 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center">
                 <Mail className="h-8 w-8 text-primary" />
               </div>
               <div className="space-y-2">
-                <h2 className="text-xl font-semibold text-foreground">
+                <h2 className="text-xl font-semibold text-gray-900">
                   {t('email')}
                 </h2>
                 <p className="text-sm text-muted-foreground">
@@ -81,11 +82,20 @@ export default async function ContatoPage({ params }: PageProps) {
                 </p>
               </div>
               <a href="mailto:contato@sistemaseabra.com.br">
-                <Button variant="outline" className="btn-pill gap-2 w-full">
-                  Enviar email
+                <Button variant="outline" className="rounded-full gap-2 w-full">
+                  {t('emailButton')}
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </a>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Contact Form */}
+        <div className="max-w-2xl mx-auto">
+          <Card className="border-gray-200 shadow-sm">
+            <CardContent className="p-8">
+              <ContactForm />
             </CardContent>
           </Card>
         </div>

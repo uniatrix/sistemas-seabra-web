@@ -39,8 +39,8 @@ export function LandingProofs({ segmentSlug }: LandingProofsProps) {
               key={index}
               className={cn(
                 'group relative aspect-video rounded-2xl overflow-hidden cursor-pointer',
-                'bg-gradient-to-br from-white/[0.04] to-white/[0.01]',
-                'border border-white/[0.06] hover:border-white/[0.15]',
+                'bg-gradient-to-br from-gray-50 to-white',
+                'border border-gray-200 hover:border-gray-300',
                 'transition-all duration-500',
                 'hover:shadow-xl hover:shadow-black/20',
                 'fade-in-up opacity-0'
@@ -55,7 +55,7 @@ export function LandingProofs({ segmentSlug }: LandingProofsProps) {
                       'h-14 w-14 mx-auto rounded-xl',
                       proof.type === 'video'
                         ? 'bg-primary/20 border border-primary/30'
-                        : 'bg-white/[0.05] border border-white/[0.1]',
+                        : 'bg-gray-100 border border-gray-200',
                       'flex items-center justify-center',
                       'group-hover:scale-110',
                       'transition-all duration-500'
@@ -66,11 +66,11 @@ export function LandingProofs({ segmentSlug }: LandingProofsProps) {
                         'h-7 w-7',
                         proof.type === 'video'
                           ? 'text-primary ml-0.5'
-                          : 'text-white/50 group-hover:text-white/70'
+                          : 'text-gray-500 group-hover:text-gray-600'
                       )}
                     />
                   </div>
-                  <p className="text-sm text-white/40 group-hover:text-white/60 transition-colors">
+                  <p className="text-sm text-gray-400 group-hover:text-gray-600 transition-colors">
                     {proof.label}
                   </p>
                 </div>

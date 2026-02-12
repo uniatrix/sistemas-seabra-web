@@ -83,7 +83,7 @@ export default async function CasesPage({ params }: PageProps) {
             <span className="text-sm font-medium text-primary">Casos de Sucesso</span>
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             {t('title')}
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -99,7 +99,7 @@ export default async function CasesPage({ params }: PageProps) {
               <Card
                 key={caseItem.id}
                 className={cn(
-                  'group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm cursor-pointer',
+                  'group overflow-hidden border-gray-200 bg-white shadow-sm cursor-pointer',
                   'transition-all duration-300 ease-out',
                   'hover:scale-[1.02] hover:-translate-y-1',
                   'hover:shadow-xl',
@@ -109,7 +109,7 @@ export default async function CasesPage({ params }: PageProps) {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Image placeholder with gradient */}
-                <div className="aspect-video relative bg-gradient-to-br from-card via-card/80 to-card/60 border-b border-border/50 overflow-hidden">
+                <div className="aspect-video relative bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 border-b border-gray-200 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center space-y-3">
                       <div className={cn(

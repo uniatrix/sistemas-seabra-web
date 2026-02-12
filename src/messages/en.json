@@ -59,7 +59,16 @@
     "p1": "We were born from direct field experience. With a background in veterinary medicine and livestock farming since 2011, we understand that precise decisions depend on reliable data — and that most producers still operate without the right tools to obtain them.",
     "p2": "Seabra Solutions develops custom livestock management systems designed for the reality of each operation. Our software turns data entry into something practical and fast, delivering performance indicators with the precision the industry demands.",
     "p3": "Each system is built from a diagnosis of your operation. We don't offer generic solutions — we deliver technology that adapts to your process, works offline in the field, and evolves alongside your business.",
+    "highlightExperience": "In the field since",
+    "highlightOffline": "Works offline",
+    "highlightSupport": "Fast support",
+    "visionLabel": "Our Vision",
     "vision": "Our vision is to establish Seabra Solutions as a reference in precision livestock technology across Latin America."
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What our clients say",
+    "subtitle": "Real producers share how technology transformed their herd management."
   },
   "proofs": {
     "title": "See it in practice",
@@ -136,6 +145,34 @@
     "title": "Get in touch",
     "subtitle": "We're ready to help you transform your operation.",
     "whatsapp": "WhatsApp",
-    "email": "Email"
+    "whatsappDesc": "Quick and direct response",
+    "whatsappButton": "Start conversation",
+    "email": "Email",
+    "emailButton": "Send email",
+    "form": {
+      "formTitle": "Send a message",
+      "formSubtitle": "Fill out the form below and we'll contact you via WhatsApp.",
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 (000) 000-0000",
+      "segment": "Segment",
+      "segmentPlaceholder": "Select your segment",
+      "segmentCattleDairy": "Dairy Cattle",
+      "segmentCattleBeef": "Beef Cattle",
+      "segmentGoatDairy": "Dairy Goats",
+      "segmentGoatBeef": "Meat Goats",
+      "segmentSheepDairy": "Dairy Sheep",
+      "segmentSheepBeef": "Meat Sheep",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your operation and how we can help...",
+      "submit": "Send via WhatsApp",
+      "disclaimer": "By submitting, you'll be redirected to WhatsApp with your pre-filled message.",
+      "successTitle": "Message sent!",
+      "successMessage": "You were redirected to WhatsApp. We'll respond within 24h.",
+      "sendAnother": "Send another message"
+    }
   }
 }

@@ -5,6 +5,7 @@ import { Link } from '@/i18n/routing';
 import { ArrowRight, Milk, Beef, Layers } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const segments = [
   {
@@ -71,20 +72,18 @@ const segments = [
 
 export function SegmentsSection() {
   const t = useTranslations();
+  const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="section-padding relative overflow-hidden" id="segments">
-      {/* Background gradient effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background/0 pointer-events-none" />
-
+    <section className="section-padding relative overflow-hidden" id="segments" ref={ref}>
       <div className="container-wide relative">
-        <div className="text-center space-y-4 mb-16">
+        <div className={`text-center space-y-4 mb-16 scroll-fade-up ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
             <Layers className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">Soluções Especializadas</span>
           </div>
 
-          <h2 className="heading-2 text-white">
+          <h2 className="heading-2 text-gray-900">
             {t('segmentsSection.title')}
           </h2>
           <p className="body-large max-w-2xl mx-auto text-muted-foreground">
@@ -92,7 +91,7 @@ export function SegmentsSection() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className={`grid gap-6 sm:grid-cols-2 lg:grid-cols-3 scroll-fade-up scroll-fade-up-delay-2 ${isVisible ? 'visible' : ''}`}>
           {segments.map((segment, index) => (
             <Link
               key={segment.key}
@@ -102,7 +101,7 @@ export function SegmentsSection() {
             >
               <Card
                 className={cn(
-                  'h-full border-border/50 bg-card/50 backdrop-blur-sm',
+                  'h-full border-gray-200 bg-white shadow-sm',
                   'transition-all duration-300 ease-out',
                   'hover:scale-[1.02] hover:-translate-y-1',
                   'hover:shadow-xl',

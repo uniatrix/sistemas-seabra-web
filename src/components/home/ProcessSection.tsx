@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Search, Rocket, Users, TrendingUp, Settings } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const steps = [
   { key: 'step1', icon: Search, number: '01', color: 'blue' },
@@ -49,20 +50,18 @@ const colorClasses: Record<string, { bg: string; hoverBg: string; icon: string; 
 
 export function ProcessSection() {
   const t = useTranslations('process');
+  const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="section-padding relative overflow-hidden">
-      {/* Background gradient effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background/0 pointer-events-none" />
-
+    <section className="section-padding relative overflow-hidden" ref={ref}>
       <div className="container-wide relative">
-        <div className="text-center space-y-4 mb-16">
+        <div className={`text-center space-y-4 mb-16 scroll-fade-up ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
             <Settings className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">Como Funciona</span>
           </div>
 
-          <h2 className="heading-2 text-white">
+          <h2 className="heading-2 text-gray-900">
             {t('title')}
           </h2>
           <p className="body-large max-w-2xl mx-auto text-muted-foreground">
@@ -70,14 +69,14 @@ export function ProcessSection() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className={`grid gap-6 md:grid-cols-2 lg:grid-cols-4 scroll-fade-up scroll-fade-up-delay-2 ${isVisible ? 'visible' : ''}`}>
           {steps.map((step, index) => {
             const colors = colorClasses[step.color];
             return (
               <Card
                 key={step.key}
                 className={cn(
-                  'group h-full border-border/50 bg-card/50 backdrop-blur-sm',
+                  'group h-full border-gray-200 bg-white shadow-sm',
                   'transition-all duration-300 ease-out',
                   'hover:scale-[1.02] hover:-translate-y-1',
                   'hover:shadow-xl',
@@ -115,7 +114,7 @@ export function ProcessSection() {
 
                     {/* Number badge */}
                     <div className={cn(
-                      'absolute -top-1 -right-1 h-8 w-8 rounded-xl text-white text-xs font-bold flex items-center justify-center',
+                      'absolute -top-1 -right-1 h-8 w-8 rounded-xl text-gray-900 text-xs font-bold flex items-center justify-center',
                       'transition-transform duration-300 group-hover:scale-110',
                       colors.numberBg
                     )}>

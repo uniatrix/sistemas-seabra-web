@@ -31,7 +31,7 @@ export function LandingHero({ segmentKey, segmentSlug }: LandingHeroProps) {
         {/* Badge */}
         <Badge
           variant="outline"
-          className="px-4 py-1.5 rounded-full border-white/[0.15] bg-white/[0.03] backdrop-blur-sm text-white/80 font-medium"
+          className="px-4 py-1.5 rounded-full border-gray-300 bg-gray-50 backdrop-blur-sm text-gray-700 font-medium"
         >
           <Zap className="h-3.5 w-3.5 mr-2 text-primary" />
           Sistema especializado
@@ -68,7 +68,7 @@ export function LandingHero({ segmentKey, segmentSlug }: LandingHeroProps) {
         </div>
 
         {/* Trust text */}
-        <p className="text-sm text-white/40">
+        <p className="text-sm text-gray-400">
           +150 produtores confiam na Seabra Solutions
         </p>
       </div>

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Check, TrendingUp, Award } from 'lucide-react';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import { type Locale } from '@/i18n/config';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 // WhatsApp SVG Icon
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -25,16 +26,17 @@ export function HeroSection() {
   const locale = useLocale() as Locale;
 
   const whatsappUrl = buildWhatsAppUrl({ locale });
+  const { ref, isVisible } = useScrollAnimation(0.1);
 
   const bullets = [t('bullet1'), t('bullet2'), t('bullet3')];
 
   return (
-    <section className="pt-28 pb-16 md:pt-32 md:pb-20">
+    <section className="pt-28 pb-16 md:pt-32 md:pb-20" ref={ref}>
       <div className="container-wide">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Text Content */}
-          <div className="space-y-6">
-            <h1 className="heading-1 text-white">
+          <div className={`space-y-6 scroll-fade-up ${isVisible ? 'visible' : ''}`}>
+            <h1 className="heading-1 text-gray-900">
               {t('headline')}
             </h1>
 
@@ -48,7 +50,7 @@ export function HeroSection() {
                   <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/20">
                     <Check className="h-3 w-3 text-primary" />
                   </div>
-                  <span className="text-white/70 text-sm">{bullet}</span>
+                  <span className="text-gray-600 text-sm">{bullet}</span>
                 </li>
               ))}
             </ul>
@@ -60,48 +62,51 @@ export function HeroSection() {
                   {t('cta')}
                 </Button>
               </a>
-              <Button className="btn-ghost px-6 h-12 text-sm w-full sm:w-auto">
+              <Button
+                className="btn-ghost px-6 h-12 text-sm w-full sm:w-auto"
+                onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Ver demonstração
               </Button>
             </div>
           </div>
 
           {/* Stats Cards */}
-          <div className="relative flex justify-center lg:justify-end">
+          <div className={`relative flex justify-center lg:justify-end scroll-fade-up scroll-fade-up-delay-2 ${isVisible ? 'visible' : ''}`}>
             <div className="relative w-full max-w-md">
               {/* Main card */}
               <div className="glass-card p-8 space-y-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-3xl font-bold text-white">+30%</p>
-                    <p className="text-sm text-white/50">Produtividade média</p>
+                    <p className="text-3xl font-bold text-gray-900">+30%</p>
+                    <p className="text-sm text-gray-500">Produtividade média</p>
                   </div>
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <TrendingUp className="h-6 w-6 text-primary" />
                   </div>
                 </div>
 
-                <div className="h-px bg-white/[0.06]" />
+                <div className="h-px bg-gray-200" />
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-3xl font-bold text-white">100%</p>
-                    <p className="text-sm text-white/50">Funciona offline</p>
+                    <p className="text-3xl font-bold text-gray-900">100%</p>
+                    <p className="text-sm text-gray-500">Funciona offline</p>
                   </div>
                   <div className="h-12 w-12 rounded-xl bg-emerald-500/10 flex items-center justify-center">
-                    <Check className="h-6 w-6 text-emerald-400" />
+                    <Check className="h-6 w-6 text-emerald-500" />
                   </div>
                 </div>
 
-                <div className="h-px bg-white/[0.06]" />
+                <div className="h-px bg-gray-200" />
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-3xl font-bold text-white">5+ anos</p>
-                    <p className="text-sm text-white/50">No mercado</p>
+                    <p className="text-3xl font-bold text-gray-900">5+ anos</p>
+                    <p className="text-sm text-gray-500">No mercado</p>
                   </div>
                   <div className="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center">
-                    <Award className="h-6 w-6 text-purple-400" />
+                    <Award className="h-6 w-6 text-purple-500" />
                   </div>
                 </div>
               </div>

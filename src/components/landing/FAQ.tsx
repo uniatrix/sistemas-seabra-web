@@ -22,8 +22,6 @@ export function FAQ() {
 
   return (
     <section className="section-padding relative overflow-hidden">
-      {/* Background gradient effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background/0 pointer-events-none" />
 
       <div className="container-tight relative">
         <div className="text-center space-y-4 mb-16">
@@ -32,7 +30,7 @@ export function FAQ() {
             <span className="text-sm font-medium text-primary">Dúvidas Frequentes</span>
           </div>
 
-          <h2 className="heading-2 text-white">
+          <h2 className="heading-2 text-gray-900">
             {t('title')}
           </h2>
         </div>
@@ -43,7 +41,7 @@ export function FAQ() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="group border border-border/50 rounded-2xl px-6 bg-card/50 backdrop-blur-sm data-[state=open]:bg-card/80 data-[state=open]:border-primary/30 transition-all duration-300 hover:scale-[1.01] hover:shadow-lg"
+                className="group border border-gray-200 rounded-2xl px-6 bg-white shadow-sm data-[state=open]:bg-card/80 data-[state=open]:border-primary/30 transition-all duration-300 hover:scale-[1.01] hover:shadow-lg"
               >
                 <AccordionTrigger className="text-left text-foreground hover:text-primary py-5 hover:no-underline transition-colors duration-300">
                   <span className="pr-4 font-semibold">{faq.q}</span>

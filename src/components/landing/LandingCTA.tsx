@@ -41,7 +41,7 @@ export function LandingCTA({ segmentSlug }: LandingCTAProps) {
 
           {/* Content */}
           <div className="space-y-6">
-            <h2 className="heading-1 text-white">
+            <h2 className="heading-1 text-gray-900">
               {t('title')}
             </h2>
             <p className="body-large max-w-xl mx-auto">
@@ -61,7 +61,7 @@ export function LandingCTA({ segmentSlug }: LandingCTAProps) {
           </a>
 
           {/* Trust text */}
-          <p className="text-sm text-white/40">
+          <p className="text-sm text-gray-400">
             Sem compromisso. Resposta em até 24h.
           </p>
         </div>

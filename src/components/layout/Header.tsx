@@ -84,7 +84,7 @@ export function Header() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
         isScrolled
-          ? 'py-3 bg-black/60 backdrop-blur-2xl border-b border-white/[0.08]'
+          ? 'py-3 bg-white/80 backdrop-blur-2xl border-b border-gray-200 shadow-sm'
           : 'py-5 bg-transparent'
       )}
     >
@@ -100,7 +100,7 @@ export function Header() {
               priority
             />
           </div>
-          <span className="text-lg font-semibold text-white tracking-tight hidden sm:block">
+          <span className="text-lg font-semibold text-gray-900 tracking-tight hidden sm:block">
             Seabra Solutions
           </span>
         </Link>
@@ -114,8 +114,8 @@ export function Header() {
               onClick={item.href.includes('#') ? (e: React.MouseEvent<HTMLAnchorElement>) => handleHashClick(e, item.href) : undefined}
               className={cn(
                 'px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full',
-                'hover:bg-white/[0.06] hover:text-white',
-                isActive(item.href) ? 'text-white' : 'text-white/60'
+                'hover:bg-gray-100 hover:text-gray-900',
+                isActive(item.href) ? 'text-gray-900' : 'text-gray-500'
               )}
             >
               {item.label}
@@ -128,10 +128,10 @@ export function Header() {
               <button
                 className={cn(
                   'flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full',
-                  'hover:bg-white/[0.06] hover:text-white',
+                  'hover:bg-gray-100 hover:text-gray-900',
                   pathname.includes('/solucoes')
-                    ? 'text-white'
-                    : 'text-white/60'
+                    ? 'text-gray-900'
+                    : 'text-gray-500'
                 )}
               >
                 {t('header.solutions')}
@@ -140,13 +140,13 @@ export function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="start"
-              className="w-64 bg-black/90 backdrop-blur-2xl border-white/[0.1] p-2"
+              className="w-64 bg-white backdrop-blur-2xl border-gray-200 shadow-lg p-2"
             >
               {solutions.map((solution) => (
                 <DropdownMenuItem key={solution.href} asChild>
                   <Link
                     href={solution.href}
-                    className="w-full cursor-pointer rounded-lg px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/[0.06] transition-all duration-200"
+                    className="w-full cursor-pointer rounded-lg px-3 py-2.5 text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-all duration-200"
                   >
                     {t(`segments.${solution.key}`)}
                   </Link>
@@ -161,15 +161,15 @@ export function Header() {
               href={item.href}
               className={cn(
                 'px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full',
-                'hover:bg-white/[0.06] hover:text-white',
-                isActive(item.href) ? 'text-white' : 'text-white/60'
+                'hover:bg-gray-100 hover:text-gray-900',
+                isActive(item.href) ? 'text-gray-900' : 'text-gray-500'
               )}
             >
               {item.label}
             </Link>
           ))}
 
-          <div className="w-px h-6 bg-white/[0.1] mx-2" />
+          <div className="w-px h-6 bg-gray-200 mx-2" />
 
           {/* Language Switcher */}
           <LanguageSwitcher />
@@ -179,8 +179,8 @@ export function Header() {
             <Button
               className={cn(
                 'rounded-full px-6 font-medium transition-all duration-300',
-                'bg-white text-black hover:bg-white/90',
-                'shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20',
+                'bg-primary text-white hover:bg-blue-600',
+                'shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30',
                 'hover:-translate-y-0.5'
               )}
             >
@@ -197,19 +197,19 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="rounded-full bg-white/[0.06] border border-white/[0.1] hover:bg-white/[0.1]"
+                className="rounded-full bg-gray-100 border border-gray-200 hover:bg-gray-200"
               >
-                <Menu className="h-5 w-5 text-white" />
+                <Menu className="h-5 w-5 text-gray-700" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-80 bg-black/95 backdrop-blur-2xl border-white/[0.1] p-0"
+              className="w-80 bg-white border-gray-200 p-0"
             >
               <div className="flex flex-col h-full">
                 {/* Mobile Logo */}
-                <div className="p-6 border-b border-white/[0.08]">
+                <div className="p-6 border-b border-gray-200">
                   <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
                     <div className="relative w-10 h-10">
                       <Image
@@ -219,7 +219,7 @@ export function Header() {
                         className="object-contain"
                       />
                     </div>
-                    <span className="text-lg font-semibold text-white">
+                    <span className="text-lg font-semibold text-gray-900">
                       Seabra Solutions
                     </span>
                   </Link>
@@ -235,7 +235,7 @@ export function Header() {
                           setIsOpen(false);
                           handleHashClick(e, item.href);
                         } : undefined}
-                        className="block text-lg font-medium text-white/70 hover:text-white transition-colors"
+                        className="block text-lg font-medium text-gray-600 hover:text-gray-900 transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -244,7 +244,7 @@ export function Header() {
 
                   {/* Solutions in Mobile */}
                   <div className="space-y-3">
-                    <span className="text-sm font-medium text-white/40 uppercase tracking-wider">
+                    <span className="text-sm font-medium text-gray-400 uppercase tracking-wider">
                       {t('header.solutions')}
                     </span>
                     <div className="space-y-1">
@@ -252,7 +252,7 @@ export function Header() {
                         <SheetClose asChild key={solution.href}>
                           <Link
                             href={solution.href}
-                            className="block py-2 px-3 text-base text-white/70 hover:text-white hover:bg-white/[0.06] rounded-lg transition-all"
+                            className="block py-2 px-3 text-base text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-all"
                           >
                             {t(`segments.${solution.key}`)}
                           </Link>
@@ -265,7 +265,7 @@ export function Header() {
                     <SheetClose asChild key={item.href}>
                       <Link
                         href={item.href}
-                        className="block text-lg font-medium text-white/70 hover:text-white transition-colors"
+                        className="block text-lg font-medium text-gray-600 hover:text-gray-900 transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -274,10 +274,10 @@ export function Header() {
                 </div>
 
                 {/* Mobile CTA */}
-                <div className="p-6 border-t border-white/[0.08]">
+                <div className="p-6 border-t border-gray-200">
                   <SheetClose asChild>
                     <Link href="/contato">
-                      <Button className="w-full rounded-full bg-white text-black hover:bg-white/90 font-medium">
+                      <Button className="w-full rounded-full bg-primary text-white hover:bg-blue-600 font-medium">
                         {t('header.contact')}
                       </Button>
                     </Link>
