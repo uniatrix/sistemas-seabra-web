@@ -47,18 +47,18 @@ export function AboutSection() {
             </div>
 
             {/* Right: Cards stacked vertically */}
-            <div className={`flex flex-col gap-4 w-full md:w-auto md:shrink-0 scroll-fade-up scroll-fade-up-delay-2 ${isVisible ? 'visible' : ''}`}>
+            <div className={`flex flex-col gap-3 md:shrink-0 scroll-fade-up scroll-fade-up-delay-2 ${isVisible ? 'visible' : ''}`}>
               {highlights.map((item) => (
                 <div
                   key={item.labelKey}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 w-full md:w-[240px]"
+                  className="inline-flex items-center gap-3 px-3 py-2.5 rounded-xl bg-gray-50 border border-gray-100"
                 >
-                  <div className="flex-shrink-0 h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <item.icon className="h-6 w-6 text-primary" />
+                  <div className="flex-shrink-0 h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <item.icon className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-gray-900 leading-tight">{item.value}</p>
-                    <p className="text-xs text-gray-500">{t(item.labelKey)}</p>
+                    <p className="text-lg font-bold text-gray-900 leading-tight">{item.value}</p>
+                    <p className="text-[11px] text-gray-500">{t(item.labelKey)}</p>
                   </div>
                 </div>
               ))}
