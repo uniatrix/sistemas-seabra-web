@@ -11,25 +11,32 @@ export interface UTMParams {
 export interface WhatsAppMessageConfig {
   locale: Locale;
   segment?: string;
+  service?: string;
   utm?: UTMParams;
 }
 
 export const WHATSAPP_NUMBER = '5521999366784';
 
-const messages: Record<Locale, { default: string; segment: string }> = {
+const messages: Record<Locale, { default: string; segment: string; service: string }> = {
   pt: {
     default: 'Olá! Quero saber mais sobre as soluções da Seabra Solutions.',
     segment:
       'Olá! Quero uma demonstração da solução para {segment}. {origin}',
+    service:
+      'Olá! Tenho interesse no plano {service} de desenvolvimento web. {origin}',
   },
   es: {
     default: '¡Hola! Quiero saber más sobre las soluciones de Seabra Solutions.',
     segment:
       '¡Hola! Quiero una demostración de la solución para {segment}. {origin}',
+    service:
+      '¡Hola! Tengo interés en el plan {service} de desarrollo web. {origin}',
   },
   en: {
     default: 'Hello! I want to know more about Seabra Solutions.',
     segment: 'Hello! I want a demo of the {segment} solution. {origin}',
+    service:
+      'Hello! I\'m interested in the {service} web development plan. {origin}',
   },
 };
 
@@ -76,8 +83,38 @@ function formatOrigin(utm?: UTMParams, locale?: Locale): string {
   return `${label}: ${parts.join(' / ')}`;
 }
 
+const serviceNames: Record<Locale, Record<string, string>> = {
+  pt: {
+    tier1: 'Landing Page',
+    tier2: 'E-commerce',
+    tier3: 'Marketplace',
+    geral: 'Desenvolvimento Web',
+  },
+  es: {
+    tier1: 'Landing Page',
+    tier2: 'E-commerce',
+    tier3: 'Marketplace',
+    geral: 'Desarrollo Web',
+  },
+  en: {
+    tier1: 'Landing Page',
+    tier2: 'E-commerce',
+    tier3: 'Marketplace',
+    geral: 'Web Development',
+  },
+};
+
 export function buildWhatsAppMessage(config: WhatsAppMessageConfig): string {
-  const { locale, segment, utm } = config;
+  const { locale, segment, service, utm } = config;
+
+  if (service) {
+    const serviceName = serviceNames[locale][service] || service;
+    const origin = formatOrigin(utm, locale);
+    return messages[locale].service
+      .replace('{service}', serviceName)
+      .replace('{origin}', origin)
+      .trim();
+  }
 
   if (!segment) {
     return messages[locale].default;

@@ -8,7 +8,8 @@
     "solutions": "Soluções",
     "cases": "Cases",
     "blog": "Blog",
-    "contact": "Contato"
+    "contact": "Contato",
+    "services": "Serviços"
   },
   "segments": {
     "cattleDairy": "Bovinos Leiteiros",
@@ -16,7 +17,8 @@
     "goatDairy": "Caprinos Leiteiros",
     "goatBeef": "Caprinos de Corte",
     "sheepDairy": "Ovinos Leiteiros",
-    "sheepBeef": "Ovinos de Corte"
+    "sheepBeef": "Ovinos de Corte",
+    "webDev": "Desenvolvimento Web"
   },
   "hero": {
     "headline": "Tecnologia para pecuária de precisão",
@@ -87,7 +89,8 @@
     "cases": "Cases",
     "blog": "Blog",
     "contact": "Contato",
-    "rights": "Todos os direitos reservados."
+    "rights": "Todos os direitos reservados.",
+    "services": "Serviços Web"
   },
   "whatsapp": {
     "defaultMessage": "Olá! Quero saber mais sobre as soluções da Seabra Solutions.",
@@ -180,6 +183,102 @@
       "successTitle": "Mensagem enviada!",
       "successMessage": "Você foi redirecionado para o WhatsApp. Responderemos em até 24h.",
       "sendAnother": "Enviar outra mensagem"
+    }
+  },
+  "servicos": {
+    "metadata": {
+      "title": "Desenvolvimento Web",
+      "description": "Landing pages, e-commerces e marketplaces sob medida para o seu negócio."
+    },
+    "hero": {
+      "badge": "Desenvolvimento Web",
+      "title": "Seu negócio online, do jeito certo",
+      "subtitle": "Criamos landing pages, e-commerces e marketplaces sob medida. Do design à publicação, você tem suporte completo.",
+      "cta": "Solicitar orçamento",
+      "secondary": "Ver planos"
+    },
+    "tiers": {
+      "badge": "Nossos Planos",
+      "title": "Escolha o plano ideal para o seu negócio",
+      "subtitle": "Três níveis de solução que crescem com a sua necessidade.",
+      "popular": "Mais Popular",
+      "includesPrevious": "Inclui tudo do plano {plan}",
+      "cta": "Quero este plano",
+      "tier1": {
+        "name": "Landing Page",
+        "description": "Presença digital profissional para apresentar sua empresa e produtos.",
+        "f1": "Design Responsivo",
+        "f1desc": "Layout adaptável para smartphones, tablets e desktops com otimização de performance",
+        "f2": "Página Inicial",
+        "f2desc": "Apresentação institucional com elementos visuais de destaque e navegação intuitiva",
+        "f3": "Catálogo de Produtos",
+        "f3desc": "Showcase de produtos com imagens, descrições detalhadas e categorização",
+        "f4": "Página Institucional",
+        "f4desc": "Seção dedicada à história, valores e diferenciais da empresa",
+        "f5": "Formulário de Contato",
+        "f5desc": "Sistema de contato integrado com notificação por e-mail",
+        "f6": "Integração WhatsApp",
+        "f6desc": "Botões de acesso direto para comunicação via WhatsApp Business",
+        "f7": "Redes Sociais",
+        "f7desc": "Integração com perfis do Instagram, Facebook e outras plataformas sociais",
+        "f8": "SEO Básico",
+        "f8desc": "Otimização para motores de busca (Google) e metadados estruturados",
+        "f9": "Hospedagem + Domínio",
+        "f9desc": "Publicação com domínio personalizado e hospedagem inclusa"
+      },
+      "tier2": {
+        "name": "E-commerce",
+        "description": "Venda online com gestão de pedidos e painel administrativo.",
+        "f1": "Catálogo Avançado de Produtos",
+        "f1desc": "Sistema completo com categorização, busca e filtros por tipo de produto",
+        "f2": "Sistema de Pedidos Online",
+        "f2desc": "Clientes podem fazer pedidos diretamente pelo site com formulário estruturado",
+        "f3": "Painel Administrativo",
+        "f3desc": "Interface para gestão centralizada de produtos, visualização de pedidos recebidos",
+        "f4": "Gestão de Produtos Centralizada",
+        "f4desc": "Adicionar, editar e remover produtos através do painel administrativo",
+        "f5": "Notificações de Pedidos",
+        "f5desc": "E-mails automáticos quando novos pedidos são recebidos",
+        "f6": "Página de Status de Pedidos",
+        "f6desc": "Clientes podem consultar o andamento de seus pedidos",
+        "f7": "Listagem de Pedidos",
+        "f7desc": "Visualização organizada de todos os pedidos recebidos com filtros por data e status",
+        "f8": "Controle Simples de Disponibilidade",
+        "f8desc": "Marcar produtos como disponíveis ou indisponíveis temporariamente",
+        "f9": "Relatório Básico de Pedidos",
+        "f9desc": "Visualização de pedidos por período e produtos mais solicitados"
+      },
+      "tier3": {
+        "name": "Marketplace",
+        "description": "Plataforma multi-vendedor com controle completo de operação.",
+        "f1": "Sistema Multi-vendedor",
+        "f1desc": "Arquitetura que permite cadastro e gestão de múltiplos vendedores associados",
+        "f2": "Painel Administrativo Completo",
+        "f2desc": "Interface de gestão para controle de vendedores, produtos, pedidos e métricas",
+        "f3": "Gestão Individual de Produtos",
+        "f3desc": "Cada vendedor gerencia seu próprio catálogo com autonomia controlada",
+        "f4": "Sistema de Pedidos Online",
+        "f4desc": "Fluxo completo de pedidos com confirmação, status e histórico",
+        "f5": "Controle de Estoque",
+        "f5desc": "Sistema automatizado de gestão de inventário por vendedor",
+        "f6": "Perfis de Vendedor Personalizados",
+        "f6desc": "Páginas individuais para cada produtor com branding próprio",
+        "f7": "Busca e Filtragem Avançada",
+        "f7desc": "Sistema de busca com filtros por categoria, vendedor, preço e disponibilidade",
+        "f8": "Notificações Automatizadas",
+        "f8desc": "Alertas por e-mail para vendedores e clientes sobre pedidos e atualizações",
+        "f9": "Relatórios e Analytics",
+        "f9desc": "Dashboard com métricas de vendas, produtos mais vendidos e performance por vendedor",
+        "f10": "Área do Cliente",
+        "f10desc": "Portal para clientes acompanharem pedidos, histórico e perfil",
+        "f11": "Customização de Funcionalidades",
+        "f11desc": "Desenvolvimento de features adicionais conforme necessidades específicas"
+      }
+    },
+    "cta": {
+      "title": "Pronto para colocar seu negócio online?",
+      "subtitle": "Entre em contato e receba uma proposta personalizada para o seu projeto.",
+      "button": "Falar no WhatsApp"
     }
   }
 }

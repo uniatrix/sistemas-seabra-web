@@ -23,6 +23,7 @@ const solutions = [
   { href: '/solucoes/caprinos/corte', key: 'goatBeef' },
   { href: '/solucoes/ovinos/leite', key: 'sheepDairy' },
   { href: '/solucoes/ovinos/corte', key: 'sheepBeef' },
+  { href: '/servicos', key: 'webDev' },
 ] as const;
 
 export function Header() {
@@ -129,7 +130,7 @@ export function Header() {
                 className={cn(
                   'flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full',
                   'hover:bg-gray-100 hover:text-gray-900',
-                  pathname.includes('/solucoes')
+                  pathname.includes('/solucoes') || pathname.includes('/servicos')
                     ? 'text-gray-900'
                     : 'text-gray-500'
                 )}

@@ -14,6 +14,7 @@ const solutions = [
   { href: '/solucoes/caprinos/corte', key: 'goatBeef' },
   { href: '/solucoes/ovinos/leite', key: 'sheepDairy' },
   { href: '/solucoes/ovinos/corte', key: 'sheepBeef' },
+  { href: '/servicos', key: 'webDev' },
 ];
 
 const socialLinks = [

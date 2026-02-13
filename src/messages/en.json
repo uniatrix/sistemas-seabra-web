@@ -8,7 +8,8 @@
     "solutions": "Solutions",
     "cases": "Cases",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "services": "Services"
   },
   "segments": {
     "cattleDairy": "Dairy Cattle",
@@ -16,7 +17,8 @@
     "goatDairy": "Dairy Goats",
     "goatBeef": "Meat Goats",
     "sheepDairy": "Dairy Sheep",
-    "sheepBeef": "Meat Sheep"
+    "sheepBeef": "Meat Sheep",
+    "webDev": "Web Development"
   },
   "hero": {
     "headline": "Precision livestock technology",
@@ -87,7 +89,8 @@
     "cases": "Cases",
     "blog": "Blog",
     "contact": "Contact",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "services": "Web Services"
   },
   "whatsapp": {
     "defaultMessage": "Hello! I want to know more about Seabra Solutions.",
@@ -180,6 +183,102 @@
       "successTitle": "Message sent!",
       "successMessage": "You were redirected to WhatsApp. We'll respond within 24h.",
       "sendAnother": "Send another message"
+    }
+  },
+  "servicos": {
+    "metadata": {
+      "title": "Web Development",
+      "description": "Custom landing pages, e-commerce stores and marketplaces for your business."
+    },
+    "hero": {
+      "badge": "Web Development",
+      "title": "Your business online, done right",
+      "subtitle": "We build custom landing pages, e-commerce stores and marketplaces. From design to launch, you get full support.",
+      "cta": "Request a quote",
+      "secondary": "View plans"
+    },
+    "tiers": {
+      "badge": "Our Plans",
+      "title": "Choose the right plan for your business",
+      "subtitle": "Three solution levels that grow with your needs.",
+      "popular": "Most Popular",
+      "includesPrevious": "Includes everything from {plan}",
+      "cta": "I want this plan",
+      "tier1": {
+        "name": "Landing Page",
+        "description": "Professional digital presence to showcase your company and products.",
+        "f1": "Responsive Design",
+        "f1desc": "Adaptive layout for smartphones, tablets and desktops with performance optimization",
+        "f2": "Homepage",
+        "f2desc": "Institutional presentation with standout visual elements and intuitive navigation",
+        "f3": "Product Catalog",
+        "f3desc": "Product showcase with images, detailed descriptions and categorization",
+        "f4": "Institutional Page",
+        "f4desc": "Dedicated section for company history, values and differentials",
+        "f5": "Contact Form",
+        "f5desc": "Integrated contact system with email notification",
+        "f6": "WhatsApp Integration",
+        "f6desc": "Direct access buttons for WhatsApp Business communication",
+        "f7": "Social Media",
+        "f7desc": "Integration with Instagram, Facebook and other social media profiles",
+        "f8": "Basic SEO",
+        "f8desc": "Search engine optimization (Google) and structured metadata",
+        "f9": "Hosting + Domain",
+        "f9desc": "Publishing with custom domain and hosting included"
+      },
+      "tier2": {
+        "name": "E-commerce",
+        "description": "Online sales with order management and admin panel.",
+        "f1": "Advanced Product Catalog",
+        "f1desc": "Complete system with categorization, search and filters by product type",
+        "f2": "Online Ordering System",
+        "f2desc": "Customers can place orders directly on the site with a structured form",
+        "f3": "Admin Panel",
+        "f3desc": "Interface for centralized product management and order viewing",
+        "f4": "Centralized Product Management",
+        "f4desc": "Add, edit and remove products through the admin panel",
+        "f5": "Order Notifications",
+        "f5desc": "Automatic emails when new orders are received",
+        "f6": "Order Status Page",
+        "f6desc": "Customers can check the progress of their orders",
+        "f7": "Order Listing",
+        "f7desc": "Organized view of all orders received with date and status filters",
+        "f8": "Simple Availability Control",
+        "f8desc": "Mark products as available or temporarily unavailable",
+        "f9": "Basic Order Reports",
+        "f9desc": "View orders by period and most requested products"
+      },
+      "tier3": {
+        "name": "Marketplace",
+        "description": "Multi-vendor platform with complete operational control.",
+        "f1": "Multi-vendor System",
+        "f1desc": "Architecture that allows registration and management of multiple associated vendors",
+        "f2": "Complete Admin Panel",
+        "f2desc": "Management interface for controlling vendors, products, orders and metrics",
+        "f3": "Individual Product Management",
+        "f3desc": "Each vendor manages their own catalog with controlled autonomy",
+        "f4": "Online Ordering System",
+        "f4desc": "Complete order flow with confirmation, status and history",
+        "f5": "Inventory Control",
+        "f5desc": "Automated inventory management system per vendor",
+        "f6": "Custom Vendor Profiles",
+        "f6desc": "Individual pages for each producer with their own branding",
+        "f7": "Advanced Search & Filtering",
+        "f7desc": "Search system with filters by category, vendor, price and availability",
+        "f8": "Automated Notifications",
+        "f8desc": "Email alerts for vendors and customers about orders and updates",
+        "f9": "Reports & Analytics",
+        "f9desc": "Dashboard with sales metrics, best-selling products and vendor performance",
+        "f10": "Client Area",
+        "f10desc": "Portal for customers to track orders, history and profile",
+        "f11": "Custom Features",
+        "f11desc": "Development of additional features according to specific needs"
+      }
+    },
+    "cta": {
+      "title": "Ready to take your business online?",
+      "subtitle": "Get in touch and receive a personalized proposal for your project.",
+      "button": "Talk on WhatsApp"
     }
   }
 }

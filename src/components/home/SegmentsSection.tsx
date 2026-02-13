@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { ArrowRight, Milk, Beef, Layers } from 'lucide-react';
+import { ArrowRight, Milk, Beef, Layers, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -67,6 +67,16 @@ const segments = [
     hoverBg: 'group-hover:bg-amber-500/20',
     borderAccent: 'group-hover:border-amber-500/30',
     glowColor: 'group-hover:shadow-amber-500/10',
+  },
+  {
+    key: 'webDev',
+    href: '/servicos',
+    icon: Globe,
+    iconColor: 'text-cyan-500',
+    iconBg: 'bg-cyan-500/10',
+    hoverBg: 'group-hover:bg-cyan-500/20',
+    borderAccent: 'group-hover:border-cyan-500/30',
+    glowColor: 'group-hover:shadow-cyan-500/10',
   },
 ];
 
