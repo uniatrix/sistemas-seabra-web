@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { Button } from '@/components/ui/button';
-import { Check, TrendingUp, Award } from 'lucide-react';
+import { Check, TrendingUp, Award, Code } from 'lucide-react';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import { type Locale } from '@/i18n/config';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -102,11 +102,23 @@ export function HeroSection() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-3xl font-bold text-gray-900">5+ anos</p>
-                    <p className="text-sm text-gray-500">No mercado</p>
+                    <p className="text-3xl font-bold text-gray-900">+15 anos</p>
+                    <p className="text-sm text-gray-500">No mercado de pecuária</p>
                   </div>
                   <div className="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center">
                     <Award className="h-6 w-6 text-purple-500" />
+                  </div>
+                </div>
+
+                <div className="h-px bg-gray-200" />
+
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-3xl font-bold text-gray-900">5+ anos</p>
+                    <p className="text-sm text-gray-500">Em desenvolvimento de sistemas/web</p>
+                  </div>
+                  <div className="h-12 w-12 rounded-xl bg-cyan-500/10 flex items-center justify-center">
+                    <Code className="h-6 w-6 text-cyan-500" />
                   </div>
                 </div>
               </div>
