@@ -198,7 +198,7 @@ export function Header() {
               className={cn(
                 'rounded-full px-6 font-medium transition-all duration-300',
                 'bg-primary text-white hover:bg-blue-800',
-                'shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30',
+                'shadow-sm hover:shadow-md',
                 'hover:-translate-y-0.5'
               )}
             >

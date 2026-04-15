@@ -122,11 +122,11 @@
   .btn-modern {
     @apply relative font-medium transition-all duration-200;
     @apply bg-primary text-white rounded-full;
-    @apply shadow-lg shadow-primary/20;
+    @apply shadow-sm;
   }
 
   .btn-modern:hover {
-    @apply bg-blue-600 shadow-primary/30;
+    @apply bg-blue-800 shadow-md;
     transform: translateY(-1px);
   }
 
@@ -166,23 +166,22 @@
   }
 
   .bg-gradient-radial-top {
-    background: radial-gradient(ellipse 100% 60% at 50% 0%, rgba(59, 130, 246, 0.15), transparent);
+    background: transparent;
   }
 
   .bg-grid-pattern {
     background-image:
-      linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.025) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 
   .blur-blob {
-    @apply absolute rounded-full blur-3xl pointer-events-none;
-    filter: blur(80px);
+    display: none;
   }
 
   .blur-blob-primary {
-    @apply bg-primary/20;
+    display: none;
   }
 
   .shine {

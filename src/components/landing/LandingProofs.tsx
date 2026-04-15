@@ -20,9 +20,6 @@ export function LandingProofs({ segmentSlug }: LandingProofsProps) {
 
   return (
     <section className="section-padding relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/5 blur-[100px] rounded-full pointer-events-none" />
-
       <div className="container-wide relative z-10">
         <div className="text-center space-y-6 mb-16">
           <h2 className="heading-2 text-gradient-subtle">

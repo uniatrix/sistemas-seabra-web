@@ -22,32 +22,28 @@ export function LogosSection() {
   const duplicated = [...logos, ...logos];
 
   return (
-    <section className="py-12 overflow-hidden">
+    <section className="py-16 overflow-hidden bg-gray-50 border-y border-gray-200">
       <div className="container-wide">
-        <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-10">
+        <p className="text-center text-xs text-gray-500 uppercase tracking-widest mb-10 font-medium">
           {t('title')}
         </p>
       </div>
 
-      {/* Infinite scroll container */}
       <div className="relative">
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
 
         <div className="flex w-max animate-scroll-logos">
           {duplicated.map((logo, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 mx-10 flex items-center justify-center"
-            >
-              <div className="relative h-20 w-48 opacity-80 hover:opacity-100 transition-all duration-500">
+            <div key={index} className="flex-shrink-0 mx-4">
+              <div className="relative h-24 w-56 rounded-xl bg-white border border-gray-200 shadow-sm flex items-center justify-center px-6 transition-shadow duration-300 hover:shadow-md">
                 <Image
                   src={logo.src}
                   alt={logo.name}
                   fill
                   loading="eager"
-                  className="object-contain rounded-xl"
+                  className="object-contain p-5"
                 />
               </div>
             </div>

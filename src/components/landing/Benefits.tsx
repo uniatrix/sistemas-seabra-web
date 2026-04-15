@@ -38,10 +38,7 @@ export function Benefits() {
               className={cn(
                 'group h-full border-gray-200 bg-white shadow-sm',
                 'transition-all duration-300 ease-out',
-                'hover:scale-[1.02] hover:-translate-y-1',
-                'hover:shadow-xl',
-                'hover:border-primary/30',
-                'group-hover:shadow-primary/10',
+                'hover:shadow-md hover:border-gray-300 hover:-translate-y-0.5',
                 'fade-in-up opacity-0'
               )}
               style={{ animationDelay: `${index * 0.1}s` }}
