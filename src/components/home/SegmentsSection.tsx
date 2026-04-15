@@ -13,8 +13,6 @@ const journeys = [
     key: 'smallRuminants',
     href: '/pequenos-ruminantes',
     iconSrc: '/images/icons/pequenos-ruminantes.png',
-    iconBg: 'bg-emerald-500/10',
-    hoverBg: 'group-hover:bg-emerald-500/20',
     borderAccent: 'group-hover:border-emerald-500/40',
     glowColor: 'group-hover:shadow-emerald-500/15',
   },
@@ -22,8 +20,6 @@ const journeys = [
     key: 'beefCattle',
     href: '/bovinos-corte',
     iconSrc: '/images/icons/bovinos-corte.png',
-    iconBg: 'bg-red-500/10',
-    hoverBg: 'group-hover:bg-red-500/20',
     borderAccent: 'group-hover:border-red-500/40',
     glowColor: 'group-hover:shadow-red-500/15',
   },
@@ -66,23 +62,13 @@ export function SegmentsSection() {
               >
                 <CardContent className="p-8 flex flex-col h-full min-h-[260px]">
                   <div className="mb-6">
-                    <div
-                      className={cn(
-                        'relative h-20 w-20 rounded-2xl flex items-center justify-center',
-                        'transition-all duration-300',
-                        journey.iconBg,
-                        journey.hoverBg,
-                        'group-hover:scale-110'
-                      )}
-                    >
-                      <Image
-                        src={journey.iconSrc}
-                        alt={t(`journey.${journey.key}.title`)}
-                        width={64}
-                        height={64}
-                        className="object-contain transition-transform duration-300 group-hover:scale-110"
-                      />
-                    </div>
+                    <Image
+                      src={journey.iconSrc}
+                      alt={t(`journey.${journey.key}.title`)}
+                      width={80}
+                      height={80}
+                      className="object-contain transition-transform duration-300 group-hover:scale-110"
+                    />
                   </div>
 
                   <div className="flex-1 flex flex-col">

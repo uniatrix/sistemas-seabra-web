@@ -1,7 +1,7 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
-import { ArrowRight, Sprout } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { LandingCTA } from '@/components/landing/LandingCTA';
@@ -28,11 +28,11 @@ const products = [
   { slug: 'ovinos-corte', href: '/solucoes/ovinos/corte', key: 'sheepBeef', iconSrc: '/images/icons/ovinos-corte.png', accent: 'amber' },
 ] as const;
 
-const accentMap: Record<string, { bg: string; text: string; border: string }> = {
-  emerald: { bg: 'bg-emerald-500/10', text: 'text-emerald-600', border: 'group-hover:border-emerald-500/40' },
-  orange: { bg: 'bg-orange-500/10', text: 'text-orange-600', border: 'group-hover:border-orange-500/40' },
-  purple: { bg: 'bg-purple-500/10', text: 'text-purple-600', border: 'group-hover:border-purple-500/40' },
-  amber: { bg: 'bg-amber-500/10', text: 'text-amber-600', border: 'group-hover:border-amber-500/40' },
+const accentMap: Record<string, { border: string }> = {
+  emerald: { border: 'group-hover:border-emerald-500/40' },
+  orange: { border: 'group-hover:border-orange-500/40' },
+  purple: { border: 'group-hover:border-purple-500/40' },
+  amber: { border: 'group-hover:border-amber-500/40' },
 };
 
 export default async function PequenosRuminantesHub({ params }: PageProps) {
@@ -49,7 +49,6 @@ export default async function PequenosRuminantesHub({ params }: PageProps) {
             variant="outline"
             className="px-4 py-1.5 rounded-full border-emerald-200 bg-emerald-50 text-emerald-700 font-medium"
           >
-            <Sprout className="h-3.5 w-3.5 mr-2" />
             {t('hubs.smallRuminants.badge')}
           </Badge>
           <h1 className="heading-display text-gray-900 max-w-3xl mx-auto">
@@ -76,8 +75,8 @@ export default async function PequenosRuminantesHub({ params }: PageProps) {
                 <Link key={product.slug} href={product.href} className="group">
                   <Card className={`h-full border-gray-200 bg-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${accent.border}`}>
                     <CardContent className="p-6 flex flex-col h-full min-h-[180px]">
-                      <div className={`h-16 w-16 rounded-xl ${accent.bg} flex items-center justify-center mb-4`}>
-                        <Image src={product.iconSrc} alt={t(`segments.${product.key}`)} width={48} height={48} className="object-contain" />
+                      <div className="mb-4">
+                        <Image src={product.iconSrc} alt={t(`segments.${product.key}`)} width={64} height={64} className="object-contain transition-transform duration-300 group-hover:scale-110" />
                       </div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                         {t(`segments.${product.key}`)}
