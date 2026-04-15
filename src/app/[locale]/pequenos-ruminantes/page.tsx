@@ -1,10 +1,11 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
-import { ArrowRight, Sprout, Milk, Beef } from 'lucide-react';
+import { ArrowRight, Sprout } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { LandingCTA } from '@/components/landing/LandingCTA';
 import { LogosSection } from '@/components/home/LogosSection';
+import { GoatIcon, SheepIcon } from '@/components/icons/AnimalIcons';
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -21,10 +22,10 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 const products = [
-  { slug: 'caprinos-leite', href: '/solucoes/caprinos/leite', key: 'goatDairy', icon: Milk, accent: 'emerald' },
-  { slug: 'caprinos-corte', href: '/solucoes/caprinos/corte', key: 'goatBeef', icon: Beef, accent: 'orange' },
-  { slug: 'ovinos-leite', href: '/solucoes/ovinos/leite', key: 'sheepDairy', icon: Milk, accent: 'purple' },
-  { slug: 'ovinos-corte', href: '/solucoes/ovinos/corte', key: 'sheepBeef', icon: Beef, accent: 'amber' },
+  { slug: 'caprinos-leite', href: '/solucoes/caprinos/leite', key: 'goatDairy', icon: GoatIcon, accent: 'emerald' },
+  { slug: 'caprinos-corte', href: '/solucoes/caprinos/corte', key: 'goatBeef', icon: GoatIcon, accent: 'orange' },
+  { slug: 'ovinos-leite', href: '/solucoes/ovinos/leite', key: 'sheepDairy', icon: SheepIcon, accent: 'purple' },
+  { slug: 'ovinos-corte', href: '/solucoes/ovinos/corte', key: 'sheepBeef', icon: SheepIcon, accent: 'amber' },
 ] as const;
 
 const accentMap: Record<string, { bg: string; text: string; border: string }> = {

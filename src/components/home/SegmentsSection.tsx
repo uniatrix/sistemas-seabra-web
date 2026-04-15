@@ -2,17 +2,18 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { ArrowRight, Layers, Beef, Sprout, Code2 } from 'lucide-react';
+import { ArrowRight, Layers, Code2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { SheepIcon, CowIcon } from '@/components/icons/AnimalIcons';
 
 const journeys = [
   {
     key: 'smallRuminants',
     href: '/pequenos-ruminantes',
-    icon: Sprout,
-    iconColor: 'text-emerald-500',
+    icon: SheepIcon,
+    iconColor: 'text-emerald-600',
     iconBg: 'bg-emerald-500/10',
     hoverBg: 'group-hover:bg-emerald-500/20',
     borderAccent: 'group-hover:border-emerald-500/40',
@@ -21,8 +22,8 @@ const journeys = [
   {
     key: 'beefCattle',
     href: '/bovinos-corte',
-    icon: Beef,
-    iconColor: 'text-red-500',
+    icon: CowIcon,
+    iconColor: 'text-red-600',
     iconBg: 'bg-red-500/10',
     hoverBg: 'group-hover:bg-red-500/20',
     borderAccent: 'group-hover:border-red-500/40',
