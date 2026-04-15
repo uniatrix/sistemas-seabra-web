@@ -1,19 +1,18 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { ArrowRight, Layers, Code2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { SheepIcon, CowIcon } from '@/components/icons/AnimalIcons';
 
 const journeys = [
   {
     key: 'smallRuminants',
     href: '/pequenos-ruminantes',
-    icon: SheepIcon,
-    iconColor: 'text-emerald-600',
+    iconSrc: '/images/icons/pequenos-ruminantes.png',
     iconBg: 'bg-emerald-500/10',
     hoverBg: 'group-hover:bg-emerald-500/20',
     borderAccent: 'group-hover:border-emerald-500/40',
@@ -22,8 +21,7 @@ const journeys = [
   {
     key: 'beefCattle',
     href: '/bovinos-corte',
-    icon: CowIcon,
-    iconColor: 'text-red-600',
+    iconSrc: '/images/icons/bovinos-corte.png',
     iconBg: 'bg-red-500/10',
     hoverBg: 'group-hover:bg-red-500/20',
     borderAccent: 'group-hover:border-red-500/40',
@@ -70,19 +68,19 @@ export function SegmentsSection() {
                   <div className="mb-6">
                     <div
                       className={cn(
-                        'relative h-16 w-16 rounded-2xl flex items-center justify-center',
+                        'relative h-20 w-20 rounded-2xl flex items-center justify-center',
                         'transition-all duration-300',
                         journey.iconBg,
                         journey.hoverBg,
-                        'group-hover:scale-110 group-hover:rotate-3'
+                        'group-hover:scale-110'
                       )}
                     >
-                      <journey.icon
-                        className={cn(
-                          'h-8 w-8 relative z-10 transition-transform duration-300',
-                          journey.iconColor,
-                          'group-hover:scale-110'
-                        )}
+                      <Image
+                        src={journey.iconSrc}
+                        alt={t(`journey.${journey.key}.title`)}
+                        width={64}
+                        height={64}
+                        className="object-contain transition-transform duration-300 group-hover:scale-110"
                       />
                     </div>
                   </div>

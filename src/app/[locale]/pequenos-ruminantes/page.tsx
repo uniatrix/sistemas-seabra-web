@@ -1,11 +1,11 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { ArrowRight, Sprout } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { LandingCTA } from '@/components/landing/LandingCTA';
 import { LogosSection } from '@/components/home/LogosSection';
-import { GoatIcon, SheepIcon } from '@/components/icons/AnimalIcons';
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -22,10 +22,10 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 const products = [
-  { slug: 'caprinos-leite', href: '/solucoes/caprinos/leite', key: 'goatDairy', icon: GoatIcon, accent: 'emerald' },
-  { slug: 'caprinos-corte', href: '/solucoes/caprinos/corte', key: 'goatBeef', icon: GoatIcon, accent: 'orange' },
-  { slug: 'ovinos-leite', href: '/solucoes/ovinos/leite', key: 'sheepDairy', icon: SheepIcon, accent: 'purple' },
-  { slug: 'ovinos-corte', href: '/solucoes/ovinos/corte', key: 'sheepBeef', icon: SheepIcon, accent: 'amber' },
+  { slug: 'caprinos-leite', href: '/solucoes/caprinos/leite', key: 'goatDairy', iconSrc: '/images/icons/caprinos-leite.png', accent: 'emerald' },
+  { slug: 'caprinos-corte', href: '/solucoes/caprinos/corte', key: 'goatBeef', iconSrc: '/images/icons/caprinos-corte.png', accent: 'orange' },
+  { slug: 'ovinos-leite', href: '/solucoes/ovinos/leite', key: 'sheepDairy', iconSrc: '/images/icons/ovinos-leite.png', accent: 'purple' },
+  { slug: 'ovinos-corte', href: '/solucoes/ovinos/corte', key: 'sheepBeef', iconSrc: '/images/icons/ovinos-corte.png', accent: 'amber' },
 ] as const;
 
 const accentMap: Record<string, { bg: string; text: string; border: string }> = {
@@ -72,13 +72,12 @@ export default async function PequenosRuminantesHub({ params }: PageProps) {
           <div className="grid gap-6 sm:grid-cols-2 max-w-4xl mx-auto">
             {products.map((product) => {
               const accent = accentMap[product.accent];
-              const Icon = product.icon;
               return (
                 <Link key={product.slug} href={product.href} className="group">
                   <Card className={`h-full border-gray-200 bg-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${accent.border}`}>
                     <CardContent className="p-6 flex flex-col h-full min-h-[180px]">
-                      <div className={`h-12 w-12 rounded-xl ${accent.bg} flex items-center justify-center mb-4`}>
-                        <Icon className={`h-6 w-6 ${accent.text}`} />
+                      <div className={`h-16 w-16 rounded-xl ${accent.bg} flex items-center justify-center mb-4`}>
+                        <Image src={product.iconSrc} alt={t(`segments.${product.key}`)} width={48} height={48} className="object-contain" />
                       </div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                         {t(`segments.${product.key}`)}
