@@ -17,7 +17,7 @@ export function Benefits() {
   ];
 
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section className="section-padding relative overflow-hidden bg-gray-50 border-y border-gray-200">
 
       <div className="container-tight relative">
         <div className="text-center space-y-4 mb-16">

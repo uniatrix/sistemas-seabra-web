@@ -27,7 +27,7 @@ export function ProofsSection() {
   });
 
   return (
-    <section className="section-padding" id="demo" ref={ref}>
+    <section className="section-padding bg-gray-50 border-y border-gray-200" id="demo" ref={ref}>
       <div className="container-wide">
         <div className={`text-center space-y-4 mb-12 scroll-fade-up ${isVisible ? 'visible' : ''}`}>
           <h2 className="heading-2 text-gray-900">{t('title')}</h2>

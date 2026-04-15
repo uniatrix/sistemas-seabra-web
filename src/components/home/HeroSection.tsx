@@ -31,7 +31,7 @@ export function HeroSection() {
   const bullets = [t('bullet1'), t('bullet2'), t('bullet3')];
 
   return (
-    <section className="pt-28 pb-16 md:pt-32 md:pb-20" ref={ref}>
+    <section className="pt-28 pb-16 md:pt-32 md:pb-20 bg-gradient-to-b from-white via-white to-gray-50" ref={ref}>
       <div className="container-wide">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Text Content */}

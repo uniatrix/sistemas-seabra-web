@@ -19,7 +19,7 @@ export function LandingProofs({ segmentSlug }: LandingProofsProps) {
   const t = useTranslations('proofs');
 
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section className="section-padding relative overflow-hidden bg-gray-50 border-y border-gray-200">
       <div className="container-wide relative z-10">
         <div className="text-center space-y-6 mb-16">
           <h2 className="heading-2 text-gradient-subtle">

@@ -15,7 +15,7 @@ export function AboutSection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="section-padding relative overflow-hidden" id="about" ref={ref}>
+    <section className="section-padding relative overflow-hidden bg-gray-50 border-y border-gray-200" id="about" ref={ref}>
       <div className="container-wide relative">
         <div className={`scroll-fade-up ${isVisible ? 'visible' : ''}`}>
           {/* Badge */}
