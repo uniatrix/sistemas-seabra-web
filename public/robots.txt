@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /docs-seabra/
+Disallow: /apresentacao
+Disallow: /apresentacao-es
+Disallow: /apresentacao-en
+Disallow: /planos
+Disallow: /planos-es
+Disallow: /planos-en
