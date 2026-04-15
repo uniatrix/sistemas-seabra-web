@@ -67,10 +67,6 @@ export function LandingHero({ segmentKey, segmentSlug }: LandingHeroProps) {
           </Button>
         </div>
 
-        {/* Trust text */}
-        <p className="text-sm text-gray-400">
-          +150 produtores confiam na Seabra Solutions
-        </p>
       </div>
     </section>
   );
