@@ -10,7 +10,9 @@
     "blog": "Blog",
     "contact": "Contact",
     "services": "Services",
-    "access": "Access system — Small Ruminants"
+    "access": "Access system — Small Ruminants",
+    "accessShort": "Access system",
+    "accessCaption": "Small Ruminants system"
   },
   "segments": {
     "cattleDairy": "Dairy Cattle",

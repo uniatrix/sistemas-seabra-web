@@ -13,6 +13,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { cn } from '@/lib/utils';
 
@@ -243,7 +244,7 @@ export function Header() {
                 </div>
 
                 {/* Mobile Nav */}
-                <div className="flex-1 overflow-y-auto p-6 space-y-6">
+                <div className="flex-1 overflow-y-auto p-6 space-y-2">
                   {navItems.slice(0, 1).map((item) => (
                     <SheetClose asChild key={item.href}>
                       <Link
@@ -252,37 +253,45 @@ export function Header() {
                           setIsOpen(false);
                           handleHashClick(e, item.href);
                         } : undefined}
-                        className="block text-lg font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                        className="block py-3 text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors"
                       >
                         {item.label}
                       </Link>
                     </SheetClose>
                   ))}
 
-                  {/* Solutions in Mobile */}
-                  <div className="space-y-3">
-                    <span className="text-sm font-medium text-gray-400 uppercase tracking-wider">
-                      {t('header.solutions')}
-                    </span>
-                    <div className="space-y-1">
-                      {solutions.map((solution) => (
-                        <SheetClose asChild key={solution.href}>
-                          <Link
-                            href={solution.href}
-                            className="block py-2 px-3 text-base text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-all"
-                          >
-                            {t(`segments.${solution.key}`)}
-                          </Link>
-                        </SheetClose>
-                      ))}
-                    </div>
-                  </div>
+                  <div className="h-px bg-gray-100" />
+
+                  {/* Solutions accordion (collapsed by default) */}
+                  <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="solutions" className="border-b-0">
+                      <AccordionTrigger className="py-3 text-lg font-medium text-gray-700 hover:no-underline hover:text-gray-900">
+                        {t('header.solutions')}
+                      </AccordionTrigger>
+                      <AccordionContent className="pl-2 pb-2">
+                        <div className="space-y-1">
+                          {solutions.map((solution) => (
+                            <SheetClose asChild key={solution.href}>
+                              <Link
+                                href={solution.href}
+                                className="block py-2.5 px-3 text-base text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all"
+                              >
+                                {t(`segments.${solution.key}`)}
+                              </Link>
+                            </SheetClose>
+                          ))}
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+
+                  <div className="h-px bg-gray-100" />
 
                   {navItems.slice(1).map((item) => (
                     <SheetClose asChild key={item.href}>
                       <Link
                         href={item.href}
-                        className="block text-lg font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                        className="block py-3 text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -291,28 +300,35 @@ export function Header() {
                 </div>
 
                 {/* Mobile CTA */}
-                <div className="p-6 border-t border-gray-200 space-y-3">
-                  <a
-                    href={APP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <Button
-                      variant="outline"
-                      className="w-full rounded-full border-gray-300 text-gray-700 font-medium gap-2"
-                    >
-                      <LogIn className="h-4 w-4" />
-                      {t('header.access')}
-                    </Button>
-                  </a>
+                <div className="p-6 border-t border-gray-200 space-y-4">
                   <SheetClose asChild>
                     <Link href="/contato">
-                      <Button className="w-full rounded-full bg-primary text-white hover:bg-blue-600 font-medium">
+                      <Button className="w-full h-12 rounded-full bg-primary text-white hover:bg-blue-600 font-medium">
                         {t('header.contact')}
                       </Button>
                     </Link>
                   </SheetClose>
+
+                  <div className="space-y-1.5">
+                    <a
+                      href={APP_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsOpen(false)}
+                      className="block"
+                    >
+                      <Button
+                        variant="outline"
+                        className="w-full h-12 rounded-full border-gray-300 text-gray-700 font-medium gap-2.5"
+                      >
+                        <LogIn className="h-4 w-4" />
+                        {t('header.accessShort')}
+                      </Button>
+                    </a>
+                    <p className="text-xs text-gray-500 text-center">
+                      {t('header.accessCaption')}
+                    </p>
+                  </div>
                 </div>
               </div>
             </SheetContent>

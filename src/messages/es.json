@@ -10,7 +10,9 @@
     "blog": "Blog",
     "contact": "Contacto",
     "services": "Servicios",
-    "access": "Acceder al sistema — Pequeños Rumiantes"
+    "access": "Acceder al sistema — Pequeños Rumiantes",
+    "accessShort": "Acceder al sistema",
+    "accessCaption": "Sistema de Pequeños Rumiantes"
   },
   "segments": {
     "cattleDairy": "Bovinos de Leche",
