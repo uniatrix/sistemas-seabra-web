@@ -73,7 +73,7 @@ export function HeroSection() {
               <div className="glass-card p-8 space-y-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-3xl font-bold text-gray-900">+30%</p>
+                    <p className="text-3xl font-semibold text-gray-900">+30%</p>
                     <p className="text-sm text-gray-500">Produtividade média</p>
                   </div>
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -85,7 +85,7 @@ export function HeroSection() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-3xl font-bold text-gray-900">100%</p>
+                    <p className="text-3xl font-semibold text-gray-900">100%</p>
                     <p className="text-sm text-gray-500">Funciona offline</p>
                   </div>
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -97,7 +97,7 @@ export function HeroSection() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-3xl font-bold text-gray-900">&gt;15 anos</p>
+                    <p className="text-3xl font-semibold text-gray-900">&gt;15 anos</p>
                     <p className="text-sm text-gray-500">No mercado de pecuária</p>
                   </div>
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -109,7 +109,7 @@ export function HeroSection() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-3xl font-bold text-gray-900">&gt;5 anos</p>
+                    <p className="text-3xl font-semibold text-gray-900">&gt;5 anos</p>
                     <p className="text-sm text-gray-500">Em desenvolvimento de sistemas/web</p>
                   </div>
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">

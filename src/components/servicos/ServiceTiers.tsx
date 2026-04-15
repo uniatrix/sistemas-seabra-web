@@ -183,7 +183,7 @@ export function ServiceTiers() {
                     <Icon className={cn('h-7 w-7', colors.iconText)} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">
+                    <h3 className="text-xl font-semibold text-gray-900">
                       {t(`${tier.key}.name`)}
                     </h3>
                     <p className="text-sm text-gray-500 mt-1">

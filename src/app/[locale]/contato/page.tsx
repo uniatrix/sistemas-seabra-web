@@ -34,7 +34,7 @@ export default async function ContatoPage({ params }: PageProps) {
       <div className="container-tight">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-gray-900">
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl text-gray-900">
             {t('title')}
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">

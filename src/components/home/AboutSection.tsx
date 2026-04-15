@@ -57,7 +57,7 @@ export function AboutSection() {
                     <item.icon className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-gray-900 leading-tight">{item.value}</p>
+                    <p className="text-lg font-semibold text-gray-900 leading-tight">{item.value}</p>
                     <p className="text-[11px] text-gray-500">{t(item.labelKey)}</p>
                   </div>
                 </div>
