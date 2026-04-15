@@ -97,7 +97,7 @@ export function HeroSection() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-3xl font-bold text-gray-900">+15 anos</p>
+                    <p className="text-3xl font-bold text-gray-900">&gt;15 anos</p>
                     <p className="text-sm text-gray-500">No mercado de pecuária</p>
                   </div>
                   <div className="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center">
@@ -109,7 +109,7 @@ export function HeroSection() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-3xl font-bold text-gray-900">5+ anos</p>
+                    <p className="text-3xl font-bold text-gray-900">&gt;5 anos</p>
                     <p className="text-sm text-gray-500">Em desenvolvimento de sistemas/web</p>
                   </div>
                   <div className="h-12 w-12 rounded-xl bg-cyan-500/10 flex items-center justify-center">

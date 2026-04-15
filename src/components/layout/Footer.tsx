@@ -113,14 +113,6 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/cases"
-                    className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
-                  >
-                    {t('footer.cases')}
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     href="/blog"
                     className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
                   >
