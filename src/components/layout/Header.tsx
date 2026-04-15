@@ -309,26 +309,24 @@ export function Header() {
                     </Link>
                   </SheetClose>
 
-                  <div className="space-y-1.5">
-                    <a
-                      href={APP_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => setIsOpen(false)}
-                      className="block"
+                  <a
+                    href={APP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                    className="block"
+                  >
+                    <Button
+                      variant="outline"
+                      className="w-full h-auto py-3 rounded-2xl border-gray-300 text-gray-700 font-medium gap-3 flex-row"
                     >
-                      <Button
-                        variant="outline"
-                        className="w-full h-12 rounded-full border-gray-300 text-gray-700 font-medium gap-2.5"
-                      >
-                        <LogIn className="h-4 w-4" />
-                        {t('header.accessShort')}
-                      </Button>
-                    </a>
-                    <p className="text-xs text-gray-500 text-center">
-                      {t('header.accessCaption')}
-                    </p>
-                  </div>
+                      <LogIn className="h-5 w-5 shrink-0" />
+                      <span className="flex flex-col items-start leading-tight">
+                        <span className="text-sm font-semibold">{t('header.accessShort')}</span>
+                        <span className="text-xs font-normal text-gray-500">{t('header.accessCaption')}</span>
+                      </span>
+                    </Button>
+                  </a>
                 </div>
               </div>
             </SheetContent>
