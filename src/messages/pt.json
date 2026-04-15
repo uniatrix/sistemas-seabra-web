@@ -9,7 +9,8 @@
     "cases": "Cases",
     "blog": "Blog",
     "contact": "Contato",
-    "services": "Serviços"
+    "services": "Serviços",
+    "access": "Acessar sistema"
   },
   "segments": {
     "cattleDairy": "Bovinos Leiteiros",
@@ -18,7 +19,45 @@
     "goatBeef": "Caprinos de Corte",
     "sheepDairy": "Ovinos Leiteiros",
     "sheepBeef": "Ovinos de Corte",
-    "webDev": "Desenvolvimento Web"
+    "webDev": "Desenvolvimento Web",
+    "smallRuminantsHub": "Pequenos Ruminantes",
+    "beefCattleHub": "Bovinos de Corte"
+  },
+  "journey": {
+    "badge": "Escolha sua jornada",
+    "title": "Para quem é a Seabra Solutions",
+    "subtitle": "Cada produção exige um sistema diferente. Escolha o ambiente que combina com a sua operação.",
+    "smallRuminants": {
+      "title": "Pequenos Ruminantes",
+      "subtitle": "Sistemas para caprinos e ovinos, leite ou corte. Manejo, reprodução e indicadores de produtividade.",
+      "cta": "Ver soluções"
+    },
+    "beefCattle": {
+      "title": "Bovinos de Corte",
+      "subtitle": "Gestão completa do rebanho de corte: pesagens, lotes, ganho médio diário e custo por arroba.",
+      "cta": "Ver solução"
+    },
+    "webDev": {
+      "title": "Desenvolvimento de sites e sistemas sob medida",
+      "subtitle": "Landing pages, e-commerces e sistemas customizados para o seu negócio fora da pecuária.",
+      "cta": "Conhecer planos"
+    }
+  },
+  "hubs": {
+    "viewSolution": "Ver solução",
+    "smallRuminants": {
+      "metaTitle": "Pequenos Ruminantes — Caprinos e Ovinos",
+      "metaDescription": "Sistemas de gestão para caprinos e ovinos, leite ou corte. Manejo, reprodução e indicadores adaptados à sua produção.",
+      "badge": "Pequenos Ruminantes",
+      "title": "Sistemas feitos para quem cria caprinos e ovinos",
+      "subtitle": "Cada produção tem suas particularidades. Escolha o sistema que conversa com o seu manejo.",
+      "productsTitle": "Nossos sistemas para pequenos ruminantes",
+      "productsSubtitle": "Soluções específicas por espécie e finalidade — leite ou corte."
+    },
+    "beefCattle": {
+      "metaTitle": "Bovinos de Corte — Sistema de Gestão de Rebanho",
+      "metaDescription": "Sistema completo para bovinocultura de corte: pesagens, ganho médio diário, lotes, custo por arroba e indicadores de produtividade."
+    }
   },
   "hero": {
     "headline": "Tecnologia para pecuária de precisão",
@@ -26,7 +65,8 @@
     "bullet1": "Funciona offline e online",
     "bullet2": "Personalizado para sua operação",
     "bullet3": "Evolução contínua com seu negócio",
-    "cta": "Falar no WhatsApp"
+    "cta": "Falar no WhatsApp",
+    "responseTime": "Resposta direta com Felipe (médico veterinário e desenvolvedor)"
   },
   "logos": {
     "title": "Empresas que confiam na Seabra Solutions"
@@ -73,8 +113,13 @@
     "subtitle": "Produtores reais compartilham como a tecnologia transformou a gestão dos seus rebanhos."
   },
   "proofs": {
-    "title": "Veja na prática",
-    "subtitle": "Prints e vídeos reais do sistema em funcionamento."
+    "title": "Veja o sistema na prática",
+    "subtitle": "Sistema em uso por produtores reais, com manejo, indicadores e relatórios.",
+    "imageAlt": "Sistema Seabra Solutions",
+    "ctaTitle": "Quer uma demonstração ao vivo?",
+    "ctaMessage": "Em poucos minutos pelo WhatsApp eu te mostro o sistema funcionando e respondo qualquer dúvida sobre como ele se aplica à sua operação.",
+    "ctaButton": "Quero ver uma demonstração",
+    "ctaNote": "Atendimento direto com Felipe — médico veterinário e desenvolvedor"
   },
   "ctaSection": {
     "title": "Pronto para transformar sua gestão?",

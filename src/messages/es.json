@@ -9,7 +9,8 @@
     "cases": "Cases",
     "blog": "Blog",
     "contact": "Contacto",
-    "services": "Servicios"
+    "services": "Servicios",
+    "access": "Acceder al sistema"
   },
   "segments": {
     "cattleDairy": "Bovinos de Leche",
@@ -18,7 +19,45 @@
     "goatBeef": "Caprinos de Carne",
     "sheepDairy": "Ovinos Lecheros",
     "sheepBeef": "Ovinos de Carne",
-    "webDev": "Desarrollo Web"
+    "webDev": "Desarrollo Web",
+    "smallRuminantsHub": "Pequeños Rumiantes",
+    "beefCattleHub": "Bovinos de Carne"
+  },
+  "journey": {
+    "badge": "Elige tu camino",
+    "title": "Para quién es Seabra Solutions",
+    "subtitle": "Cada producción exige un sistema diferente. Elige el ambiente que combina con tu operación.",
+    "smallRuminants": {
+      "title": "Pequeños Rumiantes",
+      "subtitle": "Sistemas para caprinos y ovinos, de leche o carne. Manejo, reproducción e indicadores.",
+      "cta": "Ver soluciones"
+    },
+    "beefCattle": {
+      "title": "Bovinos de Carne",
+      "subtitle": "Gestión completa: pesajes, lotes, ganancia diaria y costo por arroba.",
+      "cta": "Ver solución"
+    },
+    "webDev": {
+      "title": "Desarrollo de sitios y sistemas a medida",
+      "subtitle": "Landing pages, e-commerces y sistemas personalizados fuera del sector ganadero.",
+      "cta": "Conocer planes"
+    }
+  },
+  "hubs": {
+    "viewSolution": "Ver solución",
+    "smallRuminants": {
+      "metaTitle": "Pequeños Rumiantes — Caprinos y Ovinos",
+      "metaDescription": "Sistemas de gestión para caprinos y ovinos, de leche o carne. Manejo, reproducción e indicadores adaptados a tu producción.",
+      "badge": "Pequeños Rumiantes",
+      "title": "Sistemas hechos para quien cría caprinos y ovinos",
+      "subtitle": "Cada producción tiene sus particularidades. Elige el sistema que dialoga con tu manejo.",
+      "productsTitle": "Nuestros sistemas para pequeños rumiantes",
+      "productsSubtitle": "Soluciones específicas por especie y finalidad — leche o carne."
+    },
+    "beefCattle": {
+      "metaTitle": "Bovinos de Carne — Sistema de Gestión de Rebaño",
+      "metaDescription": "Sistema completo para bovinos de carne: pesajes, ganancia media diaria, lotes, costo por arroba e indicadores."
+    }
   },
   "hero": {
     "headline": "Tecnología para ganadería de precisión",
@@ -26,7 +65,8 @@
     "bullet1": "Funciona offline y online",
     "bullet2": "Personalizado para tu operación",
     "bullet3": "Evolución continua con tu negocio",
-    "cta": "Hablar por WhatsApp"
+    "cta": "Hablar por WhatsApp",
+    "responseTime": "Respuesta directa con Felipe (médico veterinario y desarrollador)"
   },
   "logos": {
     "title": "Empresas que confían en Seabra Solutions"
@@ -73,8 +113,13 @@
     "subtitle": "Productores reales comparten cómo la tecnología transformó la gestión de sus rebaños."
   },
   "proofs": {
-    "title": "Mira en la práctica",
-    "subtitle": "Capturas y videos reales del sistema en funcionamiento."
+    "title": "Mira el sistema en la práctica",
+    "subtitle": "Sistema usado por productores reales, con manejo, indicadores e informes.",
+    "imageAlt": "Sistema Seabra Solutions",
+    "ctaTitle": "¿Quieres una demostración en vivo?",
+    "ctaMessage": "En pocos minutos por WhatsApp te muestro el sistema funcionando y respondo cualquier duda sobre cómo se aplica a tu operación.",
+    "ctaButton": "Quiero ver una demostración",
+    "ctaNote": "Atención directa con Felipe — médico veterinario y desarrollador"
   },
   "ctaSection": {
     "title": "¿Listo para transformar tu gestión?",

@@ -9,7 +9,8 @@
     "cases": "Cases",
     "blog": "Blog",
     "contact": "Contact",
-    "services": "Services"
+    "services": "Services",
+    "access": "Access system"
   },
   "segments": {
     "cattleDairy": "Dairy Cattle",
@@ -18,7 +19,45 @@
     "goatBeef": "Meat Goats",
     "sheepDairy": "Dairy Sheep",
     "sheepBeef": "Meat Sheep",
-    "webDev": "Web Development"
+    "webDev": "Web Development",
+    "smallRuminantsHub": "Small Ruminants",
+    "beefCattleHub": "Beef Cattle"
+  },
+  "journey": {
+    "badge": "Choose your path",
+    "title": "Who Seabra Solutions is for",
+    "subtitle": "Each operation needs a different system. Pick the environment that fits yours.",
+    "smallRuminants": {
+      "title": "Small Ruminants",
+      "subtitle": "Systems for goats and sheep, dairy or meat. Handling, reproduction and productivity insights.",
+      "cta": "See solutions"
+    },
+    "beefCattle": {
+      "title": "Beef Cattle",
+      "subtitle": "End-to-end herd management: weighings, lots, average daily gain and cost per arroba.",
+      "cta": "See solution"
+    },
+    "webDev": {
+      "title": "Custom websites and software",
+      "subtitle": "Landing pages, e-commerces and tailored systems for businesses outside livestock.",
+      "cta": "View plans"
+    }
+  },
+  "hubs": {
+    "viewSolution": "See solution",
+    "smallRuminants": {
+      "metaTitle": "Small Ruminants — Goats and Sheep",
+      "metaDescription": "Management systems for goats and sheep, dairy or meat. Handling, reproduction and indicators tailored to your operation.",
+      "badge": "Small Ruminants",
+      "title": "Systems made for goat and sheep producers",
+      "subtitle": "Each operation has its quirks. Pick the system that talks to your handling.",
+      "productsTitle": "Our small ruminant systems",
+      "productsSubtitle": "Specific solutions per species and purpose — dairy or meat."
+    },
+    "beefCattle": {
+      "metaTitle": "Beef Cattle — Herd Management System",
+      "metaDescription": "Complete system for beef cattle: weighings, average daily gain, lots, cost per arroba and productivity indicators."
+    }
   },
   "hero": {
     "headline": "Precision livestock technology",
@@ -26,7 +65,8 @@
     "bullet1": "Works offline and online",
     "bullet2": "Customized for your operation",
     "bullet3": "Continuous evolution with your business",
-    "cta": "Talk on WhatsApp"
+    "cta": "Talk on WhatsApp",
+    "responseTime": "Direct reply from Felipe (vet & developer)"
   },
   "logos": {
     "title": "Companies that trust Seabra Solutions"
@@ -73,8 +113,13 @@
     "subtitle": "Real producers share how technology transformed their herd management."
   },
   "proofs": {
-    "title": "See it in practice",
-    "subtitle": "Real screenshots and videos of the system in action."
+    "title": "See the system in action",
+    "subtitle": "Used by real producers — handling, indicators and reports.",
+    "imageAlt": "Seabra Solutions system",
+    "ctaTitle": "Want a live demo?",
+    "ctaMessage": "In a few minutes on WhatsApp I'll show you the system in action and answer any questions about how it fits your operation.",
+    "ctaButton": "I want a demo",
+    "ctaNote": "Direct support with Felipe — vet and developer"
   },
   "ctaSection": {
     "title": "Ready to transform your management?",

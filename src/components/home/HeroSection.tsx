@@ -55,24 +55,19 @@ export function HeroSection() {
               ))}
             </ul>
 
-            <div className="flex flex-col sm:flex-row gap-3 pt-4">
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <Button className="rounded-full px-8 h-12 text-sm gap-2 w-full sm:w-auto bg-[#25D366] text-white hover:bg-[#20BD5A] shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:shadow-[#25D366]/40 transition-all duration-300 hover:-translate-y-0.5">
-                  <WhatsAppIcon className="h-4 w-4" />
+            <div className="pt-4">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block w-full sm:w-auto">
+                <Button className="rounded-full px-8 h-14 text-base gap-2 w-full sm:w-auto bg-[#25D366] text-white hover:bg-[#20BD5A] shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:shadow-[#25D366]/40 transition-all duration-300 hover:-translate-y-0.5">
+                  <WhatsAppIcon className="h-5 w-5" />
                   {t('cta')}
                 </Button>
               </a>
-              <Button
-                className="btn-ghost px-6 h-12 text-sm w-full sm:w-auto"
-                onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Ver demonstração
-              </Button>
+              <p className="text-xs text-gray-500 mt-3">{t('responseTime')}</p>
             </div>
           </div>
 
-          {/* Stats Cards */}
-          <div className={`relative flex justify-center lg:justify-end scroll-fade-up scroll-fade-up-delay-2 ${isVisible ? 'visible' : ''}`}>
+          {/* Stats Cards (esconde no celular para acelerar above-the-fold) */}
+          <div className={`relative hidden lg:flex justify-center lg:justify-end scroll-fade-up scroll-fade-up-delay-2 ${isVisible ? 'visible' : ''}`}>
             <div className="relative w-full max-w-md">
               {/* Main card */}
               <div className="glass-card p-8 space-y-6">

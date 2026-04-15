@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/routing';
-import { Menu, ChevronDown } from 'lucide-react';
+import { Menu, ChevronDown, LogIn } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import {
@@ -16,15 +16,18 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/s
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { cn } from '@/lib/utils';
 
+// Bovinos leiteiros (cattleDairy) está temporariamente oculto até o sistema ficar pronto.
 const solutions = [
-  { href: '/solucoes/bovinos/leite', key: 'cattleDairy' },
-  { href: '/solucoes/bovinos/corte', key: 'cattleBeef' },
+  { href: '/pequenos-ruminantes', key: 'smallRuminantsHub', isHub: true },
+  { href: '/bovinos-corte', key: 'beefCattleHub', isHub: true },
   { href: '/solucoes/caprinos/leite', key: 'goatDairy' },
   { href: '/solucoes/caprinos/corte', key: 'goatBeef' },
   { href: '/solucoes/ovinos/leite', key: 'sheepDairy' },
   { href: '/solucoes/ovinos/corte', key: 'sheepBeef' },
   { href: '/servicos', key: 'webDev' },
 ] as const;
+
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://pr.sistemaseabra.com.br/';
 
 export function Header() {
   const t = useTranslations();
@@ -175,6 +178,20 @@ export function Header() {
           {/* Language Switcher */}
           <LanguageSwitcher />
 
+          {/* Access System Button */}
+          <a href={APP_URL} target="_blank" rel="noopener noreferrer" className="ml-2">
+            <Button
+              variant="outline"
+              className={cn(
+                'rounded-full px-5 font-medium transition-all duration-300 gap-2',
+                'border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+              )}
+            >
+              <LogIn className="h-4 w-4" />
+              {t('header.access')}
+            </Button>
+          </a>
+
           {/* Contact Button */}
           <Link href="/contato" className="ml-2">
             <Button
@@ -275,7 +292,21 @@ export function Header() {
                 </div>
 
                 {/* Mobile CTA */}
-                <div className="p-6 border-t border-gray-200">
+                <div className="p-6 border-t border-gray-200 space-y-3">
+                  <a
+                    href={APP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <Button
+                      variant="outline"
+                      className="w-full rounded-full border-gray-300 text-gray-700 font-medium gap-2"
+                    >
+                      <LogIn className="h-4 w-4" />
+                      {t('header.access')}
+                    </Button>
+                  </a>
                   <SheetClose asChild>
                     <Link href="/contato">
                       <Button className="w-full rounded-full bg-primary text-white hover:bg-blue-600 font-medium">

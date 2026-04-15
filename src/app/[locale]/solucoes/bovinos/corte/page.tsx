@@ -1,43 +1,12 @@
-import { setRequestLocale } from 'next-intl/server';
-import { getTranslations } from 'next-intl/server';
-import { LandingHero } from '@/components/landing/LandingHero';
-import { PainPoints } from '@/components/landing/PainPoints';
-import { Benefits } from '@/components/landing/Benefits';
-import { Modules } from '@/components/landing/Modules';
-import { LandingProofs } from '@/components/landing/LandingProofs';
-import { FAQ } from '@/components/landing/FAQ';
-import { LandingCTA } from '@/components/landing/LandingCTA';
+import { redirect } from 'next/navigation';
 
-const SEGMENT_KEY = 'cattleBeef';
-const SEGMENT_SLUG = 'bovinos-corte';
-
+// URL canônica do hub de bovinos de corte é /bovinos-corte.
+// Esta rota fica como fallback para links antigos.
 interface PageProps {
   params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({ params }: PageProps) {
+export default async function BovinosCorteRedirect({ params }: PageProps) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'segments' });
-
-  return {
-    title: `${t(SEGMENT_KEY)} | Seabra Solutions`,
-    description: `Sistema completo para gestão de ${t(SEGMENT_KEY).toLowerCase()}. Controle de produção, manejo reprodutivo e muito mais.`,
-  };
-}
-
-export default async function BovinosCortePage({ params }: PageProps) {
-  const { locale } = await params;
-  setRequestLocale(locale);
-
-  return (
-    <>
-      <LandingHero segmentKey={SEGMENT_KEY} segmentSlug={SEGMENT_SLUG} />
-      <PainPoints />
-      <Benefits />
-      <Modules />
-      <LandingProofs segmentSlug={SEGMENT_SLUG} />
-      <FAQ />
-      <LandingCTA segmentSlug={SEGMENT_SLUG} />
-    </>
-  );
+  redirect(`/${locale}/bovinos-corte`);
 }
