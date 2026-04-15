@@ -9,7 +9,6 @@ const logos = [
   { name: 'Capril Conquista', src: '/images/logos/capril-conquista.png' },
   { name: 'Capril do Chaparral', src: '/images/logos/capril-chaparral.png' },
   { name: 'Capril Cerro Alto', src: '/images/logos/capril-cerro-alto.png' },
-  { name: 'Caprigen', src: '/images/logos/caprigen.png' },
   { name: '3 Irmãos', src: '/images/logos/3-irmaos.png' },
   { name: 'Lá do Alto', src: '/images/logos/la-do-alto.png' },
   { name: 'Bonito', src: '/images/logos/bonito.png' },
