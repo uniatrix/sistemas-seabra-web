@@ -18,8 +18,8 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 import { cn } from '@/lib/utils';
 
 // Bovinos leiteiros (cattleDairy) está temporariamente oculto até o sistema ficar pronto.
+// "Pequenos Ruminantes" hub não entra no dropdown porque os 4 segmentos caprinos/ovinos já cobrem.
 const solutions = [
-  { href: '/pequenos-ruminantes', key: 'smallRuminantsHub', isHub: true },
   { href: '/bovinos-corte', key: 'beefCattleHub', isHub: true },
   { href: '/solucoes/caprinos/leite', key: 'goatDairy' },
   { href: '/solucoes/caprinos/corte', key: 'goatBeef' },
