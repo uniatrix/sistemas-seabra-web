@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <meta name="googlebot" content="noindex,nofollow">
+    <title>Seabra Small Ruminants — System Presentation</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 0 20mm 20mm 20mm;
+            background: #fff;
+            position: relative;
+        }
+
+        body::before {
+            content: "Seabra Small Ruminants";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 90px;
+            color: #1e40af;
+            opacity: 0.025;
+            font-weight: 900;
+            pointer-events: none;
+            z-index: -1;
+            white-space: nowrap;
+        }
+
+        /* LANG SWITCHER */
+        .lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            display: flex;
+            gap: 6px;
+            z-index: 10;
+        }
+        .lang-switcher .lang-btn {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.35);
+            transition: background 0.2s;
+            letter-spacing: 0.5px;
+        }
+        .lang-switcher .lang-btn:hover { background: rgba(255,255,255,0.3); }
+        .lang-switcher .lang-btn.active {
+            background: white;
+            color: #1e40af;
+            border-color: white;
+        }
+
+        .hero {
+            min-height: 260mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40mm 10mm;
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 60%, #3b82f6 100%);
+            color: white;
+            margin: 0 -20mm;
+            page-break-after: always;
+            position: relative;
+        }
+        .hero img.logo { height: 90px; margin-bottom: 30px; filter: brightness(0) invert(1); }
+        .hero .brand { font-size: 36px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+        .hero .sub-brand { font-size: 16px; font-weight: 400; opacity: 0.85; margin-bottom: 50px; letter-spacing: 2px; text-transform: uppercase; }
+        .hero .promise { font-size: 32px; font-weight: 700; line-height: 1.3; max-width: 600px; margin-bottom: 20px; }
+        .hero .tagline { font-size: 18px; opacity: 0.9; max-width: 520px; margin-bottom: 40px; }
+        .hero .badge-audience {
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+
+        section { page-break-inside: avoid; margin: 40px 0; }
+
+        h2 {
+            color: #1e40af;
+            font-size: 24px;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #2563eb;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        h3 { color: #1e40af; font-size: 18px; margin: 20px 0 10px 0; }
+        h4 { color: #1e40af; font-size: 15px; margin-bottom: 8px; }
+        p { margin-bottom: 14px; }
+        ul { margin-left: 22px; margin-bottom: 14px; }
+        li { margin-bottom: 8px; }
+        .page-break { page-break-before: always; }
+
+        .problem-section {
+            background: #fef2f2;
+            border-left: 5px solid #dc2626;
+            padding: 25px 30px;
+            border-radius: 0 10px 10px 0;
+            margin: 30px 0;
+        }
+        .problem-section h2 { color: #991b1b; border-bottom-color: #dc2626; }
+        .problem-section ul li { color: #7f1d1d; font-weight: 500; }
+        .problem-section ul li strong { color: #991b1b; }
+
+        .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 25px 0; }
+        .pillar {
+            border-radius: 12px;
+            padding: 22px;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+            border: 1px solid #e2e8f0;
+            border-top: 5px solid #2563eb;
+        }
+        .pillar.p-operations { border-top-color: #2563eb; }
+        .pillar.p-technical { border-top-color: #16a34a; }
+        .pillar.p-decision { border-top-color: #8b5cf6; }
+        .pillar.p-governance { border-top-color: #f59e0b; }
+        .pillar .p-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #64748b;
+            margin-bottom: 6px;
+        }
+        .pillar h3 { margin-top: 0; font-size: 17px; }
+        .pillar p { font-size: 13px; color: #475569; margin: 0; }
+
+        .how-it-works { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 25px 0; }
+        .step {
+            text-align: center;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+        .step .step-num {
+            display: inline-block;
+            width: 40px; height: 40px; line-height: 40px;
+            border-radius: 50%;
+            background: #2563eb;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+        .step h4 { margin-bottom: 6px; }
+        .step p { font-size: 13px; color: #64748b; margin: 0; }
+
+        .segments-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 20px 0; }
+        .segment-card {
+            border-radius: 10px;
+            padding: 18px 22px;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid #2563eb;
+            background: #f8fafc;
+        }
+        .segment-card.sc-dairy-goat { border-top-color: #16a34a; }
+        .segment-card.sc-dairy-sheep { border-top-color: #3b82f6; }
+        .segment-card.sc-meat-goat { border-top-color: #f59e0b; }
+        .segment-card.sc-meat-sheep { border-top-color: #8b5cf6; }
+        .segment-card h4 { font-size: 16px; margin-bottom: 10px; }
+        .segment-card ul { margin: 0; padding-left: 20px; }
+        .segment-card li { font-size: 13px; color: #475569; margin-bottom: 5px; }
+
+        .profile-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 22px;
+            margin-bottom: 18px;
+            border-left: 5px solid #2563eb;
+        }
+        .profile-card.pc-technician { border-left-color: #16a34a; }
+        .profile-card.pc-admin { border-left-color: #8b5cf6; }
+        .profile-card .identity {
+            font-style: italic;
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 10px;
+            padding-left: 12px;
+            border-left: 3px solid #e2e8f0;
+        }
+        .profile-card h3 { margin-top: 0; }
+        .profile-card ul { margin-top: 12px; margin-bottom: 0; }
+        .profile-card li { font-size: 14px; }
+
+        .diff-block {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 5px solid #2563eb;
+            padding: 22px 25px;
+            margin: 18px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        .diff-block.green { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-left-color: #16a34a; }
+        .diff-block.purple { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left-color: #8b5cf6; }
+        .diff-block.amber { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-left-color: #f59e0b; }
+        .diff-block .diff-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; color: #1e40af; margin-bottom: 4px; }
+        .diff-block.green .diff-label { color: #15803d; }
+        .diff-block.purple .diff-label { color: #6d28d9; }
+        .diff-block.amber .diff-label { color: #b45309; }
+        .diff-block h3 { margin: 0 0 10px 0; font-size: 18px; }
+        .diff-block p { font-size: 14px; margin: 0; color: #334155; }
+        .diff-block .diff-chip {
+            display: inline-block;
+            background: rgba(30,64,175,0.1);
+            color: #1e40af;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 6px;
+            margin-top: 8px;
+        }
+
+        .presenter-kit {
+            background: #fffbeb;
+            border: 2px dashed #f59e0b;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .presenter-kit h2 { color: #b45309; border-bottom-color: #f59e0b; }
+        .objections { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 15px; }
+        .objection {
+            background: white;
+            border: 1px solid #fde68a;
+            border-radius: 8px;
+            padding: 14px;
+        }
+        .objection .obj { font-weight: 600; color: #7f1d1d; font-size: 13px; margin-bottom: 8px; }
+        .objection .obj::before { content: "❝ "; color: #dc2626; }
+        .objection .obj::after { content: " ❞"; color: #dc2626; }
+        .objection .ans { font-size: 13px; color: #15803d; }
+        .objection .ans strong { color: #166534; }
+
+        .partnership { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 20px; }
+        .partnership-card {
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            background: white;
+        }
+        .partnership-card .p-title { font-weight: 700; color: #1e40af; font-size: 16px; margin-bottom: 8px; }
+        .partnership-card .p-body { font-size: 13px; color: #475569; }
+        .partnership-card.saas { border-top: 4px solid #2563eb; }
+        .partnership-card.license { border-top: 4px solid #16a34a; }
+        .partnership-card.custom { border-top: 4px solid #8b5cf6; }
+
+        .training-list h3 {
+            margin-top: 25px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .training-list.green h3 { color: #16a34a; border-bottom-color: #bbf7d0; }
+        .training-list.blue h3 { color: #2563eb; border-bottom-color: #bfdbfe; }
+        .training-list.purple h3 { color: #8b5cf6; border-bottom-color: #ddd6fe; }
+        .training-list.amber h3 { color: #f59e0b; border-bottom-color: #fde68a; }
+
+        .cta-final {
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+            color: white;
+            padding: 45px 30px;
+            border-radius: 14px;
+            margin: 40px 0 20px 0;
+            text-align: center;
+        }
+        .cta-final h2 {
+            color: white;
+            border: none;
+            font-size: 28px;
+            justify-content: center;
+            margin-top: 0;
+        }
+        .cta-final p { font-size: 16px; opacity: 0.92; margin-bottom: 25px; }
+        .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+        .cta-btn {
+            background: white;
+            color: #1e40af;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .cta-btn.secondary { background: transparent; border: 2px solid white; color: white; }
+        .cta-final .note { font-size: 12px; opacity: 0.7; margin-top: 15px; }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+            text-align: center;
+            color: #64748b;
+            font-size: 12px;
+        }
+        .footer img { height: 35px; margin-bottom: 8px; opacity: 0.6; }
+
+        @media print {
+            body { padding: 0 15mm 15mm 15mm; }
+            .hero { margin: 0 -15mm; min-height: 270mm; }
+            .page-break { page-break-before: always; }
+            .lang-switcher { display: none; }
+            section, .pillar, .diff-block, .profile-card, .segment-card, .partnership-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="lang-switcher">
+        <a href="apresentacao.html" class="lang-btn">PT</a>
+        <a href="apresentacao-es.html" class="lang-btn">ES</a>
+        <a href="apresentacao-en.html" class="lang-btn active">EN</a>
+    </div>
+    <img src="Logo_png.png" alt="Seabra" class="logo">
+    <div class="brand">Seabra</div>
+    <div class="sub-brand">Small Ruminants</div>
+    <div class="promise">From the animal to the decision. Complete management for goat and sheep producers.</div>
+    <div class="tagline">Dairy and meat. Goats and sheep. One single system — in the field, in real time.</div>
+    <div class="badge-audience">For associations, independent producers and institutions</div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem-section">
+    <h2>The problem your operation faces today</h2>
+    <ul>
+        <li><strong>Notebooks and spreadsheets:</strong> notes get lost, data goes stale, animal history becomes fragmented.</li>
+        <li><strong>Overloaded technicians:</strong> farm visits without structured records, evaluations that never reach the producer.</li>
+        <li><strong>Guesswork-driven decisions:</strong> with no production, reproduction or health indicators, the farm operates in the dark.</li>
+        <li><strong>Associations blind to their herd:</strong> each producer works in isolation, with no aggregated data to negotiate, research or prove value to the community.</li>
+        <li><strong>Paper in the field:</strong> rain, dust, loss, rework — and zero traceability.</li>
+    </ul>
+</section>
+
+<!-- 4 PILLARS -->
+<section>
+    <h2>The solution in 4 pillars</h2>
+    <p>Seabra Small Ruminants organizes everything your operation needs across four integrated fronts:</p>
+    <div class="pillars">
+        <div class="pillar p-operations">
+            <div class="p-label">01 · OPERATIONS</div>
+            <h3>Farm routine</h3>
+            <p>Herd, events (birth, sale, death, abortion, culling), daily production, milk recording, lactations, unlimited staff with role-based permissions, in-app and WhatsApp notifications, financials.</p>
+        </div>
+        <div class="pillar p-technical">
+            <div class="p-label">02 · TECHNICAL</div>
+            <h3>Field work for technicians</h3>
+            <p>Dairy LTE (Linear Type Evaluation, 16 traits) and Meat LTE (13 traits), body measurements, pregnancy diagnosis, CMT, FAMACHA, body condition score — all working offline.</p>
+        </div>
+        <div class="pillar p-decision">
+            <div class="p-label">03 · DECISION</div>
+            <h3>Data that drives action</h3>
+            <p>Segment-adaptive dashboards, cross-indicators (reproduction × production × genetics), AI Assistant and CSV export of every data type.</p>
+        </div>
+        <div class="pillar p-governance">
+            <div class="p-label">04 · GOVERNANCE</div>
+            <h3>Association management</h3>
+            <p>Multi-tenant with data isolation, admin panel, management of technicians and producers, integrated training, payments.</p>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+    <h2>How it works</h2>
+    <div class="how-it-works">
+        <div class="step">
+            <div class="step-num">1</div>
+            <h4>Record</h4>
+            <p>Producers and technicians log events in the app, in the field, with or without internet.</p>
+        </div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <h4>Sync</h4>
+            <p>When the connection is back, everything syncs automatically to the cloud — nothing is lost.</p>
+        </div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <h4>Decide</h4>
+            <p>Dashboards, AI Assistant and exports turn your data into decisions.</p>
+        </div>
+    </div>
+</section>
+
+<div class="page-break"></div>
+
+<!-- SEGMENTS -->
+<section>
+    <h2>Supported segments</h2>
+    <p>The system adapts to your production profile. Screens, indicators and flows change by segment — each producer sees only what's relevant to their reality.</p>
+    <div class="segments-grid">
+        <div class="segment-card sc-dairy-goat">
+            <h4>🐐 Dairy Goats</h4>
+            <ul>
+                <li>Milk recording (both milkings)</li>
+                <li>Lactations and drying-off</li>
+                <li>Analyses: SCC, TBC, fat, protein, lactose</li>
+                <li>CMT (California Mastitis Test)</li>
+                <li>Dairy LTE and Pregnancy Diagnosis</li>
+            </ul>
+        </div>
+        <div class="segment-card sc-dairy-sheep">
+            <h4>🐑 Dairy Sheep</h4>
+            <ul>
+                <li>Milk recording adapted to the species</li>
+                <li>Lactations and milk composition</li>
+                <li>Reproductive and productive indicators</li>
+                <li>LTE and PD with sheep protocol</li>
+                <li>Pre-loaded sheep breeds</li>
+            </ul>
+        </div>
+        <div class="segment-card sc-meat-goat">
+            <h4>🐐 Meat Goats</h4>
+            <ul>
+                <li>Weighings and average daily gain (ADG)</li>
+                <li>Body measurements (heart girth, scrotal circumference)</li>
+                <li><strong>Meat LTE</strong> module (13 traits across 4 groups)</li>
+                <li><strong>SMI</strong> (Sire Merit Index) and <strong>KWW</strong> (Kilograms of Weaned Kid)</li>
+                <li>Genealogy and progeny tracking</li>
+                <li>Lot and sector management</li>
+            </ul>
+        </div>
+        <div class="segment-card sc-meat-sheep">
+            <h4>🐑 Meat Sheep</h4>
+            <ul>
+                <li>Weight performance per animal and lot (ADG)</li>
+                <li>Body measurements and scores</li>
+                <li><strong>Meat LTE</strong> for sheep (13 traits)</li>
+                <li><strong>SMI</strong> and <strong>KWW</strong> for ram selection</li>
+                <li>Reproduction, growing and full traceability to slaughter</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<div class="page-break"></div>
+
+<!-- PROFILES -->
+<section>
+    <h2>Features by user role</h2>
+
+    <div class="profile-card">
+        <h3>Producer</h3>
+        <div class="identity">"I'm a producer and I need to record what happens on my farm without overcomplicating my routine."</div>
+        <ul>
+            <li><strong>Herd:</strong> registration, editing, filtered listing and detailed individual profile per animal.</li>
+            <li><strong>Events:</strong> births, reproduction, abortions, deaths, sales, culling, drying-off, weighing, clinical care and handling.</li>
+            <li><strong>Production:</strong> daily production, milk recording, milk output, storage (tank/chiller).</li>
+            <li><strong>Lactations:</strong> full history and details of closed lactations.</li>
+            <li><strong>Milk analyses:</strong> composition, SCC, TBC, fat and protein.</li>
+            <li><strong>Dashboard:</strong> charts of production, herd composition and reproductive indicators.</li>
+            <li><strong>Technical requests:</strong> open and track technician visits.</li>
+            <li><strong>Unlimited staff with granular permissions:</strong> add as many workers as needed and define exactly what each one can see and do.</li>
+            <li><strong>In-app + WhatsApp notifications:</strong> births, PD, weanings, analyses, visits and handling delivered automatically to your phone.</li>
+            <li><strong>Financials:</strong> expenses by category, sector and period.</li>
+            <li><strong>CSV export</strong> of all farm data at any time.</li>
+        </ul>
+    </div>
+
+    <div class="profile-card pc-technician">
+        <h3>Technician</h3>
+        <div class="identity">"I'm a technician and I need to record evaluations and services in the field, often with no signal."</div>
+        <ul>
+            <li><strong>Linear Type Evaluation (LTE):</strong> two dedicated modules — <strong>Dairy LTE</strong> (16 traits, focused on udder, teats and dairy conformation) and <strong>Meat LTE</strong> (13 traits across 4 groups: body structure, meat structure, front limbs and rear limbs). Separate forms for males and females, total scoring and editable history.</li>
+            <li><strong>Body measurements:</strong> heart girth, scrotal circumference and objective body metrics.</li>
+            <li><strong>Pregnancy Diagnosis (PD):</strong> records with gestational days and identification of reproductive pathologies.</li>
+            <li><strong>Visit management:</strong> schedule, farms covered, activity dashboard.</li>
+            <li><strong>Requests:</strong> receive, approve and decline producer requests.</li>
+            <li><strong>Full offline mode:</strong> everything works with no signal and syncs later.</li>
+        </ul>
+    </div>
+
+    <div class="profile-card pc-admin">
+        <h3>Association Admin</h3>
+        <div class="identity">"I'm an admin and I need to see the aggregated herd of my association and govern technicians and producers."</div>
+        <ul>
+            <li><strong>User management:</strong> registration and editing of technicians and producers tied to the association.</li>
+            <li><strong>Properties:</strong> visualization and usage monitoring of every member farm.</li>
+            <li><strong>Managerial analytics:</strong> global metrics, sex distribution, per-farm breakdown, aggregated production.</li>
+            <li><strong>History:</strong> advanced filters for records, movements and reproductive events by category.</li>
+            <li><strong>Centralized export:</strong> dedicated panel with date filters, per-producer aggregation, 12 data types.</li>
+            <li><strong>Payments:</strong> subscriptions, history, delinquency.</li>
+        </ul>
+    </div>
+</section>
+
+<div class="page-break"></div>
+
+<!-- DIFFERENTIATORS -->
+<section>
+    <h2>Technical differentiators</h2>
+
+    <div class="diff-block green">
+        <div class="diff-label">01 · Offline First</div>
+        <h3>Field work that doesn't depend on a signal</h3>
+        <p>Local storage on every device with automatic syncing and conflict resolution when connectivity returns. The technician can visit the most remote farm and record LTE, measurements and PD through the same familiar workflow.</p>
+    </div>
+
+    <div class="diff-block purple">
+        <div class="diff-label">02 · AI Assistant</div>
+        <h3>A consultant inside the app, 24/7</h3>
+        <p>Answers natural-language questions about your herd based on the actual farm data — production, reproduction, milk quality, health, performance, genetics and much more. The more you record, the more valuable the answers become.</p>
+        <p style="margin-top:14px;"><strong>Detects scientific questions</strong> (in multiple languages) and automatically searches academic literature. <strong>Knows the app manual</strong> and answers operational questions adapted to the user role (producer, technician, admin, staff).</p>
+    </div>
+
+    <div class="diff-block">
+        <div class="diff-label">03 · CSV data export</div>
+        <h3>Your data available for any external analysis</h3>
+        <p>Producers export their own data from every list screen. The association admin has a centralized panel with date filters and per-producer aggregation. Exports <strong>12 data types</strong>: milk recording, handling, weighing, drying-off, birth, sale, death, abortion, culling, clinical, milk output, daily production. UTF-8 CSV files ready for Excel, scientific research or ERP.</p>
+    </div>
+
+    <div class="diff-block amber">
+        <div class="diff-label">04 · Per-farm configuration</div>
+        <h3>The system adjusts to your productive reality</h3>
+        <p>Each farm configures its own parameters: ideal weaning weight and age, age and weight for first breeding, days for pregnancy diagnosis, default birth weight, auto-categorization. For associations and institutions with specific needs, we offer <strong>custom development on demand</strong> (see partnership models below).</p>
+    </div>
+
+    <div class="diff-block">
+        <div class="diff-label">05 · Smart notifications + WhatsApp</div>
+        <h3>The system reminds you before you need to remember</h3>
+        <p>An in-app notification center alerts you to important routine events: <strong>expected births, pregnancy diagnoses coming due, upcoming weanings, milk analysis results, technical visit requests, vaccinations and pending handlings</strong>. With one click the same notifications are sent directly to the <strong>WhatsApp</strong> of the producer, technician or worker — no need for push, email or even opening the app.</p>
+        <span class="diff-chip">Births and PD</span>
+        <span class="diff-chip">Weaning and weighings</span>
+        <span class="diff-chip">Milk analyses</span>
+        <span class="diff-chip">Technical visits</span>
+        <span class="diff-chip">Handling and vaccines</span>
+    </div>
+
+    <div class="diff-block amber">
+        <div class="diff-label">06 · Unlimited staff with permissions</div>
+        <h3>Your whole farm team using the system</h3>
+        <p>Add <strong>as many workers as you want</strong> — milkers, caretakers, admin, foreman — with no per-user fee. For each worker the producer defines <strong>exactly what they can see and do</strong>: access only to milk recording, only to clinical handling, only to reproductive events, or any combination. Everyone does their part without exposing sensitive data or interfering with other workflows.</p>
+    </div>
+
+    <div class="diff-block green">
+        <div class="diff-label">07 · Multi-tenant and Multi-platform</div>
+        <h3>One platform, many associations, all devices</h3>
+        <p>Each association has its own isolated data and its own admin. The same infrastructure serves many organizations with total separation. Available on Android, iOS and Web, on a single shared database.</p>
+    </div>
+</section>
+
+<div class="page-break"></div>
+
+<!-- PRESENTER KIT -->
+<section class="presenter-kit">
+    <h2>For those who present Seabra</h2>
+    <p>If you are a consultant, association technician or partner who is going to pitch the system to an association or group of producers, this is your argument kit.</p>
+
+    <h3 style="color:#b45309;">The 4 pillars in one line each</h3>
+    <ul>
+        <li><strong>Operations:</strong> the producer's entire routine in one app.</li>
+        <li><strong>Technical:</strong> LTE, PD, measurements and CMT in the field, offline.</li>
+        <li><strong>Decision:</strong> dashboards, AI and data export.</li>
+        <li><strong>Governance:</strong> the association sees and manages the member herd.</li>
+    </ul>
+
+    <h3 style="color:#b45309;">3 anchor differentiators</h3>
+    <ul>
+        <li><strong>Offline First</strong> — the only system in the sector that really works in the field without a signal.</li>
+        <li><strong>AI Assistant</strong> — conversational consultant inside the app, answering based on the actual farm data.</li>
+        <li><strong>Multi-segment</strong> — goats and sheep, dairy and meat, on a single platform.</li>
+    </ul>
+
+    <h3 style="color:#b45309;">3 common objections and how to handle them</h3>
+    <div class="objections">
+        <div class="objection">
+            <div class="obj">I already use a spreadsheet, it does the job.</div>
+            <div class="ans"><strong>Answer:</strong> a spreadsheet doesn't alert you when a birth is coming, doesn't run offline in the pen and doesn't cross indicators. Seabra does.</div>
+        </div>
+        <div class="objection">
+            <div class="obj">My association has no IT team.</div>
+            <div class="ans"><strong>Answer:</strong> it's SaaS, runs in the cloud. Nobody needs to maintain servers. We guide the rollout and train everyone.</div>
+        </div>
+        <div class="objection">
+            <div class="obj">The technician won't use a phone.</div>
+            <div class="ans"><strong>Answer:</strong> the app was designed for people who wear boots and work with animals. Simple interface, large taps, offline. In-person training available.</div>
+        </div>
+    </div>
+
+    <h3 style="color:#b45309;">The revenue-stream argument</h3>
+    <p>Associations and institutions can adopt Seabra not just as a tool, but as a <strong>revenue generator</strong>:</p>
+    <ul>
+        <li>Reselling licenses to member producers at a margin.</li>
+        <li>Monetizing aggregated herd data (research, genetics, dairies).</li>
+        <li>Offering higher-value technical services (LTE, PD, consulting) with professional records.</li>
+    </ul>
+</section>
+
+<!-- PARTNERSHIP MODELS -->
+<section>
+    <h2>Partnership models</h2>
+    <p>Seabra Small Ruminants is offered in three models, selected according to the client's profile and goal:</p>
+    <div class="partnership">
+        <div class="partnership-card saas">
+            <div class="p-title">SaaS</div>
+            <div class="p-body">Monthly subscription for independent producers or associations. Immediate access, no upfront investment, updates included.</div>
+        </div>
+        <div class="partnership-card license">
+            <div class="p-title">Full License</div>
+            <div class="p-body">Acquisition of the system including source code. For associations or institutions that want to operate it as a <strong>revenue stream</strong>: reselling to producers, data collection, research, white-label.</div>
+        </div>
+        <div class="partnership-card custom">
+            <div class="p-title">Custom Development</div>
+            <div class="p-body">Paid adaptations for groups with specific needs: new fields, custom reports, integrations (ERP, labs), dedicated dashboards, white-label.</div>
+        </div>
+    </div>
+    <p style="margin-top: 20px; font-size: 13px; color: #64748b; text-align: center;">Commercial terms upon request. Ask for our tailored proposal.</p>
+</section>
+
+<div class="page-break"></div>
+
+<!-- TRAINING -->
+<section class="training-list green">
+    <h2>Training programs</h2>
+    <p>Seabra's rollout is accompanied by a technical training program. Animal-science knowledge and system operation go hand in hand.</p>
+
+    <h3>Goat and Sheep Husbandry</h3>
+    <ul>
+        <li>Animal restraint and general handling</li>
+        <li>Nutrition and sanitary best practices</li>
+        <li>Prophylaxis, metaphylaxis and early clinical diagnosis</li>
+        <li>First aid and neonatal best practices</li>
+    </ul>
+
+    <div class="training-list blue">
+        <h3>Transrectal Pregnancy Diagnosis</h3>
+        <ul>
+            <li>Diagnosis from day 30 of gestation</li>
+            <li>Identification of reproductive pathologies</li>
+        </ul>
+    </div>
+
+    <div class="training-list purple">
+        <h3>Reproduction</h3>
+        <ul>
+            <li>Transcervical artificial insemination</li>
+            <li>Reproductive protocols</li>
+            <li>Breeding calendar for smooth dairy production</li>
+            <li>Breeding methods</li>
+        </ul>
+    </div>
+
+    <div class="training-list amber">
+        <h3>System Use</h3>
+        <ul>
+            <li>Full app operation for producers</li>
+            <li>Indicator interpretation</li>
+            <li>Milk recording in the field</li>
+            <li>Linear Type Evaluation (for animal-science professionals)</li>
+        </ul>
+    </div>
+
+    <div class="training-list green">
+        <h3>Management in Goat and Sheep Farming</h3>
+        <ul>
+            <li>Data entry and quality</li>
+            <li>Indicator analysis</li>
+            <li>Managerial tools within the system</li>
+            <li>Financial analysis with production costs</li>
+        </ul>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+    <h2>Ready to see it in action?</h2>
+    <p>Schedule a personalized demo or request a proposal tailored to your reality.</p>
+    <div class="cta-buttons">
+        <a href="https://wa.me/5521999366784?text=I%20would%20like%20to%20schedule%20a%20Seabra%20demo" class="cta-btn">Schedule a demo</a>
+        <a href="mailto:sistemaseabra@gmail.com?subject=Seabra%20proposal%20request" class="cta-btn secondary">Request a proposal</a>
+    </div>
+    <div class="note">Institutional material — commercial terms upon request</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <img src="Logo_png.png" alt="Seabra Small Ruminants">
+    <p><strong>Seabra Small Ruminants</strong> — Management System for Goats and Sheep (dairy and meat)</p>
+    <p>Confidential document · Restricted distribution · Not published on public channels</p>
+</div>
+
+</body>
+</html>

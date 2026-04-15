@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <meta name="googlebot" content="noindex,nofollow">
+    <title>Seabra Pequeños Rumiantes — Planes y Valores</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.55; color: #1f2937; max-width: 210mm; margin: 0 auto; padding: 15mm 20mm; background: #fff; position: relative; }
+        body::before {
+            content: "CONFIDENCIAL";
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 140px;
+            color: #1e40af;
+            opacity: 0.03;
+            font-weight: 900;
+            pointer-events: none;
+            z-index: -1;
+            letter-spacing: 10px;
+        }
+
+        .lang-switcher { position: absolute; top: 20px; right: 20mm; display: flex; gap: 6px; z-index: 10; }
+        .lang-switcher .lang-btn { display: inline-block; padding: 4px 11px; border-radius: 20px; font-size: 11px; font-weight: 600; text-decoration: none; color: #1e40af; background: #eff6ff; border: 1px solid #bfdbfe; letter-spacing: 0.5px; }
+        .lang-switcher .lang-btn.active { background: #1e40af; color: white; border-color: #1e40af; }
+
+        .header { text-align: center; border-bottom: 3px solid #2563eb; padding-bottom: 22px; margin-bottom: 30px; margin-top: 20px; }
+        .header img { height: 65px; margin-bottom: 14px; }
+        .header h1 { color: #1e40af; font-size: 26px; margin-bottom: 5px; }
+        .header .subtitle { color: #64748b; font-size: 14px; }
+        .header .confidential { display: inline-block; background: #fef3c7; color: #92400e; padding: 5px 14px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 12px; letter-spacing: 1px; text-transform: uppercase; }
+
+        h2 { color: #1e40af; font-size: 18px; margin: 30px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid #e2e8f0; }
+
+        .plan-card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 22px 26px; margin-bottom: 18px; background: #ffffff; border-left: 5px solid #2563eb; page-break-inside: avoid; }
+        .plan-card.asociacion { border-left-color: #16a34a; }
+        .plan-card.licencia { border-left-color: #8b5cf6; background: #faf5ff; }
+        .plan-card.custom { border-left-color: #f59e0b; background: #fffbeb; }
+
+        .plan-title-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; gap: 15px; }
+        .plan-title { color: #1e40af; font-size: 18px; font-weight: 700; }
+        .plan-card.asociacion .plan-title { color: #15803d; }
+        .plan-card.licencia .plan-title { color: #6d28d9; }
+        .plan-card.custom .plan-title { color: #b45309; }
+
+        .plan-price { font-size: 22px; font-weight: 800; color: #1e40af; white-space: nowrap; }
+        .plan-card.asociacion .plan-price { color: #15803d; }
+        .plan-card.licencia .plan-price, .plan-card.custom .plan-price { color: #64748b; font-size: 14px; font-style: italic; }
+        .plan-price small { font-size: 12px; font-weight: 500; color: #64748b; display: block; text-align: right; }
+
+        .plan-subtitle { font-size: 13px; color: #64748b; margin-bottom: 12px; }
+        .plan-card ul { margin-left: 20px; margin-top: 10px; }
+        .plan-card li { font-size: 13px; margin-bottom: 5px; color: #334155; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: #f0fdf4; color: #15803d; font-weight: 600; font-size: 13px; }
+        td strong { color: #15803d; }
+
+        .use-cases { background: #f8fafc; padding: 12px 16px; border-radius: 8px; margin-top: 12px; font-size: 13px; color: #475569; }
+        .use-cases strong { color: #1e40af; }
+
+        .how-to { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); padding: 22px; border-radius: 12px; margin: 25px 0; }
+        .how-to h2 { margin-top: 0; color: #1e40af; border: none; padding: 0; }
+        .how-to-steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 15px; }
+        .how-to-step { background: white; padding: 14px; border-radius: 8px; text-align: center; }
+        .how-to-step .n { display: inline-block; width: 30px; height: 30px; line-height: 30px; border-radius: 50%; background: #2563eb; color: white; font-weight: 700; margin-bottom: 8px; }
+        .how-to-step strong { display: block; font-size: 14px; color: #1e40af; margin-bottom: 4px; }
+        .how-to-step span { font-size: 12px; color: #64748b; }
+
+        .contact { background: #1e40af; color: white; padding: 25px; border-radius: 12px; text-align: center; margin-top: 25px; }
+        .contact h2 { color: white; border: none; margin-top: 0; }
+        .contact .channels { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 12px; font-size: 14px; }
+        .contact .channels div strong { display: block; font-size: 11px; opacity: 0.75; margin-bottom: 3px; letter-spacing: 1px; }
+
+        .footer { margin-top: 30px; padding-top: 15px; border-top: 1px solid #e2e8f0; text-align: center; color: #64748b; font-size: 11px; }
+        .page-break { page-break-before: always; }
+
+        @media print { body { padding: 12mm 15mm; } .plan-card { page-break-inside: avoid; } .lang-switcher { display: none; } }
+    </style>
+</head>
+<body>
+
+<div class="lang-switcher">
+    <a href="planos.html" class="lang-btn">PT</a>
+    <a href="planos-es.html" class="lang-btn active">ES</a>
+    <a href="planos-en.html" class="lang-btn">EN</a>
+</div>
+
+<div class="header">
+    <img src="Logo_png.png" alt="Seabra">
+    <h1>Planes y Valores</h1>
+    <div class="subtitle">Seabra Pequeños Rumiantes — Sistema de Gestión para Caprinos y Ovinos</div>
+    <div class="confidential">Documento confidencial · Enviado bajo solicitud</div>
+</div>
+
+<div class="plan-card">
+    <div class="plan-title-row">
+        <div class="plan-title">Productor Independiente</div>
+        <div class="plan-price">US$ 29<small>por mes · por establecimiento</small></div>
+    </div>
+    <div class="plan-subtitle">Para productores que gestionan su propio establecimiento, sin vínculo con asociación en el sistema.</div>
+    <strong style="font-size: 13px; color: #1e40af;">Incluye:</strong>
+    <ul>
+        <li>Acceso completo a la aplicación (Android, iOS, Web)</li>
+        <li>Rebaño, eventos, producción, lactancias y pesajes (GMD)</li>
+        <li>Módulos técnicos completos: EML Lechera, EML de Carne, Diagnóstico Gestacional, Medidas, CMT, FAMACHA</li>
+        <li>Indicadores de carne: IMR, KCD, progenie y genealogía</li>
+        <li><strong>Colaboradores ilimitados</strong> con permisos granulares (el productor define qué ve y puede usar cada uno)</li>
+        <li><strong>Notificaciones automáticas en la app y vía WhatsApp</strong> (partos, DG, destetes, análisis, visitas, manejos)</li>
+        <li>Modo offline con sincronización automática</li>
+        <li>Asistente IA conversacional basado en los datos de su rebaño</li>
+        <li>Exportación CSV de todos los datos del establecimiento</li>
+        <li>Backup automático en la nube</li>
+        <li>Actualizaciones y nuevas funcionalidades</li>
+        <li>Soporte remoto en horario comercial</li>
+        <li>Sin permanencia — suscripción mensual</li>
+    </ul>
+</div>
+
+<div class="plan-card asociacion">
+    <div class="plan-title-row">
+        <div class="plan-title">Asociación</div>
+        <div class="plan-price">desde US$ 19<small>por asociado · por mes</small></div>
+    </div>
+    <div class="plan-subtitle">Para asociaciones de productores con admin centralizado, técnicos vinculados y gestión agregada del rebaño asociado.</div>
+    <table>
+        <tr>
+            <th>Tamaño de la asociación</th>
+            <th>Valor por asociado / mes</th>
+        </tr>
+        <tr>
+            <td>Hasta <strong>[30]</strong> asociados</td>
+            <td><strong>US$ 23</strong></td>
+        </tr>
+        <tr>
+            <td>Más de <strong>[30]</strong> asociados</td>
+            <td><strong>US$ 19</strong></td>
+        </tr>
+    </table>
+    <strong style="font-size: 13px; color: #15803d; display: block; margin-top: 14px;">Incluye (todo lo del plan independiente + funciones de asociación):</strong>
+    <ul>
+        <li>Panel admin de la asociación</li>
+        <li>Gestión de técnicos, productores vinculados y colaboradores ilimitados por establecimiento</li>
+        <li>Notificaciones en la app y vía WhatsApp para toda la cadena (productor, técnico, colaborador)</li>
+        <li>Análisis gerenciales agregados (producción, reproducción, sanidad)</li>
+        <li>Exportación centralizada por fecha y por productor</li>
+        <li>Gestión de solicitudes entre productores y técnicos</li>
+        <li>Capacitación online inicial</li>
+        <li>Soporte remoto dedicado</li>
+    </ul>
+</div>
+
+<div class="page-break"></div>
+
+<div class="plan-card licencia">
+    <div class="plan-title-row">
+        <div class="plan-title">Licencia Completa</div>
+        <div class="plan-price">bajo consulta<small>pago único</small></div>
+    </div>
+    <div class="plan-subtitle">Para instituciones y asociaciones que quieren operar el sistema como <strong>fuente de ingresos</strong> — revendiendo a productores, recolectando datos del rebaño o entregándolo como white-label.</div>
+    <strong style="font-size: 13px; color: #6d28d9;">Incluye:</strong>
+    <ul>
+        <li>Código fuente completo de la aplicación</li>
+        <li>Derechos de uso y modificación ilimitados</li>
+        <li>Sitio web institucional para la organización</li>
+        <li>Capacitación presencial (4 días)</li>
+        <li>Manual técnico para desarrolladores</li>
+        <li>Soporte técnico en el primer año</li>
+    </ul>
+    <div class="use-cases">
+        <strong>Casos de uso típicos:</strong> una asociación revende licencias a productores asociados con margen · una institución de investigación opera el sistema para recolectar datos del rebaño · una empresa presta un servicio white-label a redes de productores · una láctea monitorea sus establecimientos proveedores.
+    </div>
+</div>
+
+<div class="plan-card custom">
+    <div class="plan-title-row">
+        <div class="plan-title">Desarrollo a Medida</div>
+        <div class="plan-price">bajo consulta<small>proyecto cerrado</small></div>
+    </div>
+    <div class="plan-subtitle">Adaptaciones pagas para grupos, asociaciones o instituciones con necesidades específicas. El alcance define el precio.</div>
+    <strong style="font-size: 13px; color: #b45309;">Ejemplos de desarrollo a medida:</strong>
+    <ul>
+        <li>Nuevos campos específicos por raza, segmento o región</li>
+        <li>Reportes a medida (impresión, PDF, dashboards)</li>
+        <li>Integraciones con ERP, laboratorios o sistemas de ordeño</li>
+        <li>Dashboards dedicados por perfil de usuario</li>
+        <li>Ajustes de flujo según la realidad operativa de la asociación</li>
+        <li>White-label (colores, logo, dominio propio)</li>
+        <li>Módulos nuevos específicos de la demanda</li>
+    </ul>
+    <div class="use-cases">
+        <strong>Cómo funciona:</strong> usted describe lo que necesita → relevamos el alcance → enviamos presupuesto cerrado → desarrollamos e implementamos.
+    </div>
+</div>
+
+<div class="how-to">
+    <h2>Cómo contratar</h2>
+    <div class="how-to-steps">
+        <div class="how-to-step">
+            <div class="n">1</div>
+            <strong>Contacto</strong>
+            <span>WhatsApp o email</span>
+        </div>
+        <div class="how-to-step">
+            <div class="n">2</div>
+            <strong>Demostración</strong>
+            <span>Conocimiento del sistema y análisis de necesidad</span>
+        </div>
+        <div class="how-to-step">
+            <div class="n">3</div>
+            <strong>Implementación</strong>
+            <span>Registro, capacitación e inicio de uso</span>
+        </div>
+    </div>
+</div>
+
+<div class="contact">
+    <h2>Conversemos</h2>
+    <p>Envíenos un mensaje y reciba una propuesta personalizada para su realidad.</p>
+    <div class="channels">
+        <div>
+            <strong>WHATSAPP</strong>
+            <a href="https://wa.me/5521999366784?text=Quisiera%20conocer%20los%20planes%20de%20Seabra" style="color: white; text-decoration: none;">+55 (21) 9 9936-6784</a>
+        </div>
+        <div>
+            <strong>EMAIL</strong>
+            <a href="mailto:sistemaseabra@gmail.com?subject=Inter%C3%A9s%20en%20planes%20Seabra" style="color: white; text-decoration: none;">sistemaseabra@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p><strong>Seabra Pequeños Rumiantes</strong> — Documento confidencial · Valores válidos por 60 días desde el envío</p>
+    <p>Distribución restringida — no publicado en canales públicos · Valores en USD, sujetos a ajuste por mercado local</p>
+</div>
+
+</body>
+</html>

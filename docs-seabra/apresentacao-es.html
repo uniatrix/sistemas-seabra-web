@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <meta name="googlebot" content="noindex,nofollow">
+    <title>Seabra Pequeños Rumiantes — Presentación del Sistema</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 0 20mm 20mm 20mm;
+            background: #fff;
+            position: relative;
+        }
+
+        body::before {
+            content: "Seabra Pequeños Rumiantes";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 90px;
+            color: #1e40af;
+            opacity: 0.025;
+            font-weight: 900;
+            pointer-events: none;
+            z-index: -1;
+            white-space: nowrap;
+        }
+
+        .lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            display: flex;
+            gap: 6px;
+            z-index: 10;
+        }
+        .lang-switcher .lang-btn {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.35);
+            transition: background 0.2s;
+            letter-spacing: 0.5px;
+        }
+        .lang-switcher .lang-btn:hover { background: rgba(255,255,255,0.3); }
+        .lang-switcher .lang-btn.active {
+            background: white;
+            color: #1e40af;
+            border-color: white;
+        }
+
+        .hero {
+            min-height: 260mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40mm 10mm;
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 60%, #3b82f6 100%);
+            color: white;
+            margin: 0 -20mm;
+            page-break-after: always;
+            position: relative;
+        }
+        .hero img.logo { height: 90px; margin-bottom: 30px; filter: brightness(0) invert(1); }
+        .hero .brand { font-size: 36px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+        .hero .sub-brand { font-size: 16px; font-weight: 400; opacity: 0.85; margin-bottom: 50px; letter-spacing: 2px; text-transform: uppercase; }
+        .hero .promise { font-size: 32px; font-weight: 700; line-height: 1.3; max-width: 600px; margin-bottom: 20px; }
+        .hero .tagline { font-size: 18px; opacity: 0.9; max-width: 520px; margin-bottom: 40px; }
+        .hero .badge-audience {
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+
+        section { page-break-inside: avoid; margin: 40px 0; }
+        h2 { color: #1e40af; font-size: 24px; margin: 40px 0 20px 0; padding-bottom: 10px; border-bottom: 3px solid #2563eb; display: flex; align-items: center; gap: 12px; }
+        h3 { color: #1e40af; font-size: 18px; margin: 20px 0 10px 0; }
+        h4 { color: #1e40af; font-size: 15px; margin-bottom: 8px; }
+        p { margin-bottom: 14px; }
+        ul { margin-left: 22px; margin-bottom: 14px; }
+        li { margin-bottom: 8px; }
+        .page-break { page-break-before: always; }
+
+        .problem-section { background: #fef2f2; border-left: 5px solid #dc2626; padding: 25px 30px; border-radius: 0 10px 10px 0; margin: 30px 0; }
+        .problem-section h2 { color: #991b1b; border-bottom-color: #dc2626; }
+        .problem-section ul li { color: #7f1d1d; font-weight: 500; }
+        .problem-section ul li strong { color: #991b1b; }
+
+        .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 25px 0; }
+        .pillar { border-radius: 12px; padding: 22px; background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); border: 1px solid #e2e8f0; border-top: 5px solid #2563eb; }
+        .pillar.p-op { border-top-color: #2563eb; }
+        .pillar.p-tec { border-top-color: #16a34a; }
+        .pillar.p-dec { border-top-color: #8b5cf6; }
+        .pillar.p-gob { border-top-color: #f59e0b; }
+        .pillar .p-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #64748b; margin-bottom: 6px; }
+        .pillar h3 { margin-top: 0; font-size: 17px; }
+        .pillar p { font-size: 13px; color: #475569; margin: 0; }
+
+        .how-it-works { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 25px 0; }
+        .step { text-align: center; padding: 20px; background: #f8fafc; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .step .step-num { display: inline-block; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; background: #2563eb; color: white; font-weight: 700; margin-bottom: 12px; font-size: 18px; }
+        .step h4 { margin-bottom: 6px; }
+        .step p { font-size: 13px; color: #64748b; margin: 0; }
+
+        .segments-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 20px 0; }
+        .segment-card { border-radius: 10px; padding: 18px 22px; border: 1px solid #e2e8f0; border-top: 4px solid #2563eb; background: #f8fafc; }
+        .segment-card.sc-lec-cap { border-top-color: #16a34a; }
+        .segment-card.sc-lec-ovi { border-top-color: #3b82f6; }
+        .segment-card.sc-car-cap { border-top-color: #f59e0b; }
+        .segment-card.sc-car-ovi { border-top-color: #8b5cf6; }
+        .segment-card h4 { font-size: 16px; margin-bottom: 10px; }
+        .segment-card ul { margin: 0; padding-left: 20px; }
+        .segment-card li { font-size: 13px; color: #475569; margin-bottom: 5px; }
+
+        .profile-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px; margin-bottom: 18px; border-left: 5px solid #2563eb; }
+        .profile-card.pc-tecnico { border-left-color: #16a34a; }
+        .profile-card.pc-admin { border-left-color: #8b5cf6; }
+        .profile-card .identity { font-style: italic; color: #64748b; font-size: 14px; margin-bottom: 10px; padding-left: 12px; border-left: 3px solid #e2e8f0; }
+        .profile-card h3 { margin-top: 0; }
+        .profile-card ul { margin-top: 12px; margin-bottom: 0; }
+        .profile-card li { font-size: 14px; }
+
+        .diff-block { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-left: 5px solid #2563eb; padding: 22px 25px; margin: 18px 0; border-radius: 0 10px 10px 0; }
+        .diff-block.green { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-left-color: #16a34a; }
+        .diff-block.purple { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left-color: #8b5cf6; }
+        .diff-block.amber { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-left-color: #f59e0b; }
+        .diff-block .diff-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; color: #1e40af; margin-bottom: 4px; }
+        .diff-block.green .diff-label { color: #15803d; }
+        .diff-block.purple .diff-label { color: #6d28d9; }
+        .diff-block.amber .diff-label { color: #b45309; }
+        .diff-block h3 { margin: 0 0 10px 0; font-size: 18px; }
+        .diff-block p { font-size: 14px; margin: 0; color: #334155; }
+        .diff-block .diff-chip { display: inline-block; background: rgba(30,64,175,0.1); color: #1e40af; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; margin-right: 6px; margin-top: 8px; }
+
+        .presenter-kit { background: #fffbeb; border: 2px dashed #f59e0b; padding: 25px; border-radius: 12px; margin: 25px 0; }
+        .presenter-kit h2 { color: #b45309; border-bottom-color: #f59e0b; }
+        .objections { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 15px; }
+        .objection { background: white; border: 1px solid #fde68a; border-radius: 8px; padding: 14px; }
+        .objection .obj { font-weight: 600; color: #7f1d1d; font-size: 13px; margin-bottom: 8px; }
+        .objection .obj::before { content: "❝ "; color: #dc2626; }
+        .objection .obj::after { content: " ❞"; color: #dc2626; }
+        .objection .ans { font-size: 13px; color: #15803d; }
+        .objection .ans strong { color: #166534; }
+
+        .partnership { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 20px; }
+        .partnership-card { padding: 20px; border-radius: 10px; border: 1px solid #e2e8f0; background: white; }
+        .partnership-card .p-title { font-weight: 700; color: #1e40af; font-size: 16px; margin-bottom: 8px; }
+        .partnership-card .p-body { font-size: 13px; color: #475569; }
+        .partnership-card.saas { border-top: 4px solid #2563eb; }
+        .partnership-card.licencia { border-top: 4px solid #16a34a; }
+        .partnership-card.custom { border-top: 4px solid #8b5cf6; }
+
+        .training-list h3 { margin-top: 25px; padding-bottom: 6px; border-bottom: 2px solid #e2e8f0; }
+        .training-list.green h3 { color: #16a34a; border-bottom-color: #bbf7d0; }
+        .training-list.blue h3 { color: #2563eb; border-bottom-color: #bfdbfe; }
+        .training-list.purple h3 { color: #8b5cf6; border-bottom-color: #ddd6fe; }
+        .training-list.amber h3 { color: #f59e0b; border-bottom-color: #fde68a; }
+
+        .cta-final { background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%); color: white; padding: 45px 30px; border-radius: 14px; margin: 40px 0 20px 0; text-align: center; }
+        .cta-final h2 { color: white; border: none; font-size: 28px; justify-content: center; margin-top: 0; }
+        .cta-final p { font-size: 16px; opacity: 0.92; margin-bottom: 25px; }
+        .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+        .cta-btn { background: white; color: #1e40af; padding: 14px 28px; border-radius: 30px; font-weight: 700; font-size: 15px; text-decoration: none; display: inline-block; }
+        .cta-btn.secondary { background: transparent; border: 2px solid white; color: white; }
+        .cta-final .note { font-size: 12px; opacity: 0.7; margin-top: 15px; }
+
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; font-size: 12px; }
+        .footer img { height: 35px; margin-bottom: 8px; opacity: 0.6; }
+
+        @media print {
+            body { padding: 0 15mm 15mm 15mm; }
+            .hero { margin: 0 -15mm; min-height: 270mm; }
+            .page-break { page-break-before: always; }
+            .lang-switcher { display: none; }
+            section, .pillar, .diff-block, .profile-card, .segment-card, .partnership-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="lang-switcher">
+        <a href="apresentacao.html" class="lang-btn">PT</a>
+        <a href="apresentacao-es.html" class="lang-btn active">ES</a>
+        <a href="apresentacao-en.html" class="lang-btn">EN</a>
+    </div>
+    <img src="Logo_png.png" alt="Seabra" class="logo">
+    <div class="brand">Seabra</div>
+    <div class="sub-brand">Pequeños Rumiantes</div>
+    <div class="promise">Del animal a la decisión. Gestión completa para caprinocultores y ovinocultores.</div>
+    <div class="tagline">Leche y carne. Caprinos y ovinos. Un único sistema, en el campo y en tiempo real.</div>
+    <div class="badge-audience">Para asociaciones, productores independientes e instituciones</div>
+</div>
+
+<section class="problem-section">
+    <h2>El problema que enfrenta su operación hoy</h2>
+    <ul>
+        <li><strong>Cuadernos y planillas:</strong> las anotaciones se pierden, los datos quedan desactualizados, el historial del animal se fragmenta.</li>
+        <li><strong>Técnicos sobrecargados:</strong> visitas sin registro estructurado, evaluaciones que no vuelven al productor.</li>
+        <li><strong>Decisiones por intuición:</strong> sin indicadores de producción, reproducción o sanidad, el establecimiento camina a ciegas.</li>
+        <li><strong>Asociaciones sin visión del rebaño asociado:</strong> cada productor trabaja aislado, sin datos agregados para negociar, investigar o demostrar valor a la comunidad.</li>
+        <li><strong>Papel en el campo:</strong> lluvia, polvo, pérdidas, retrabajo — y cero trazabilidad.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>La solución en 4 pilares</h2>
+    <p>Seabra Pequeños Rumiantes organiza todo lo que su operación necesita en cuatro frentes integrados:</p>
+    <div class="pillars">
+        <div class="pillar p-op">
+            <div class="p-label">01 · OPERACIÓN</div>
+            <h3>Rutina del establecimiento</h3>
+            <p>Rebaño, eventos (nacimiento, venta, muerte, aborto, descarte), producción diaria, control lechero, lactancias, colaboradores ilimitados con permisos, notificaciones en la app y vía WhatsApp, finanzas.</p>
+        </div>
+        <div class="pillar p-tec">
+            <div class="p-label">02 · TÉCNICA</div>
+            <h3>Trabajo del técnico en campo</h3>
+            <p>EML lechera (16 características) y EML de carne (13 características), medidas corporales, diagnóstico gestacional, CMT, FAMACHA, condición corporal — todo funcionando offline.</p>
+        </div>
+        <div class="pillar p-dec">
+            <div class="p-label">03 · DECISIÓN</div>
+            <h3>Datos que generan acción</h3>
+            <p>Dashboards adaptativos por segmento, indicadores cruzados (reproducción × producción × genética), Asistente IA y exportación CSV de todos los tipos de datos.</p>
+        </div>
+        <div class="pillar p-gob">
+            <div class="p-label">04 · GOBERNANZA</div>
+            <h3>Gestión de la asociación</h3>
+            <p>Multi-tenant con aislamiento de datos, panel de admin, gestión de técnicos y productores, capacitaciones integradas, pagos.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Cómo funciona</h2>
+    <div class="how-it-works">
+        <div class="step">
+            <div class="step-num">1</div>
+            <h4>Registra</h4>
+            <p>Productor y técnico cargan eventos en la app, en el campo, con o sin internet.</p>
+        </div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <h4>Sincroniza</h4>
+            <p>Al recuperar la conexión, todo se sincroniza automáticamente en la nube, sin perder nada.</p>
+        </div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <h4>Decide</h4>
+            <p>Dashboards, Asistente IA y exportaciones transforman los datos en decisión.</p>
+        </div>
+    </div>
+</section>
+
+<div class="page-break"></div>
+
+<section>
+    <h2>Segmentos atendidos</h2>
+    <p>El sistema se adapta al perfil productivo. Las pantallas, indicadores y flujos cambian según el segmento — cada productor ve solo lo relevante para su realidad.</p>
+    <div class="segments-grid">
+        <div class="segment-card sc-lec-cap">
+            <h4>🐐 Caprinos Lecheros</h4>
+            <ul>
+                <li>Control lechero (dos ordeños)</li>
+                <li>Lactancias y secado</li>
+                <li>Análisis: CCS, CBT, grasa, proteína, lactosa</li>
+                <li>CMT (California Mastitis Test)</li>
+                <li>EML lechera y Diagnóstico Gestacional</li>
+            </ul>
+        </div>
+        <div class="segment-card sc-lec-ovi">
+            <h4>🐑 Ovinos Lecheros</h4>
+            <ul>
+                <li>Control lechero adaptado a la especie</li>
+                <li>Lactancias y composición de leche</li>
+                <li>Indicadores reproductivos y productivos</li>
+                <li>EML y DG con protocolo ovino</li>
+                <li>Razas ovinas pre-cargadas</li>
+            </ul>
+        </div>
+        <div class="segment-card sc-car-cap">
+            <h4>🐐 Caprinos de Carne</h4>
+            <ul>
+                <li>Pesajes y ganancia media diaria (GMD)</li>
+                <li>Medidas corporales (perímetro torácico, circunferencia escrotal)</li>
+                <li><strong>EML de Carne</strong> dedicada (13 características en 4 grupos)</li>
+                <li><strong>IMR</strong> (Índice de Mérito del Reproductor) y <strong>KCD</strong> (Kilos de Cría Destetada)</li>
+                <li>Genealogía y seguimiento de progenie</li>
+                <li>Control de lotes y sectores</li>
+            </ul>
+        </div>
+        <div class="segment-card sc-car-ovi">
+            <h4>🐑 Ovinos de Carne</h4>
+            <ul>
+                <li>Desempeño ponderal por animal y lote (GMD)</li>
+                <li>Medidas corporales y escores</li>
+                <li><strong>EML de Carne</strong> ovina (13 características)</li>
+                <li><strong>IMR</strong> y <strong>KCD</strong> para selección de reproductores</li>
+                <li>Manejo reproductivo, recría y trazabilidad hasta faena</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<div class="page-break"></div>
+
+<section>
+    <h2>Funcionalidades por perfil de usuario</h2>
+
+    <div class="profile-card">
+        <h3>Productor</h3>
+        <div class="identity">"Soy productor y necesito registrar lo que pasa en mi establecimiento sin complicar la rutina."</div>
+        <ul>
+            <li><strong>Rebaño:</strong> registro, edición, listado con filtros y perfil individual detallado por animal.</li>
+            <li><strong>Eventos:</strong> nacimientos, reproducción, abortos, muertes, ventas, descartes, secado, pesaje, clínica y manejo.</li>
+            <li><strong>Producción:</strong> producción diaria, control lechero, salida de leche, stock (tanque/enfriador).</li>
+            <li><strong>Lactancias:</strong> historial completo y detalles de lactancias cerradas.</li>
+            <li><strong>Análisis de leche:</strong> composición, CCS, CBT, grasa y proteína.</li>
+            <li><strong>Dashboard:</strong> gráficos de producción, composición del rebaño e indicadores reproductivos.</li>
+            <li><strong>Solicitudes técnicas:</strong> apertura y seguimiento de visitas de los técnicos.</li>
+            <li><strong>Colaboradores ilimitados con permisos granulares:</strong> registre cuantos colaboradores necesite y defina qué puede ver y usar cada uno.</li>
+            <li><strong>Notificaciones en la app + WhatsApp:</strong> partos, DG, destetes, análisis, visitas y manejos avisados automáticamente en el celular.</li>
+            <li><strong>Finanzas:</strong> gastos por categoría, sector y período.</li>
+            <li><strong>Exportación CSV</strong> de los datos del establecimiento en cualquier momento.</li>
+        </ul>
+    </div>
+
+    <div class="profile-card pc-tecnico">
+        <h3>Técnico</h3>
+        <div class="identity">"Soy técnico y necesito registrar evaluaciones y servicios en el campo, muchas veces sin señal."</div>
+        <ul>
+            <li><strong>Evaluación Morfológica Lineal (EML):</strong> dos módulos dedicados — <strong>EML Lechera</strong> (16 características, foco en ubre, pezones y conformación lechera) y <strong>EML de Carne</strong> (13 características en 4 grupos: estructura corporal, estructura de carne, miembros anteriores y posteriores). Formularios diferenciados para machos y hembras, puntuación total e historial editable.</li>
+            <li><strong>Medidas corporales:</strong> perímetro torácico, circunferencia escrotal y medidas objetivas.</li>
+            <li><strong>Diagnóstico Gestacional (DG):</strong> registros con días gestacionales e identificación de patologías reproductivas.</li>
+            <li><strong>Gestión de visitas:</strong> agenda, establecimientos atendidos, panel de actividades.</li>
+            <li><strong>Solicitudes:</strong> recepción, aprobación y rechazo de las solicitudes de los productores.</li>
+            <li><strong>Modo offline completo:</strong> todo funciona sin señal y sincroniza después.</li>
+        </ul>
+    </div>
+
+    <div class="profile-card pc-admin">
+        <h3>Admin de la Asociación</h3>
+        <div class="identity">"Soy admin y necesito ver el rebaño agregado de mi asociación y gobernar técnicos y productores."</div>
+        <ul>
+            <li><strong>Gestión de usuarios:</strong> registro y edición de técnicos y productores vinculados a la asociación.</li>
+            <li><strong>Establecimientos:</strong> visualización y monitoreo del uso de cada establecimiento asociado.</li>
+            <li><strong>Análisis gerenciales:</strong> métricas globales, distribución por sexo, por establecimiento, producción agregada.</li>
+            <li><strong>Historiales:</strong> filtros avanzados de registros, movimientos y eventos reproductivos por categoría.</li>
+            <li><strong>Exportación centralizada:</strong> panel dedicado con filtros por fecha, agregación por productor, 12 tipos de datos.</li>
+            <li><strong>Pagos:</strong> suscripciones, historial, morosidad.</li>
+        </ul>
+    </div>
+</section>
+
+<div class="page-break"></div>
+
+<section>
+    <h2>Diferenciales técnicos</h2>
+
+    <div class="diff-block green">
+        <div class="diff-label">01 · Modo Offline First</div>
+        <h3>Trabajo de campo sin depender de señal</h3>
+        <p>Almacenamiento local en cada dispositivo con sincronización automática y resolución de conflictos cuando la conexión vuelve. El técnico va al establecimiento más remoto y registra EML, medidas y DG con el mismo flujo de siempre.</p>
+    </div>
+
+    <div class="diff-block purple">
+        <div class="diff-label">02 · Asistente de IA</div>
+        <h3>Un consultor dentro de la app, 24/7</h3>
+        <p>Responde en lenguaje natural a preguntas sobre su rebaño, basándose en los datos reales del establecimiento — producción, reproducción, calidad de leche, sanidad, desempeño, genética y mucho más. Cuantos más datos registra, más valiosas son las respuestas.</p>
+        <p style="margin-top:14px;"><strong>Detecta preguntas científicas</strong> (PT/ES) y busca literatura académica automáticamente. <strong>Conoce el manual de la app</strong> y responde dudas operativas adaptadas al perfil del usuario (productor, técnico, admin, colaborador).</p>
+    </div>
+
+    <div class="diff-block">
+        <div class="diff-label">03 · Exportación de datos en CSV</div>
+        <h3>Sus datos disponibles para cualquier análisis externo</h3>
+        <p>El productor exporta datos propios desde cada pantalla de listado. El admin de asociación tiene un panel centralizado con filtros por fecha y agregación por productor. Exporta <strong>12 tipos de datos</strong>: control lechero, manejo, pesaje, secado, nacimiento, venta, muerte, aborto, descarte, clínica, salida de leche, producción diaria. Archivo CSV UTF-8 listo para Excel, investigación científica o ERP.</p>
+    </div>
+
+    <div class="diff-block amber">
+        <div class="diff-label">04 · Configuración por establecimiento</div>
+        <h3>El sistema se ajusta a su realidad productiva</h3>
+        <p>Cada establecimiento configura sus propios parámetros: peso y edad ideales de destete, peso y edad para entrada en reproducción, días para diagnóstico gestacional, peso estándar al nacimiento, auto-categorización. Para asociaciones e instituciones con necesidades específicas, ofrecemos <strong>desarrollo a medida</strong> (ver modelos de asociación más adelante).</p>
+    </div>
+
+    <div class="diff-block">
+        <div class="diff-label">05 · Notificaciones inteligentes + WhatsApp</div>
+        <h3>El sistema avisa antes de que tenga que recordar</h3>
+        <p>Central de notificaciones en la propia app que alerta sobre eventos importantes de la rutina: <strong>partos previstos, diagnósticos gestacionales venciendo, destetes próximos, resultados de análisis de leche, solicitudes de visita técnica, vacunaciones y manejos pendientes</strong>. Con un clic, las mismas notificaciones se envían directamente al <strong>WhatsApp</strong> del productor, técnico o colaborador — sin depender de push, email o de que el usuario abra la aplicación.</p>
+        <span class="diff-chip">Partos y DG</span>
+        <span class="diff-chip">Destete y pesajes</span>
+        <span class="diff-chip">Análisis de leche</span>
+        <span class="diff-chip">Visitas técnicas</span>
+        <span class="diff-chip">Manejos y vacunas</span>
+    </div>
+
+    <div class="diff-block amber">
+        <div class="diff-label">06 · Colaboradores ilimitados con permisos</div>
+        <h3>Todo el equipo del establecimiento usando el sistema</h3>
+        <p>Registre <strong>cuantos colaboradores quiera</strong> — tamberos, ordeñadores, administrativos, capataz — sin costo adicional por usuario. Para cada colaborador, el productor define <strong>exactamente qué puede ver y qué puede usar</strong>: acceso solo a carga de ordeño, solo a manejo clínico, solo a eventos reproductivos, o combinaciones. Cada persona hace su parte sin exponer datos sensibles ni entorpecer el flujo de otros.</p>
+    </div>
+
+    <div class="diff-block green">
+        <div class="diff-label">07 · Multi-tenant y Multi-plataforma</div>
+        <h3>Una plataforma, varias asociaciones, todos los dispositivos</h3>
+        <p>Cada asociación tiene sus datos aislados y su propio admin. La misma infraestructura atiende varias organizaciones con separación total. Disponible en Android, iOS y Web, con la misma base de datos.</p>
+    </div>
+</section>
+
+<div class="page-break"></div>
+
+<section class="presenter-kit">
+    <h2>Para quien presenta Seabra</h2>
+    <p>Si usted es consultor, técnico de asociación o socio que va a presentar el sistema a una asociación o grupo de productores, este es su kit de argumentación.</p>
+
+    <h3 style="color:#b45309;">Los 4 pilares en una línea cada uno</h3>
+    <ul>
+        <li><strong>Operación:</strong> toda la rutina del productor en una sola app.</li>
+        <li><strong>Técnica:</strong> EML, DG, medidas y CMT en el campo, offline.</li>
+        <li><strong>Decisión:</strong> dashboards, IA y exportación de datos.</li>
+        <li><strong>Gobernanza:</strong> la asociación ve y gestiona el rebaño asociado.</li>
+    </ul>
+
+    <h3 style="color:#b45309;">3 diferenciales ancla</h3>
+    <ul>
+        <li><strong>Offline First</strong> — único sistema del sector que funciona de verdad en el campo sin señal.</li>
+        <li><strong>Asistente IA</strong> — consultor conversacional dentro de la app, respondiendo con base en los datos reales del establecimiento.</li>
+        <li><strong>Multi-segmento</strong> — caprinos y ovinos, leche y carne, en una sola plataforma.</li>
+    </ul>
+
+    <h3 style="color:#b45309;">3 objeciones comunes y cómo responder</h3>
+    <div class="objections">
+        <div class="objection">
+            <div class="obj">Ya uso planilla, me alcanza.</div>
+            <div class="ans"><strong>Respuesta:</strong> la planilla no avisa cuando un parto está próximo, no funciona offline en el corral y no genera indicadores cruzados. Seabra sí.</div>
+        </div>
+        <div class="objection">
+            <div class="obj">Mi asociación no tiene área de TI.</div>
+            <div class="ans"><strong>Respuesta:</strong> el sistema es SaaS, corre en la nube. Nadie necesita mantener servidores. Acompañamos la implementación y capacitamos a todos.</div>
+        </div>
+        <div class="objection">
+            <div class="obj">El técnico no va a usar celular.</div>
+            <div class="ans"><strong>Respuesta:</strong> la app fue diseñada para quien usa botas y trabaja con animales. Interfaz simple, toques grandes, offline. Capacitación presencial disponible.</div>
+        </div>
+    </div>
+
+    <h3 style="color:#b45309;">Argumento de fuente de ingresos</h3>
+    <p>Asociaciones e instituciones pueden adoptar Seabra no solo como herramienta, sino como <strong>generador de ingresos</strong>:</p>
+    <ul>
+        <li>Reventa de licencias a los productores asociados con margen.</li>
+        <li>Monetización de los datos agregados del rebaño (investigación, genética, lácteas).</li>
+        <li>Prestación de servicios técnicos de mayor valor (EML, DG, consultoría) con registro profesional.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Modelos de asociación</h2>
+    <p>Seabra Pequeños Rumiantes se comercializa en tres modelos, elegidos según el perfil y el objetivo del cliente:</p>
+    <div class="partnership">
+        <div class="partnership-card saas">
+            <div class="p-title">SaaS</div>
+            <div class="p-body">Suscripción mensual para productor independiente o asociación. Acceso inmediato, sin inversión inicial, actualizaciones incluidas.</div>
+        </div>
+        <div class="partnership-card licencia">
+            <div class="p-title">Licencia Completa</div>
+            <div class="p-body">Adquisición del sistema con código fuente. Para asociaciones o instituciones que quieren operar como <strong>fuente de ingresos</strong>: reventa a productores, recolección de datos, investigación, white-label.</div>
+        </div>
+        <div class="partnership-card custom">
+            <div class="p-title">Desarrollo a Medida</div>
+            <div class="p-body">Adaptaciones pagas para grupos con realidad específica: nuevos campos, reportes a medida, integraciones (ERP, laboratorios), dashboards dedicados, white-label.</div>
+        </div>
+    </div>
+    <p style="margin-top: 20px; font-size: 13px; color: #64748b; text-align: center;">Valores comerciales bajo consulta. Solicite nuestra propuesta personalizada.</p>
+</section>
+
+<div class="page-break"></div>
+
+<section class="training-list green">
+    <h2>Capacitaciones disponibles</h2>
+    <p>La implementación de Seabra se acompaña de un programa de capacitaciones técnicas. Conocimiento zootécnico y operación del sistema caminan juntos.</p>
+
+    <h3>Manejo en Caprinocultura y Ovinocultura</h3>
+    <ul>
+        <li>Contención de animales y manejo general</li>
+        <li>Nutrición y buenas prácticas sanitarias</li>
+        <li>Profilaxis, metafilaxis y diagnóstico clínico precoz</li>
+        <li>Primeros auxilios y buenas prácticas con neonatos</li>
+    </ul>
+
+    <div class="training-list blue">
+        <h3>Diagnóstico Gestacional Transrectal</h3>
+        <ul>
+            <li>Diagnóstico a partir de 30 días de gestación</li>
+            <li>Identificación de patologías reproductivas</li>
+        </ul>
+    </div>
+
+    <div class="training-list purple">
+        <h3>Reproducción</h3>
+        <ul>
+            <li>Inseminación artificial transcervical</li>
+            <li>Protocolos reproductivos</li>
+            <li>Calendario de servicios para producción lechera homogénea</li>
+            <li>Métodos de servicio</li>
+        </ul>
+    </div>
+
+    <div class="training-list amber">
+        <h3>Uso del Sistema</h3>
+        <ul>
+            <li>Operación completa de la app por parte de los productores</li>
+            <li>Interpretación de los indicadores</li>
+            <li>Registro de control lechero en el campo</li>
+            <li>Evaluación Morfológica Lineal (para técnicos en ciencias agrarias)</li>
+        </ul>
+    </div>
+
+    <div class="training-list green">
+        <h3>Gerenciamiento en Caprinocultura y Ovinocultura</h3>
+        <ul>
+            <li>Ingreso y calidad de los datos</li>
+            <li>Análisis de indicadores</li>
+            <li>Herramientas gerenciales del sistema</li>
+            <li>Análisis financiero con costos de producción</li>
+        </ul>
+    </div>
+</section>
+
+<div class="cta-final">
+    <h2>¿Listo para verlo funcionando?</h2>
+    <p>Agende una demostración personalizada o solicite una propuesta adecuada a su realidad.</p>
+    <div class="cta-buttons">
+        <a href="https://wa.me/5521999366784?text=Quisiera%20agendar%20una%20demostraci%C3%B3n%20de%20Seabra" class="cta-btn">Agendar demostración</a>
+        <a href="mailto:sistemaseabra@gmail.com?subject=Solicitud%20de%20propuesta%20Seabra" class="cta-btn secondary">Solicitar propuesta</a>
+    </div>
+    <div class="note">Material institucional — valores comerciales bajo consulta</div>
+</div>
+
+<div class="footer">
+    <img src="Logo_png.png" alt="Seabra Pequeños Rumiantes">
+    <p><strong>Seabra Pequeños Rumiantes</strong> — Sistema de Gestión para Caprinos y Ovinos (leche y carne)</p>
+    <p>Documento confidencial · Distribución restringida · No publicado en canales públicos</p>
+</div>
+
+</body>
+</html>
