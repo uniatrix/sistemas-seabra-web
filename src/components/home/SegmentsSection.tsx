@@ -97,20 +97,20 @@ export function SegmentsSection() {
           }`}
         >
           <Link href="/servicos" className="group block">
-            <Card className="border-gray-200 bg-gradient-to-br from-cyan-500/5 via-white to-white hover:border-cyan-500/30 transition-all duration-300 hover:shadow-lg">
+            <Card className="border-gray-200 bg-white hover:border-primary/30 transition-all duration-300 hover:shadow-md">
               <CardContent className="p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
-                <div className="h-12 w-12 rounded-xl bg-cyan-500/10 flex items-center justify-center shrink-0 group-hover:bg-cyan-500/20 transition-colors">
-                  <Code2 className="h-6 w-6 text-cyan-600" />
+                <div className="h-12 w-12 rounded-xl bg-gray-50 border border-gray-200 flex items-center justify-center shrink-0 transition-colors group-hover:bg-primary/5 group-hover:border-primary/20">
+                  <Code2 className="h-6 w-6 text-gray-700 transition-colors group-hover:text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-cyan-600 transition-colors">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">
                     {t('journey.webDev.title')}
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     {t('journey.webDev.subtitle')}
                   </p>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-cyan-600 font-medium shrink-0">
+                <div className="flex items-center gap-2 text-sm text-primary font-medium shrink-0">
                   <span>{t('journey.webDev.cta')}</span>
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </div>

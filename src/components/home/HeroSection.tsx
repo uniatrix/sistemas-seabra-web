@@ -88,8 +88,8 @@ export function HeroSection() {
                     <p className="text-3xl font-bold text-gray-900">100%</p>
                     <p className="text-sm text-gray-500">Funciona offline</p>
                   </div>
-                  <div className="h-12 w-12 rounded-xl bg-emerald-500/10 flex items-center justify-center">
-                    <Check className="h-6 w-6 text-emerald-500" />
+                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Check className="h-6 w-6 text-primary" />
                   </div>
                 </div>
 
@@ -100,8 +100,8 @@ export function HeroSection() {
                     <p className="text-3xl font-bold text-gray-900">&gt;15 anos</p>
                     <p className="text-sm text-gray-500">No mercado de pecuária</p>
                   </div>
-                  <div className="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center">
-                    <Award className="h-6 w-6 text-purple-500" />
+                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Award className="h-6 w-6 text-primary" />
                   </div>
                 </div>
 
@@ -112,8 +112,8 @@ export function HeroSection() {
                     <p className="text-3xl font-bold text-gray-900">&gt;5 anos</p>
                     <p className="text-sm text-gray-500">Em desenvolvimento de sistemas/web</p>
                   </div>
-                  <div className="h-12 w-12 rounded-xl bg-cyan-500/10 flex items-center justify-center">
-                    <Code className="h-6 w-6 text-cyan-500" />
+                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Code className="h-6 w-6 text-primary" />
                   </div>
                 </div>
               </div>

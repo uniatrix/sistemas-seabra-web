@@ -12,7 +12,6 @@ const testimonials = [
     farm: 'Capril Conquista',
     text: 'Antes do sistema, eu perdia horas anotando tudo em cadernos. Hoje, lanço os dados em minutos e tenho relatórios prontos. A produtividade do rebanho aumentou visivelmente.',
     rating: 5,
-    color: 'blue',
   },
   {
     name: 'Maria Helena',
@@ -20,7 +19,6 @@ const testimonials = [
     farm: 'Fazenda Santa Rita',
     text: 'O que mais me impressionou foi funcionar offline. No campo, não temos internet, e o sistema continua funcionando perfeitamente. Quando chego em casa, sincroniza tudo.',
     rating: 5,
-    color: 'emerald',
   },
   {
     name: 'Pedro Almeida',
@@ -28,15 +26,8 @@ const testimonials = [
     farm: 'Capril Cerro Alto',
     text: 'Como veterinário, preciso do histórico completo de cada animal. O sistema me dá isso em segundos. Facilita muito o diagnóstico e o acompanhamento reprodutivo.',
     rating: 5,
-    color: 'purple',
   },
 ];
-
-const colorClasses: Record<string, { bg: string; border: string }> = {
-  blue: { bg: 'bg-blue-50', border: 'border-blue-200' },
-  emerald: { bg: 'bg-emerald-50', border: 'border-emerald-200' },
-  purple: { bg: 'bg-purple-50', border: 'border-purple-200' },
-};
 
 export function TestimonialsSection() {
   const t = useTranslations('testimonials');
@@ -63,15 +54,12 @@ export function TestimonialsSection() {
         {/* Testimonials Grid */}
         <div className={`grid gap-6 md:grid-cols-3 scroll-fade-up scroll-fade-up-delay-2 ${isVisible ? 'visible' : ''}`}>
           {testimonials.map((testimonial, index) => {
-            const colors = colorClasses[testimonial.color];
             return (
               <div
                 key={index}
                 className={cn(
-                  'relative p-6 rounded-2xl border transition-all duration-300',
-                  'hover:shadow-md hover:-translate-y-1',
-                  colors.bg,
-                  colors.border
+                  'relative p-6 rounded-2xl border border-gray-200 bg-white transition-all duration-300',
+                  'hover:shadow-md hover:border-gray-300 hover:-translate-y-0.5'
                 )}
               >
                 {/* Stars */}

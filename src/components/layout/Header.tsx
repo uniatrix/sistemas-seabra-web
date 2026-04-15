@@ -197,7 +197,7 @@ export function Header() {
             <Button
               className={cn(
                 'rounded-full px-6 font-medium transition-all duration-300',
-                'bg-primary text-white hover:bg-blue-600',
+                'bg-primary text-white hover:bg-blue-800',
                 'shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30',
                 'hover:-translate-y-0.5'
               )}
@@ -303,7 +303,7 @@ export function Header() {
                 <div className="p-6 border-t border-gray-200 space-y-4">
                   <SheetClose asChild>
                     <Link href="/contato">
-                      <Button className="w-full h-12 rounded-full bg-primary text-white hover:bg-blue-600 font-medium">
+                      <Button className="w-full h-12 rounded-full bg-primary text-white hover:bg-blue-800 font-medium">
                         {t('header.contact')}
                       </Button>
                     </Link>
