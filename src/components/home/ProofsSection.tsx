@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
-import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
@@ -39,13 +38,12 @@ export function ProofsSection() {
             isVisible ? 'visible' : ''
           }`}
         >
-          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 shadow-lg">
-            <Image
-              src="/images/logo.png"
-              alt={t('imageAlt')}
-              fill
-              className="object-contain p-12"
-              sizes="(max-width: 1024px) 100vw, 600px"
+          <div className="relative aspect-4/3 rounded-3xl overflow-hidden bg-linear-to-br from-gray-50 to-gray-100 border border-gray-200 shadow-lg">
+            <iframe
+              src="https://pr.sistemaseabra.com.br/"
+              title={t('imageAlt')}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full border-0"
             />
           </div>
 
