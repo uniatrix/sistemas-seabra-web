@@ -117,10 +117,12 @@
   "proofs": {
     "title": "See the system in action",
     "subtitle": "Used by real producers — handling, indicators and reports.",
-    "imageAlt": "Seabra Solutions system",
+    "liveCtaTitle": "Explore the live system",
+    "liveCtaSubtitle": "Small Ruminants",
+    "liveCtaButton": "Open in new tab",
     "ctaTitle": "Want a live demo?",
-    "ctaMessage": "In a few minutes on WhatsApp I'll show you the system in action and answer any questions about how it fits your operation.",
-    "ctaButton": "I want a demo",
+    "ctaMessage": "Schedule a presentation with our team and see the system in action. In just a few minutes we'll show how it fits your operation.",
+    "ctaButton": "Schedule presentation",
     "ctaNote": "Direct support from our team"
   },
   "ctaSection": {

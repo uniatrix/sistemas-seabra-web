@@ -1,7 +1,9 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, ChevronDown, Maximize2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import { type Locale } from '@/i18n/config';
@@ -19,17 +21,83 @@ export function ProofsSection() {
   const t = useTranslations('proofs');
   const locale = useLocale() as Locale;
   const { ref, isVisible } = useScrollAnimation();
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const whatsappUrl = buildWhatsAppUrl({
     locale,
     utm: { utm_source: 'site', utm_campaign: 'demo' },
   });
 
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    let locked = false;
+    const lock = () => {
+      if (!locked) {
+        document.body.style.overflow = 'hidden';
+        locked = true;
+      }
+    };
+    const unlock = () => {
+      if (locked) {
+        document.body.style.overflow = '';
+        locked = false;
+      }
+    };
+
+    const handleWindowBlur = () => {
+      setTimeout(() => {
+        if (document.activeElement === iframe) lock();
+      }, 0);
+    };
+    const handleDocumentMouseDown = (e: MouseEvent) => {
+      if (e.target !== iframe) unlock();
+    };
+
+    window.addEventListener('blur', handleWindowBlur);
+    window.addEventListener('focus', unlock);
+    document.addEventListener('mousedown', handleDocumentMouseDown);
+
+    return () => {
+      window.removeEventListener('blur', handleWindowBlur);
+      window.removeEventListener('focus', unlock);
+      document.removeEventListener('mousedown', handleDocumentMouseDown);
+      unlock();
+    };
+  }, []);
+
+  const centerIframe = () => {
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+    document.body.style.overflow = '';
+    const rect = iframe.getBoundingClientRect();
+    const headerHeight =
+      document.querySelector('header')?.getBoundingClientRect().height ?? 0;
+    const available = window.innerHeight - headerHeight;
+    const desiredTopFromViewport =
+      rect.height > available
+        ? headerHeight + 20
+        : headerHeight + (available - rect.height) / 2;
+    const targetY = window.scrollY + rect.top - desiredTopFromViewport;
+    window.scrollTo({ top: targetY, behavior: 'smooth' });
+  };
+
   return (
     <section className="section-padding bg-gray-50 border-y border-gray-200" id="demo" ref={ref}>
       <div className="container-wide">
         <div className={`text-center space-y-4 mb-12 scroll-fade-up ${isVisible ? 'visible' : ''}`}>
-          <h2 className="heading-2 text-gray-900">{t('title')}</h2>
+          <div className="flex items-center justify-center gap-4">
+            <h2 className="heading-2 text-gray-900">{t('title')}</h2>
+            <button
+              type="button"
+              onClick={centerIframe}
+              aria-label={t('liveCtaTitle')}
+              className="hidden lg:flex h-11 w-11 items-center justify-center rounded-full bg-primary text-white shadow-md shadow-primary/30 hover:shadow-lg hover:shadow-primary/40 hover:scale-110 active:scale-95 transition-all duration-300"
+            >
+              <ChevronDown className="h-5 w-5" />
+            </button>
+          </div>
           <p className="body-large max-w-2xl mx-auto text-muted-foreground">{t('subtitle')}</p>
         </div>
 
@@ -38,16 +106,55 @@ export function ProofsSection() {
             isVisible ? 'visible' : ''
           }`}
         >
-          <div className="relative aspect-4/3 rounded-3xl overflow-hidden bg-linear-to-br from-gray-50 to-gray-100 border border-gray-200 shadow-lg">
-            <iframe
-              src="https://pr.sistemaseabra.com.br/"
-              title={t('imageAlt')}
-              loading="lazy"
-              className="absolute inset-0 w-full h-full border-0"
-            />
+          <div className="hidden lg:flex justify-center">
+            <div className="relative">
+              <iframe
+                ref={iframeRef}
+                src="https://pr.sistemaseabra.com.br/"
+                aria-label={t('liveCtaTitle')}
+                loading="lazy"
+                allowFullScreen
+                width={461}
+                height={831}
+                className="rounded-3xl border border-gray-200 shadow-md bg-white"
+              />
+              <button
+                type="button"
+                onClick={() => iframeRef.current?.requestFullscreen()}
+                aria-label="Maximizar"
+                className="absolute top-1.5 right-1.5 h-8 w-8 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:scale-110 transition-all duration-200"
+              >
+                <Maximize2 className="h-4 w-4" />
+              </button>
+            </div>
           </div>
 
-          <div className="space-y-6">
+          <a
+            href="https://pr.sistemaseabra.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="lg:hidden group relative aspect-4/3 rounded-3xl border border-gray-200 bg-white hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 flex flex-col items-center justify-center gap-7 p-10"
+          >
+            <Image
+              src="/images/logo.png"
+              alt="Seabra Solutions"
+              width={80}
+              height={80}
+              className="object-contain group-hover:scale-105 transition-transform duration-500"
+            />
+
+            <div className="text-center space-y-1.5">
+              <h3 className="text-2xl font-semibold text-gray-900">{t('liveCtaTitle')}</h3>
+              <p className="text-sm text-gray-500">{t('liveCtaSubtitle')}</p>
+            </div>
+
+            <span className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-linear-to-r from-primary to-blue-600 text-white text-sm font-semibold shadow-lg shadow-primary/30 group-hover:shadow-xl group-hover:shadow-primary/40 transition-all duration-300">
+              {t('liveCtaButton')}
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+            </span>
+          </a>
+
+          <div className="flex flex-col items-center text-center space-y-6">
             <h3 className="heading-3 text-gray-900">{t('ctaTitle')}</h3>
             <p className="body-large text-muted-foreground">{t('ctaMessage')}</p>
 

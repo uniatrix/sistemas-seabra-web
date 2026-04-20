@@ -117,10 +117,12 @@
   "proofs": {
     "title": "Veja o sistema na prática",
     "subtitle": "Sistema em uso por produtores reais, com manejo, indicadores e relatórios.",
-    "imageAlt": "Sistema Seabra Solutions",
+    "liveCtaTitle": "Explore o sistema ao vivo",
+    "liveCtaSubtitle": "Pequenos Ruminantes",
+    "liveCtaButton": "Abrir em nova aba",
     "ctaTitle": "Quer uma demonstração ao vivo?",
-    "ctaMessage": "Em poucos minutos pelo WhatsApp eu te mostro o sistema funcionando e respondo qualquer dúvida sobre como ele se aplica à sua operação.",
-    "ctaButton": "Quero ver uma demonstração",
+    "ctaMessage": "Agende uma apresentação com nossa equipe e veja o sistema funcionando na prática. Em poucos minutos mostramos como ele se aplica à sua operação.",
+    "ctaButton": "Agendar apresentação",
     "ctaNote": "Atendimento direto com nossa equipe"
   },
   "ctaSection": {

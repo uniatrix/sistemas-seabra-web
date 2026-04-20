@@ -117,10 +117,12 @@
   "proofs": {
     "title": "Mira el sistema en la práctica",
     "subtitle": "Sistema usado por productores reales, con manejo, indicadores e informes.",
-    "imageAlt": "Sistema Seabra Solutions",
+    "liveCtaTitle": "Explora el sistema en vivo",
+    "liveCtaSubtitle": "Pequeños Rumiantes",
+    "liveCtaButton": "Abrir en nueva pestaña",
     "ctaTitle": "¿Quieres una demostración en vivo?",
-    "ctaMessage": "En pocos minutos por WhatsApp te muestro el sistema funcionando y respondo cualquier duda sobre cómo se aplica a tu operación.",
-    "ctaButton": "Quiero ver una demostración",
+    "ctaMessage": "Agenda una presentación con nuestro equipo y ve el sistema funcionando en la práctica. En pocos minutos te mostramos cómo se aplica a tu operación.",
+    "ctaButton": "Agendar presentación",
     "ctaNote": "Atención directa con nuestro equipo"
   },
   "ctaSection": {
