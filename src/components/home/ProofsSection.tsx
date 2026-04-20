@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { ArrowRight, ChevronDown, Maximize2 } from 'lucide-react';
@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import { type Locale } from '@/i18n/config';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
+const DEMO_APP_URL = process.env.NEXT_PUBLIC_DEMO_APP_URL || 'https://pr.sistemaseabra.com.br';
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -22,11 +24,39 @@ export function ProofsSection() {
   const locale = useLocale() as Locale;
   const { ref, isVisible } = useScrollAnimation();
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [demoSrc, setDemoSrc] = useState<string>(DEMO_APP_URL);
+  const [mobileDemoHref, setMobileDemoHref] = useState<string>(DEMO_APP_URL);
 
   const whatsappUrl = buildWhatsAppUrl({
     locale,
     utm: { utm_source: 'site', utm_campaign: 'demo' },
   });
+
+  // Auto-login do usuário demo no iframe do app Flutter.
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const resp = await fetch('/api/demo-session', { method: 'POST' });
+        if (!resp.ok) return;
+        const data = (await resp.json()) as { access_token?: string; refresh_token?: string };
+        if (cancelled || !data.refresh_token) return;
+        const params = new URLSearchParams({
+          demo: 'true',
+          access_token: data.access_token || '',
+          refresh_token: data.refresh_token,
+        });
+        const src = `${DEMO_APP_URL}/?${params.toString()}`;
+        setDemoSrc(src);
+        setMobileDemoHref(src);
+      } catch {
+        // silencioso — fallback mostra tela de login normal
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     const iframe = iframeRef.current;
@@ -110,10 +140,12 @@ export function ProofsSection() {
             <div className="relative">
               <iframe
                 ref={iframeRef}
-                src="https://pr.sistemaseabra.com.br/"
+                src={demoSrc}
                 aria-label={t('liveCtaTitle')}
                 loading="lazy"
                 allowFullScreen
+                sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-downloads"
+                referrerPolicy="no-referrer"
                 width={461}
                 height={831}
                 className="rounded-3xl border border-gray-200 shadow-md bg-white"
@@ -130,7 +162,7 @@ export function ProofsSection() {
           </div>
 
           <a
-            href="https://pr.sistemaseabra.com.br/"
+            href={mobileDemoHref}
             target="_blank"
             rel="noopener noreferrer"
             className="lg:hidden group relative aspect-4/3 rounded-3xl border border-gray-200 bg-white hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 flex flex-col items-center justify-center gap-7 p-10"
