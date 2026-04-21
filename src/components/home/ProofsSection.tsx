@@ -154,7 +154,7 @@ export function ProofsSection() {
                 type="button"
                 onClick={() => iframeRef.current?.requestFullscreen()}
                 aria-label="Maximizar"
-                className="absolute top-1.5 right-1.5 h-8 w-8 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:scale-110 transition-all duration-200"
+                className="absolute top-2 right-2 h-9 w-9 flex items-center justify-center rounded-xl bg-white/40 backdrop-blur-md border border-white/50 text-gray-700 shadow-sm hover:bg-white/70 hover:text-gray-900 hover:shadow-md hover:scale-105 active:scale-95 transition-all duration-200"
               >
                 <Maximize2 className="h-4 w-4" />
               </button>
