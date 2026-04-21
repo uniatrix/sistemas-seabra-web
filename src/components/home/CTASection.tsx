@@ -2,7 +2,6 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight } from 'lucide-react';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import { type Locale } from '@/i18n/config';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -29,14 +28,9 @@ export function CTASection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="py-24 md:py-32 bg-primary" ref={ref}>
+    <section className="py-14 md:py-16 bg-primary" ref={ref}>
       <div className="container-tight">
-        <div className={`max-w-3xl mx-auto text-center space-y-10 scroll-fade-up ${isVisible ? 'visible' : ''}`}>
-          {/* Icon */}
-          <div className="inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-white/10 border border-white/20">
-            <ArrowUpRight className="h-8 w-8 text-white" />
-          </div>
-
+        <div className={`max-w-3xl mx-auto text-center space-y-8 scroll-fade-up ${isVisible ? 'visible' : ''}`}>
           {/* Content */}
           <div className="space-y-6">
             <h2 className="heading-1 text-white">
@@ -62,7 +56,7 @@ export function CTASection() {
 
           {/* Trust text */}
           <p className="text-sm text-blue-200">
-            Sem compromisso. Resposta em até 24h.
+            Sem compromisso. Resposta em até 30 minutos.
           </p>
         </div>
       </div>
