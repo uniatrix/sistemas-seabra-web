@@ -280,9 +280,9 @@ export default async function TermosPage({ params }: PageProps) {
           </h2>
           <p>
             Estes Termos são regidos pelas leis da{' '}
-            <strong>República Federativa do Brasil</strong>. Fica eleito o foro
-            da Comarca da sede da Seabra Solutions para dirimir quaisquer
-            controvérsias.
+            <strong>República Federativa do Brasil</strong>. Fica eleito o{' '}
+            <strong>foro da Comarca do Rio de Janeiro/RJ</strong> para dirimir
+            quaisquer controvérsias.
           </p>
 
           <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-4">
