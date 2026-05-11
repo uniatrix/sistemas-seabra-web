@@ -139,7 +139,20 @@
     "blog": "Blog",
     "contact": "Contato",
     "rights": "Todos os direitos reservados.",
-    "services": "Serviços Web"
+    "services": "Serviços Web",
+    "privacy": "Privacidade",
+    "terms": "Termos de Uso"
+  },
+  "privacyPage": {
+    "title": "Política de Privacidade",
+    "lastUpdated": "Última atualização: 10 de maio de 2026",
+    "localeNotice": ""
+  },
+  "termsPage": {
+    "title": "Termos de Uso",
+    "lastUpdated": "Última atualização: 10 de maio de 2026",
+    "localeNotice": "",
+    "draftNotice": ""
   },
   "whatsapp": {
     "defaultMessage": "Olá! Quero saber mais sobre as soluções da Seabra Solutions.",

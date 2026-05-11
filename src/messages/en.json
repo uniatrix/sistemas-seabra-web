@@ -139,7 +139,20 @@
     "blog": "Blog",
     "contact": "Contact",
     "rights": "All rights reserved.",
-    "services": "Web Services"
+    "services": "Web Services",
+    "privacy": "Privacy",
+    "terms": "Terms of Use"
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: May 10, 2026",
+    "localeNotice": "The legal text below is in Portuguese (Brazilian law applies). For an automated translation, use your browser's translate feature."
+  },
+  "termsPage": {
+    "title": "Terms of Use",
+    "lastUpdated": "Last updated: May 10, 2026",
+    "localeNotice": "The legal text below is in Portuguese (Brazilian law applies). For an automated translation, use your browser's translate feature.",
+    "draftNotice": ""
   },
   "whatsapp": {
     "defaultMessage": "Hello! I want to know more about Seabra Solutions.",

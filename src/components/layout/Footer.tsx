@@ -175,12 +175,18 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Seabra Solutions. {t('footer.rights')}
           </p>
           <div className="flex items-center gap-6 text-sm text-gray-500">
-            <a href="#" className="hover:text-white transition-colors">
-              Privacidade
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Termos
-            </a>
+            <Link
+              href="/privacidade"
+              className="hover:text-white transition-colors"
+            >
+              {t('footer.privacy')}
+            </Link>
+            <Link
+              href="/termos"
+              className="hover:text-white transition-colors"
+            >
+              {t('footer.terms')}
+            </Link>
           </div>
         </div>
       </div>
