@@ -136,6 +136,9 @@
         table.assoc th, table.assoc td { padding: 9px 12px; text-align: left; border-bottom: 1px solid #eceff3; }
         table.assoc th { background: #eef2f6; color: #1e3a5f; font-weight: 600; font-size: 12.5px; }
         table.assoc td strong { color: #1e3a5f; }
+        .assoc .ann { display: block; color: #64748b; font-weight: 500; font-size: 11px; margin-top: 1px; }
+        .assoc th span { font-weight: 500; color: #5b6573; font-size: 11px; }
+        .assoc-note { font-size: 12px; color: #64748b; margin-top: 10px; line-height: 1.5; }
         .use-cases { background: #f1f5f9; padding: 11px 15px; border-radius: 6px; margin-top: 11px; font-size: 12.5px; color: #475569; }
         .use-cases strong { color: #1e3a5f; }
 
@@ -314,23 +317,32 @@
 <div class="model-card">
     <div class="model-title-row">
         <div class="model-title">Associação</div>
-        <div class="model-price">desconto por filiado<small>sobre o plano escolhido</small></div>
+        <div class="model-price">desconto por associado<small>sobre o plano escolhido</small></div>
     </div>
-    <div class="model-subtitle">Para associações com produtores filiados, técnicos vinculados e gestão agregada do rebanho. Cada produtor filiado assina o plano que precisa, com desconto progressivo conforme o tamanho da associação.</div>
+    <div class="model-subtitle">Para associações com produtores associados, técnicos vinculados e gestão agregada do rebanho. Cada produtor associado assina o plano que precisa, com desconto progressivo conforme o tamanho da associação.</div>
     <table class="assoc">
         <tr>
-            <th>Tamanho da associação</th>
-            <th>Desconto por filiado</th>
+            <th>Plano</th>
+            <th>Até 30 associados <span>· 20% off</span></th>
+            <th>Acima de 30 <span>· 33% off</span></th>
         </tr>
         <tr>
-            <td>Até 30 filiados</td>
-            <td><strong>20% de desconto</strong> sobre o plano</td>
+            <td>Iniciante</td>
+            <td><strong>R$ 11,99</strong>/mês<span class="ann">anual R$ 10,19/mês</span></td>
+            <td><strong>R$ 10,04</strong>/mês<span class="ann">anual R$ 8,54/mês</span></td>
         </tr>
         <tr>
-            <td>Acima de 30 filiados</td>
-            <td><strong>33% de desconto</strong> sobre o plano</td>
+            <td>Intermediário</td>
+            <td><strong>R$ 60,00</strong>/mês<span class="ann">anual R$ 51,00/mês</span></td>
+            <td><strong>R$ 50,25</strong>/mês<span class="ann">anual R$ 42,71/mês</span></td>
+        </tr>
+        <tr>
+            <td>Pro</td>
+            <td><strong>R$ 120,00</strong>/mês<span class="ann">anual R$ 102,00/mês</span></td>
+            <td><strong>R$ 100,50</strong>/mês<span class="ann">anual R$ 85,43/mês</span></td>
         </tr>
     </table>
+    <p class="assoc-note">Os descontos somam: o da associação se aplica ao plano e, no ciclo anual, ainda entram 15% sobre esse valor. Ex.: Pro acima de 30 associados sai por R$ 100,50/mês (mensal) ou R$ 85,43/mês (anual).</p>
     <strong style="font-size: 13px; color: #1e3a5f; display: block; margin-top: 12px;">Inclui, além dos planos individuais:</strong>
     <ul>
         <li>Painel administrativo da associação</li>
@@ -348,7 +360,7 @@
         <div class="model-title">Licença Completa</div>
         <div class="model-price muted">sob consulta<small>pagamento único</small></div>
     </div>
-    <div class="model-subtitle">Para instituições e associações que querem operar o sistema como fonte de renda — revendendo aos produtores, coletando dados do rebanho filiado ou oferecendo white-label.</div>
+    <div class="model-subtitle">Para instituições e associações que querem operar o sistema como fonte de renda — revendendo aos produtores, coletando dados do rebanho associado ou oferecendo white-label.</div>
     <ul>
         <li>Código-fonte completo do aplicativo</li>
         <li>Direitos de uso e modificação ilimitados</li>
@@ -358,7 +370,7 @@
         <li>Suporte técnico no primeiro ano</li>
     </ul>
     <div class="use-cases">
-        <strong>Casos de uso típicos:</strong> a associação revende licenças aos filiados com margem · uma instituição de pesquisa opera o sistema para coletar dados do rebanho · uma empresa presta serviço white-label para redes de produtores · um laticínio monitora seus fornecedores.
+        <strong>Casos de uso típicos:</strong> a associação revende licenças aos associados com margem · uma instituição de pesquisa opera o sistema para coletar dados do rebanho · uma empresa presta serviço white-label para redes de produtores · um laticínio monitora seus fornecedores.
     </div>
 </div>
 
