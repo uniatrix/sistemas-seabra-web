@@ -155,9 +155,7 @@
         .presenter-kit h2 { color: #b45309; border-bottom-color: #f59e0b; }
         .objections { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 15px; }
         .objection { background: white; border: 1px solid #fde68a; border-radius: 8px; padding: 14px; }
-        .objection .obj { font-weight: 600; color: #7f1d1d; font-size: 13px; margin-bottom: 8px; }
-        .objection .obj::before { content: "❝ "; color: #dc2626; }
-        .objection .obj::after { content: " ❞"; color: #dc2626; }
+        .objection .obj { font-weight: 600; color: #991b1b; font-size: 13px; margin-bottom: 8px; padding-left: 10px; border-left: 3px solid #fca5a5; }
         .objection .ans { font-size: 13px; color: #15803d; }
         .objection .ans strong { color: #166534; }
 
@@ -199,11 +197,11 @@
 
 <div class="hero">
     <div class="lang-switcher">
-        <a href="/apresentacao" class="lang-btn">PT</a>
-        <a href="/apresentacao-es" class="lang-btn active">ES</a>
-        <a href="/apresentacao-en" class="lang-btn">EN</a>
+        <a href="apresentacao.html" class="lang-btn">PT</a>
+        <a href="apresentacao-es.html" class="lang-btn active">ES</a>
+        <a href="apresentacao-en.html" class="lang-btn">EN</a>
     </div>
-    <img src="/docs-seabra/Logo_png.png" alt="Seabra" class="logo">
+    <img src="Logo_png.png" alt="Seabra" class="logo">
     <div class="brand">Seabra</div>
     <div class="sub-brand">Pequeños Rumiantes</div>
     <div class="promise">Del animal a la decisión. Gestión completa para caprinocultores y ovinocultores.</div>
@@ -277,7 +275,7 @@
     <p>El sistema se adapta al perfil productivo. Las pantallas, indicadores y flujos cambian según el segmento — cada productor ve solo lo relevante para su realidad.</p>
     <div class="segments-grid">
         <div class="segment-card sc-lec-cap">
-            <h4>🐐 Caprinos Lecheros</h4>
+            <h4>Caprinos Lecheros</h4>
             <ul>
                 <li>Control lechero (dos ordeños)</li>
                 <li>Lactancias y secado</li>
@@ -287,7 +285,7 @@
             </ul>
         </div>
         <div class="segment-card sc-lec-ovi">
-            <h4>🐑 Ovinos Lecheros</h4>
+            <h4>Ovinos Lecheros</h4>
             <ul>
                 <li>Control lechero adaptado a la especie</li>
                 <li>Lactancias y composición de leche</li>
@@ -297,7 +295,7 @@
             </ul>
         </div>
         <div class="segment-card sc-car-cap">
-            <h4>🐐 Caprinos de Carne</h4>
+            <h4>Caprinos de Carne</h4>
             <ul>
                 <li>Pesajes y ganancia media diaria (GMD)</li>
                 <li>Medidas corporales (perímetro torácico, circunferencia escrotal)</li>
@@ -308,7 +306,7 @@
             </ul>
         </div>
         <div class="segment-card sc-car-ovi">
-            <h4>🐑 Ovinos de Carne</h4>
+            <h4>Ovinos de Carne</h4>
             <ul>
                 <li>Desempeño ponderal por animal y lote (GMD)</li>
                 <li>Medidas corporales y escores</li>
@@ -327,7 +325,7 @@
 
     <div class="profile-card">
         <h3>Productor</h3>
-        <div class="identity">"Soy productor y necesito registrar lo que pasa en mi establecimiento sin complicar la rutina."</div>
+        <div class="identity">Registra lo que pasa en el establecimiento sin complicar la rutina diaria.</div>
         <ul>
             <li><strong>Rebaño:</strong> registro, edición, listado con filtros y perfil individual detallado por animal.</li>
             <li><strong>Eventos:</strong> nacimientos, reproducción, abortos, muertes, ventas, descartes, secado, pesaje, clínica y manejo.</li>
@@ -345,7 +343,7 @@
 
     <div class="profile-card pc-tecnico">
         <h3>Técnico</h3>
-        <div class="identity">"Soy técnico y necesito registrar evaluaciones y servicios en el campo, muchas veces sin señal."</div>
+        <div class="identity">Registra evaluaciones y servicios en el campo, muchas veces sin señal.</div>
         <ul>
             <li><strong>Evaluación Morfológica Lineal (EML):</strong> dos módulos dedicados — <strong>EML Lechera</strong> (16 características, foco en ubre, pezones y conformación lechera) y <strong>EML de Carne</strong> (13 características en 4 grupos: estructura corporal, estructura de carne, miembros anteriores y posteriores). Formularios diferenciados para machos y hembras, puntuación total e historial editable.</li>
             <li><strong>Medidas corporales:</strong> perímetro torácico, circunferencia escrotal y medidas objetivas.</li>
@@ -358,7 +356,7 @@
 
     <div class="profile-card pc-admin">
         <h3>Admin de la Asociación</h3>
-        <div class="identity">"Soy admin y necesito ver el rebaño agregado de mi asociación y gobernar técnicos y productores."</div>
+        <div class="identity">Ve el rebaño agregado de la asociación y administra técnicos y productores.</div>
         <ul>
             <li><strong>Gestión de usuarios:</strong> registro y edición de técnicos y productores vinculados a la asociación.</li>
             <li><strong>Establecimientos:</strong> visualización y monitoreo del uso de cada establecimiento asociado.</li>
@@ -383,7 +381,7 @@
 
     <div class="diff-block purple">
         <div class="diff-label">02 · Asistente de IA</div>
-        <h3>Un consultor dentro de la app, 24/7</h3>
+        <h3>Un asistente dentro de la app, siempre a mano</h3>
         <p>Responde en lenguaje natural a preguntas sobre su rebaño, basándose en los datos reales del establecimiento — producción, reproducción, calidad de leche, sanidad, desempeño, genética y mucho más. Cuantos más datos registra, más valiosas son las respuestas.</p>
         <p style="margin-top:14px;"><strong>Detecta preguntas científicas</strong> (PT/ES) y busca literatura académica automáticamente. <strong>Conoce el manual de la app</strong> y responde dudas operativas adaptadas al perfil del usuario (productor, técnico, admin, colaborador).</p>
     </div>
@@ -397,7 +395,7 @@
     <div class="diff-block amber">
         <div class="diff-label">04 · Configuración por establecimiento</div>
         <h3>El sistema se ajusta a su realidad productiva</h3>
-        <p>Cada establecimiento configura sus propios parámetros: peso y edad ideales de destete, peso y edad para entrada en reproducción, días para diagnóstico gestacional, peso estándar al nacimiento, auto-categorización. Para asociaciones e instituciones con necesidades específicas, ofrecemos <strong>desarrollo a medida</strong> (ver modelos de asociación más adelante).</p>
+        <p>Cada establecimiento configura sus propios parámetros: peso y edad ideales de destete, peso y edad para entrada en reproducción, días para diagnóstico gestacional, peso estándar al nacimiento, auto-categorización. Para asociaciones e instituciones con necesidades específicas, ofrecemos <strong>desarrollo a medida</strong> (ver modelos comerciales más adelante).</p>
     </div>
 
     <div class="diff-block">
@@ -440,7 +438,7 @@
 
     <h3 style="color:#b45309;">3 diferenciales ancla</h3>
     <ul>
-        <li><strong>Offline First</strong> — único sistema del sector que funciona de verdad en el campo sin señal.</li>
+        <li><strong>Offline First</strong> — hecho para funcionar en el campo sin señal, no solo en la oficina.</li>
         <li><strong>Asistente IA</strong> — consultor conversacional dentro de la app, respondiendo con base en los datos reales del establecimiento.</li>
         <li><strong>Multi-segmento</strong> — caprinos y ovinos, leche y carne, en una sola plataforma.</li>
     </ul>
@@ -471,12 +469,12 @@
 </section>
 
 <section>
-    <h2>Modelos de asociación</h2>
-    <p>Seabra Pequeños Rumiantes se comercializa en tres modelos, elegidos según el perfil y el objetivo del cliente:</p>
+    <h2>Modelos comerciales</h2>
+    <p>Seabra atiende desde el productor individual hasta instituciones, en modelos elegidos según el perfil y el objetivo del cliente:</p>
     <div class="partnership">
         <div class="partnership-card saas">
-            <div class="p-title">SaaS</div>
-            <div class="p-body">Suscripción mensual para productor independiente o asociación. Acceso inmediato, sin inversión inicial, actualizaciones incluidas.</div>
+            <div class="p-title">Suscripción (SaaS)</div>
+            <div class="p-body">Tres planes para el productor — <strong>Iniciante, Intermediario y Pro</strong> — en ciclo mensual o anual. Las asociaciones afilian a sus productores con descuento por asociado y obtienen su propio panel administrativo. Acceso inmediato, sin inversión inicial.</div>
         </div>
         <div class="partnership-card licencia">
             <div class="p-title">Licencia Completa</div>
@@ -487,7 +485,7 @@
             <div class="p-body">Adaptaciones pagas para grupos con realidad específica: nuevos campos, reportes a medida, integraciones (ERP, laboratorios), dashboards dedicados, white-label.</div>
         </div>
     </div>
-    <p style="margin-top: 20px; font-size: 13px; color: #64748b; text-align: center;">Valores comerciales bajo consulta. Solicite nuestra propuesta personalizada.</p>
+    <p style="margin-top: 20px; font-size: 13px; color: #64748b; text-align: center;">Valores, comparativo de funcionalidades y descuentos en el documento <strong>Planes y Valores</strong>.</p>
 </section>
 
 <div class="page-break"></div>
@@ -550,11 +548,11 @@
         <a href="https://wa.me/5521999366784?text=Quisiera%20agendar%20una%20demostraci%C3%B3n%20de%20Seabra" class="cta-btn">Agendar demostración</a>
         <a href="mailto:sistemaseabra@gmail.com?subject=Solicitud%20de%20propuesta%20Seabra" class="cta-btn secondary">Solicitar propuesta</a>
     </div>
-    <div class="note">Material institucional — valores comerciales bajo consulta</div>
+    <div class="note">Material institucional · Planes y valores en documento aparte</div>
 </div>
 
 <div class="footer">
-    <img src="/docs-seabra/Logo_png.png" alt="Seabra Pequeños Rumiantes">
+    <img src="Logo_png.png" alt="Seabra Pequeños Rumiantes">
     <p><strong>Seabra Pequeños Rumiantes</strong> — Sistema de Gestión para Caprinos y Ovinos (leche y carne)</p>
     <p>Documento confidencial · Distribución restringida · No publicado en canales públicos</p>
 </div>
