@@ -115,9 +115,15 @@
         .contact { background: #1e3a5f; color: #fff; padding: 26px; border-radius: 8px; text-align: center; margin-top: 26px; }
         .contact h2 { color: #fff; border: none; margin: 0 0 6px; padding: 0; }
         .contact p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-        .contact .channels { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
-        .contact .channels .ch-label { font-size: 11px; opacity: 0.7; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 4px; }
-        .contact .channels a { color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; }
+        .contact .channels { display: flex; justify-content: center; align-items: stretch; gap: 16px; flex-wrap: wrap; }
+        .contact-btn { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; padding: 13px 28px; border-radius: 8px; line-height: 1.3; transition: transform .12s ease, box-shadow .12s ease; }
+        .contact-btn .cb-top { font-size: 15px; font-weight: 700; }
+        .contact-btn .cb-sub { font-size: 12.5px; opacity: 0.85; margin-top: 3px; }
+        .contact-btn.wa { background: #fff; color: #1e3a5f; box-shadow: 0 2px 8px rgba(0,0,0,0.18); }
+        .contact-btn.wa:hover { transform: translateY(-1px); box-shadow: 0 5px 16px rgba(0,0,0,0.28); }
+        .contact-btn.email { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.5); }
+        .contact-btn.email:hover { background: rgba(255,255,255,0.12); }
+        .contact .hint { font-size: 12px; opacity: 0.7; margin-top: 14px; }
 
         .footer { margin-top: 26px; padding-top: 14px; border-top: 1px solid #e2e8f0; text-align: center; color: #94a3b8; font-size: 11px; }
 
@@ -364,17 +370,18 @@
 <!-- ===== CONTACTO ===== -->
 <div class="contact">
     <h2>Conversemos</h2>
-    <p>Envíe un mensaje y reciba una propuesta adecuada a su realidad.</p>
+    <p>Toque el botón de abajo: abre directamente una conversación de WhatsApp con nuestro equipo.</p>
     <div class="channels">
-        <div>
-            <div class="ch-label">WhatsApp</div>
-            <a href="https://wa.me/5521999366784?text=Quisiera%20conocer%20los%20planes%20de%20Seabra">+55 (21) 9 9936-6784</a>
-        </div>
-        <div>
-            <div class="ch-label">E-mail</div>
-            <a href="mailto:sistemaseabra@gmail.com?subject=Interes%20en%20los%20planes%20Seabra">sistemaseabra@gmail.com</a>
-        </div>
+        <a class="contact-btn wa" href="https://wa.me/5521999366784?text=Quisiera%20conocer%20los%20planes%20de%20Seabra">
+            <span class="cb-top">Abrir conversación en WhatsApp &rarr;</span>
+            <span class="cb-sub">+55 (21) 9 9936-6784</span>
+        </a>
+        <a class="contact-btn email" href="mailto:sistemaseabra@gmail.com?subject=Interes%20en%20los%20planes%20Seabra">
+            <span class="cb-top">Enviar e-mail</span>
+            <span class="cb-sub">sistemaseabra@gmail.com</span>
+        </a>
     </div>
+    <div class="hint">Respondemos en horario comercial. Sin compromiso.</div>
 </div>
 
 <div class="footer">
