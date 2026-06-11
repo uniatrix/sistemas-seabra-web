@@ -16,13 +16,6 @@ const journeys = [
     borderAccent: 'group-hover:border-emerald-500/40',
     glowColor: 'group-hover:shadow-emerald-500/15',
   },
-  {
-    key: 'beefCattle',
-    href: '/bovinos-corte',
-    iconSrc: '/images/icons/bovinos-corte.png',
-    borderAccent: 'group-hover:border-red-500/40',
-    glowColor: 'group-hover:shadow-red-500/15',
-  },
 ];
 
 export function SegmentsSection() {
@@ -45,7 +38,7 @@ export function SegmentsSection() {
         </div>
 
         <div
-          className={`grid gap-6 md:grid-cols-2 max-w-4xl mx-auto scroll-fade-up scroll-fade-up-delay-2 ${
+          className={`grid gap-6 max-w-xl mx-auto scroll-fade-up scroll-fade-up-delay-2 ${
             isVisible ? 'visible' : ''
           }`}
         >
@@ -92,7 +85,7 @@ export function SegmentsSection() {
 
         {/* Web development as separate, distinct block */}
         <div
-          className={`mt-12 max-w-4xl mx-auto scroll-fade-up scroll-fade-up-delay-3 ${
+          className={`mt-12 max-w-xl mx-auto scroll-fade-up scroll-fade-up-delay-3 ${
             isVisible ? 'visible' : ''
           }`}
         >

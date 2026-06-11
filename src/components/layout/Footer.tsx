@@ -8,8 +8,7 @@ import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 
 const solutions = [
-  { href: '/solucoes/bovinos/leite', key: 'cattleDairy' },
-  { href: '/solucoes/bovinos/corte', key: 'cattleBeef' },
+  { href: '/pequenos-ruminantes', key: 'smallRuminantsHub' },
   { href: '/solucoes/caprinos/leite', key: 'goatDairy' },
   { href: '/solucoes/caprinos/corte', key: 'goatBeef' },
   { href: '/solucoes/ovinos/leite', key: 'sheepDairy' },

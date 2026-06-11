@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
       { source: '/planos-en',       destination: '/docs-seabra/planos-en.html' },
     ];
   },
+  async redirects() {
+    return [
+      { source: '/privacidade', destination: '/pt/privacidade', permanent: true },
+      { source: '/termos',      destination: '/pt/termos',      permanent: true },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

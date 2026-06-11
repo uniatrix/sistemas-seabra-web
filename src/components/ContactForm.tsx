@@ -18,8 +18,6 @@ export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
   const segments = [
-    { value: 'bovinos-leite', label: t('segmentCattleDairy') },
-    { value: 'bovinos-corte', label: t('segmentCattleBeef') },
     { value: 'caprinos-leite', label: t('segmentGoatDairy') },
     { value: 'caprinos-corte', label: t('segmentGoatBeef') },
     { value: 'ovinos-leite', label: t('segmentSheepDairy') },
