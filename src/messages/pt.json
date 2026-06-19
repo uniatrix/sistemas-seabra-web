@@ -24,7 +24,7 @@
     "webDev": "Desenvolvimento Web",
     "smallRuminantsHub": "Pequenos Ruminantes",
     "beefCattleHub": "Bovinos de Corte",
-    "sales": "Vendas",
+    "sales": "Produtos e Serviços",
     "consulting": "Consultoria",
     "rfidProducts": "Microchips e Leitores"
   },
@@ -352,7 +352,7 @@
       "description": "Consultoria em pequenos ruminantes e venda de microchips e leitores RFID para identificação e rastreabilidade do rebanho."
     },
     "hero": {
-      "badge": "Vendas",
+      "badge": "Produtos e Serviços",
       "title": "Consultoria e tecnologia para o seu rebanho",
       "subtitle": "Da orientação técnica em pequenos ruminantes aos equipamentos de identificação animal — tudo em um só lugar."
     },
@@ -385,10 +385,10 @@
       "stats": {
         "years": "15 anos",
         "yearsLabel": "de atuação no setor",
-        "reach": "Brasil + exterior",
-        "reachLabel": "Espanha e Portugal",
+        "reach": "Experiência nacional e internacional",
+        "reachLabel": "Brasil e Espanha",
         "count": "Dezenas",
-        "countLabel": "de consultorias realizadas"
+        "countLabel": "de produtores atendidos por todo o Brasil"
       },
       "profile": {
         "name": "Felipe Seabra",

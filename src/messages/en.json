@@ -24,7 +24,7 @@
     "webDev": "Web Development",
     "smallRuminantsHub": "Small Ruminants",
     "beefCattleHub": "Beef Cattle",
-    "sales": "Sales",
+    "sales": "Products & Services",
     "consulting": "Consulting",
     "rfidProducts": "Microchips & Readers"
   },
@@ -352,7 +352,7 @@
       "description": "Small ruminant consulting and RFID microchips and readers for animal identification and herd traceability."
     },
     "hero": {
-      "badge": "Sales",
+      "badge": "Products & Services",
       "title": "Consulting and technology for your herd",
       "subtitle": "From expert small-ruminant guidance to animal identification equipment — all in one place."
     },
@@ -385,10 +385,10 @@
       "stats": {
         "years": "15 years",
         "yearsLabel": "in the sector",
-        "reach": "Brazil + abroad",
-        "reachLabel": "Spain and Portugal",
+        "reach": "National & international experience",
+        "reachLabel": "Brazil and Spain",
         "count": "Dozens",
-        "countLabel": "of consulting projects"
+        "countLabel": "of producers served across Brazil"
       },
       "profile": {
         "name": "Felipe Seabra",
