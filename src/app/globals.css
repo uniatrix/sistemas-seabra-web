@@ -42,6 +42,13 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
+  --color-surface-light: var(--surface-light);
+  --color-surface-light-foreground: var(--surface-light-foreground);
+  --color-surface-light-muted: var(--surface-light-muted);
+  --color-surface-light-border: var(--surface-light-border);
+  --color-warm: var(--warm);
+  --color-warm-strong: var(--warm-strong);
+  --font-display: var(--font-display);
 }
 
 :root {
@@ -77,6 +84,60 @@
   --sidebar-accent-foreground: #111827;
   --sidebar-border: #e5e7eb;
   --sidebar-ring: #3b82f6;
+  /* Selective-dark surfaces (light-on-light fallback) + warm accent */
+  --surface-light: #f6f7f9;
+  --surface-light-foreground: #14181f;
+  --surface-light-muted: #5b6473;
+  --surface-light-border: #e3e6eb;
+  --warm: #d97706;
+  --warm-strong: #b45309;
+}
+
+/*
+ * Tema escuro. O site aplica `className="dark"` em <html> (layout.tsx), então
+ * este bloco está ativo por padrão. Base carvão (não preto puro) + acento âmbar
+ * que humaniza para o público rural. Azul permanece como cor de ação.
+ */
+.dark {
+  --background: #0c0e12;
+  --foreground: #f4f5f7;
+  --card: #15181e;
+  --card-foreground: #f4f5f7;
+  --popover: #15181e;
+  --popover-foreground: #f4f5f7;
+  --primary: #3b82f6; /* azul clareado p/ contraste AA sobre carvão */
+  --primary-foreground: #ffffff;
+  --secondary: #1d2129;
+  --secondary-foreground: #e5e7eb;
+  --muted: #161a21;
+  --muted-foreground: #9aa3b2;
+  --accent: rgba(245, 178, 90, 0.12);
+  --accent-foreground: #f5b25a;
+  --destructive: #ef4444;
+  --border: #232833;
+  --input: #232833;
+  --ring: #3b82f6;
+  --chart-1: #3b82f6;
+  --chart-2: #10b981;
+  --chart-3: #f59e0b;
+  --chart-4: #8b5cf6;
+  --chart-5: #ec4899;
+  --sidebar: #0c0e12;
+  --sidebar-foreground: #f4f5f7;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #161a21;
+  --sidebar-accent-foreground: #f4f5f7;
+  --sidebar-border: #232833;
+  --sidebar-ring: #3b82f6;
+  /* Faixas CLARAS intencionais (logos, demo) — texto escuro-sobre-claro */
+  --surface-light: #f6f7f9;
+  --surface-light-foreground: #14181f;
+  --surface-light-muted: #5b6473;
+  --surface-light-border: #e3e6eb;
+  /* Acento quente âmbar/trigo (glows, setas, palavra de destaque) */
+  --warm: #f5b25a;
+  --warm-strong: #e09a3e;
 }
 
 @layer base {
@@ -113,11 +174,15 @@
   }
 
   .text-gradient-subtle {
-    @apply bg-clip-text text-transparent bg-linear-to-b from-gray-900 to-gray-700;
+    @apply bg-clip-text text-transparent bg-linear-to-b from-foreground to-muted-foreground;
   }
 
   .glass-card {
-    @apply bg-white border border-gray-200 rounded-2xl shadow-sm;
+    @apply bg-card border border-border rounded-2xl shadow-sm;
+  }
+
+  .font-display {
+    font-family: var(--font-display), Georgia, "Times New Roman", serif;
   }
 
   .btn-modern {
@@ -133,11 +198,11 @@
 
   .btn-ghost {
     @apply font-medium transition-all duration-200;
-    @apply bg-gray-100 text-gray-900 border border-gray-200 rounded-full;
+    @apply bg-secondary text-secondary-foreground border border-border rounded-full;
   }
 
   .btn-ghost:hover {
-    @apply bg-gray-200 border-gray-300;
+    @apply bg-secondary/80 border-border;
   }
 
   .heading-1 {
@@ -162,11 +227,11 @@
 
   .btn-ghost-modern {
     @apply font-medium transition-all duration-200;
-    @apply bg-gray-100 text-gray-900 border border-gray-200 rounded-full;
+    @apply bg-secondary text-secondary-foreground border border-border rounded-full;
   }
 
   .btn-ghost-modern:hover {
-    @apply bg-gray-200 border-gray-300;
+    @apply bg-secondary/80 border-border;
     transform: translateY(-1px);
   }
 
@@ -176,8 +241,8 @@
 
   .bg-grid-pattern {
     background-image:
-      linear-gradient(rgba(0, 0, 0, 0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 0, 0, 0.025) 1px, transparent 1px);
+      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 
@@ -285,7 +350,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.18);
   border-radius: 3px;
 }
 

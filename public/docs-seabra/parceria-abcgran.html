@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parceria ABCGRAN × Seabra Solutions</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      background: #f4f6f8;
+      color: #1a1a1a;
+      padding: 2rem;
+    }
+
+    .page {
+      max-width: 794px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      overflow: hidden;
+    }
+
+    /* ── Cabeçalho ── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 2.5rem 1.5rem;
+      border-bottom: 3px solid #e8eef2;
+      gap: 1.5rem;
+    }
+
+    .header-logos {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .header-logos img {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .header-divider {
+      width: 1px;
+      height: 50px;
+      background: #c8d4dc;
+    }
+
+    .header-meta {
+      text-align: right;
+    }
+
+    .doc-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6b7a8d;
+    }
+
+    .doc-date {
+      font-size: 0.8rem;
+      color: #8a95a3;
+      margin-top: 2px;
+    }
+
+    /* ── Banner título ── */
+    .banner {
+      background: linear-gradient(135deg, #1a3a2a 0%, #1e3a5f 100%);
+      padding: 2rem 2.5rem;
+      color: #fff;
+    }
+
+    .banner h1 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .banner p {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 560px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* ── Corpo ── */
+    .body {
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    /* ── Seção genérica ── */
+    .section-title {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #1e3a5f;
+      margin-bottom: 0.6rem;
+    }
+
+    /* ── Benefícios ── */
+    .benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: #2d3748;
+      text-align: justify;
+    }
+
+    .benefit-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: #1a3a2a;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 900;
+      margin-top: 1px;
+    }
+
+    .benefit-item strong {
+      color: #1a3a2a;
+    }
+
+    /* ── Dados ── */
+    .data-box {
+      background: #f0f5f2;
+      border-left: 4px solid #1a3a2a;
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: #2d3748;
+      text-align: justify;
+    }
+
+    .data-box strong {
+      color: #1a3a2a;
+    }
+
+    /* ── Passos ── */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: #2d3748;
+      text-align: justify;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: #1e3a5f;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 800;
+      margin-top: 1px;
+    }
+
+    /* ── Planos com desconto ── */
+    .plans-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .plan-card {
+      border: 1px solid #d7dee6;
+      border-radius: 8px;
+      padding: 0.9rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .plan-card.featured {
+      border-color: #1e3a5f;
+      background: #f5f8fd;
+    }
+
+    .plan-name {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #1e3a5f;
+    }
+
+    .plan-original {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      text-decoration: line-through;
+    }
+
+    .plan-price {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #1a3a2a;
+      line-height: 1;
+    }
+
+    .plan-price span {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: #6b7a8d;
+    }
+
+    .plan-badge {
+      display: inline-block;
+      background: #1a3a2a;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.05em;
+      margin-top: 2px;
+      align-self: flex-start;
+    }
+
+    .plan-divider {
+      border: none;
+      border-top: 1px dashed #d7dee6;
+      margin: 0.4rem 0 0.2rem;
+    }
+
+    .plan-annual {
+      font-size: 0.78rem;
+      color: #15803d;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .plan-annual span {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 400;
+      color: #6b7a8d;
+    }
+
+    /* ── Site ── */
+    .site-note {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: #4a5568;
+      text-align: justify;
+    }
+
+    /* ── Rodapé ── */
+    .footer {
+      border-top: 1px solid #e2e8f0;
+      padding: 1.25rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      background: #f8fafc;
+    }
+
+    .footer-col {
+      font-size: 0.78rem;
+      color: #6b7a8d;
+      line-height: 1.7;
+    }
+
+    .footer-col strong {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4a5568;
+      margin-bottom: 2px;
+    }
+
+    .footer-col a {
+      color: #1e3a5f;
+      text-decoration: none;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body { background: #fff; padding: 0; }
+      .page { box-shadow: none; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Cabeçalho -->
+    <div class="header">
+      <div class="header-logos">
+        <img src="logo_abcgran.png" alt="ABCGRAN" />
+        <div class="header-divider"></div>
+        <img src="Logo_png.png" alt="Seabra Solutions" />
+      </div>
+      <div class="header-meta">
+        <div class="doc-label">Documento de Parceria</div>
+        <div class="doc-date">Junho de 2025</div>
+      </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner">
+      <h1>Parceria ABCGRAN × Seabra Solutions</h1>
+      <p>
+        A ABCGRAN e a Seabra Solutions firmam a parceria para utilizar o
+        <strong style="color:#fff;">Sistema Seabra — Pequenos Ruminantes</strong>
+        como ferramenta oficial de gestão de rebanho dos associados, promovendo
+        o melhoramento genético e a disseminação da caprinocultura leiteira da raça Murciano-Granadina.
+      </p>
+    </div>
+
+    <!-- Corpo -->
+    <div class="body">
+
+      <!-- Benefícios -->
+      <div>
+        <div class="section-title">Benefícios para o Associado</div>
+        <div class="benefits">
+          <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <span><strong>20% de desconto</strong> em qualquer plano do Sistema Seabra — Pequenos Ruminantes, aplicado automaticamente ao associado cadastrado.</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <span>Contribuição ativa para o <strong>melhoramento genético</strong> da raça por meio dos dados do rebanho, fortalecendo o banco genético da ABCGRAN.</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <span>
+              <strong>Vitrine no site da ABCGRAN</strong> para divulgação de animais e produtos —
+              com opções de destaque disponíveis para ampliar a visibilidade do seu plantel.
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Planos com desconto -->
+      <div>
+        <div class="section-title">Planos com desconto de associado (20% off)</div>
+        <div class="plans-grid">
+          <div class="plan-card">
+            <div class="plan-name">Iniciante</div>
+            <div class="plan-original">R$ 14,99/mês</div>
+            <div class="plan-price">R$ 11,99 <span>/ mês</span></div>
+            <div class="plan-badge">20% off</div>
+            <hr class="plan-divider" />
+            <div class="plan-annual">R$ 10,19<span>/ mês no anual · economize 32%</span></div>
+          </div>
+          <div class="plan-card featured">
+            <div class="plan-name">Intermediário</div>
+            <div class="plan-original">R$ 75,00/mês</div>
+            <div class="plan-price">R$ 60,00 <span>/ mês</span></div>
+            <div class="plan-badge">20% off</div>
+            <hr class="plan-divider" />
+            <div class="plan-annual">R$ 51,00<span>/ mês no anual · economize 32%</span></div>
+          </div>
+          <div class="plan-card">
+            <div class="plan-name">Pro</div>
+            <div class="plan-original">R$ 150,00/mês</div>
+            <div class="plan-price">R$ 120,00 <span>/ mês</span></div>
+            <div class="plan-badge">20% off</div>
+            <hr class="plan-divider" />
+            <div class="plan-annual">R$ 102,00<span>/ mês no anual · economize 32%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Posse dos Dados -->
+      <div>
+        <div class="section-title">Posse dos Dados</div>
+        <div class="data-box">
+          O criador mantém a <strong>posse individual</strong> dos seus dados no
+          Sistema Seabra — Pequenos Ruminantes. Ao optar pela integração com a ABCGRAN,
+          os dados passam a ser gerenciados pela associação com a finalidade exclusiva de
+          <strong>melhoramento genético e acompanhamento dos rebanhos da raça</strong>.
+          A integração é voluntária e pode ser solicitada a qualquer momento.
+        </div>
+      </div>
+
+      <!-- Como ativar -->
+      <div>
+        <div class="section-title">Como Ativar o Desconto</div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <span>Certifique-se de ser associado da ABCGRAN.</span>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <span>Informe à ABCGRAN o e-mail que fará o cadastro ou, se já cadastrado, o e-mail registrado no <strong>Sistema Seabra — Pequenos Ruminantes</strong>.</span>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <span>A associação insere seu e-mail na lista de usuários beneficiados.</span>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <span>O <strong>desconto de 20%</strong> é aplicado no plano escolhido ou na renovação.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Site institucional -->
+      <div>
+        <div class="section-title">Site Institucional</div>
+        <p class="site-note">
+          A <strong>Seabra Solutions</strong> está desenvolvendo o site institucional da ABCGRAN
+          para divulgar a raça, associados, eventos e trabalhos voltados à caprinocultura leiteira —
+          fortalecendo a presença digital da associação e da raça Murciano-Granadina no Brasil.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+      <div class="footer-col">
+        <strong>ABCGRAN</strong>
+        <a href="mailto:associacaoabcgran@gmail.com">associacaoabcgran@gmail.com</a>
+      </div>
+      <div class="footer-col" style="text-align:right;">
+        <strong>Seabra Solutions</strong>
+        <a href="https://wa.me/5521999366784" target="_blank">WhatsApp</a><br />
+        <a href="mailto:sistemaseabra@gmail.com">sistemaseabra@gmail.com</a><br />
+        <a href="https://www.sistemaseabra.com.br">sistemaseabra.com.br</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
