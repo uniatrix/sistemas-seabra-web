@@ -93,53 +93,6 @@
   --warm-strong: #b45309;
 }
 
-/*
- * Tema escuro. O site aplica `className="dark"` em <html> (layout.tsx), então
- * este bloco está ativo por padrão. Base carvão (não preto puro) + acento âmbar
- * que humaniza para o público rural. Azul permanece como cor de ação.
- */
-.dark {
-  --background: #0c0e12;
-  --foreground: #f4f5f7;
-  --card: #15181e;
-  --card-foreground: #f4f5f7;
-  --popover: #15181e;
-  --popover-foreground: #f4f5f7;
-  --primary: #3b82f6; /* azul clareado p/ contraste AA sobre carvão */
-  --primary-foreground: #ffffff;
-  --secondary: #1d2129;
-  --secondary-foreground: #e5e7eb;
-  --muted: #161a21;
-  --muted-foreground: #9aa3b2;
-  --accent: rgba(245, 178, 90, 0.12);
-  --accent-foreground: #f5b25a;
-  --destructive: #ef4444;
-  --border: #232833;
-  --input: #232833;
-  --ring: #3b82f6;
-  --chart-1: #3b82f6;
-  --chart-2: #10b981;
-  --chart-3: #f59e0b;
-  --chart-4: #8b5cf6;
-  --chart-5: #ec4899;
-  --sidebar: #0c0e12;
-  --sidebar-foreground: #f4f5f7;
-  --sidebar-primary: #3b82f6;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #161a21;
-  --sidebar-accent-foreground: #f4f5f7;
-  --sidebar-border: #232833;
-  --sidebar-ring: #3b82f6;
-  /* Faixas CLARAS intencionais (logos, demo) — texto escuro-sobre-claro */
-  --surface-light: #f6f7f9;
-  --surface-light-foreground: #14181f;
-  --surface-light-muted: #5b6473;
-  --surface-light-border: #e3e6eb;
-  /* Acento quente âmbar/trigo (glows, setas, palavra de destaque) */
-  --warm: #f5b25a;
-  --warm-strong: #e09a3e;
-}
-
 @layer base {
   * {
     @apply border-border;
@@ -241,8 +194,8 @@
 
   .bg-grid-pattern {
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      linear-gradient(rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.025) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 
@@ -350,7 +303,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 3px;
 }
 
