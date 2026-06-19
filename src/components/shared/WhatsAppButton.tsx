@@ -72,7 +72,7 @@ export function WhatsAppButton({ segment, className }: WhatsAppButtonProps) {
       <span
         className={cn(
           'absolute right-full mr-4 px-4 py-2',
-          'bg-white text-black text-sm font-medium',
+          'bg-card text-black text-sm font-medium',
           'rounded-xl shadow-xl',
           'whitespace-nowrap',
           'opacity-0 pointer-events-none',

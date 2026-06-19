@@ -52,10 +52,10 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div className="text-center py-12 space-y-4">
-        <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-emerald-100 mb-2">
-          <CheckCircle className="h-8 w-8 text-emerald-600" />
+        <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-emerald-500/15 mb-2">
+          <CheckCircle className="h-8 w-8 text-emerald-400" />
         </div>
-        <h3 className="text-xl font-semibold text-gray-900">{t('successTitle')}</h3>
+        <h3 className="text-xl font-semibold text-foreground">{t('successTitle')}</h3>
         <p className="text-muted-foreground">{t('successMessage')}</p>
         <Button
           variant="outline"
@@ -72,11 +72,11 @@ export function ContactForm() {
   }
 
   const inputClasses =
-    'w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors';
+    'w-full rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-colors';
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">
+      <h3 className="text-xl font-semibold text-foreground text-center mb-2">
         {t('formTitle')}
       </h3>
       <p className="text-sm text-muted-foreground text-center mb-6">
@@ -85,7 +85,7 @@ export function ContactForm() {
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="name" className="block text-sm font-medium text-foreground/90 mb-1.5">
             {t('name')} *
           </label>
           <input
@@ -101,7 +101,7 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="email" className="block text-sm font-medium text-foreground/90 mb-1.5">
             {t('email')}
           </label>
           <input
@@ -116,7 +116,7 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="phone" className="block text-sm font-medium text-foreground/90 mb-1.5">
             {t('phone')}
           </label>
           <input
@@ -131,7 +131,7 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="segment" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="segment" className="block text-sm font-medium text-foreground/90 mb-1.5">
             {t('segment')}
           </label>
           <select
@@ -152,7 +152,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1.5">
+        <label htmlFor="message" className="block text-sm font-medium text-foreground/90 mb-1.5">
           {t('message')}
         </label>
         <textarea
@@ -174,7 +174,7 @@ export function ContactForm() {
         {t('submit')}
       </Button>
 
-      <p className="text-xs text-gray-400 text-center">
+      <p className="text-xs text-muted-foreground text-center">
         {t('disclaimer')}
       </p>
     </form>

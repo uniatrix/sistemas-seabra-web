@@ -28,15 +28,22 @@ export function CTASection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="py-14 md:py-16 bg-primary" ref={ref}>
-      <div className="container-tight">
+    <section className="relative overflow-hidden py-16 md:py-20 bg-background" ref={ref}>
+      {/* Linha-gradiente superior (continuidade com o footer) */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+      {/* Glow dramático azul (ação) + âmbar (calor) */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_120%_at_50%_0%,rgba(59,130,246,0.18),transparent_70%),radial-gradient(40%_80%_at_50%_100%,rgba(245,178,90,0.08),transparent_70%)]"
+      />
+      <div className="container-tight relative">
         <div className={`max-w-3xl mx-auto text-center space-y-8 scroll-fade-up ${isVisible ? 'visible' : ''}`}>
           {/* Content */}
           <div className="space-y-6">
-            <h2 className="heading-1 text-white">
+            <h2 className="heading-1 font-display text-foreground">
               {t('title')}
             </h2>
-            <p className="text-base md:text-lg text-blue-100 leading-relaxed max-w-xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
               {t('subtitle')}
             </p>
           </div>
@@ -46,7 +53,7 @@ export function CTASection() {
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
-                className="rounded-full px-10 h-14 text-base gap-3 bg-[#25D366] text-white hover:bg-[#20BD5A] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                className="rounded-full px-10 h-14 text-base gap-3 bg-[#25D366] text-white hover:bg-[#20BD5A] ring-1 ring-white/10 shadow-lg shadow-[#25D366]/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 {t('cta')}
@@ -55,7 +62,7 @@ export function CTASection() {
           </div>
 
           {/* Trust text */}
-          <p className="text-sm text-blue-200">
+          <p className="text-sm text-muted-foreground">
             Sem compromisso. Resposta em até 30 minutos.
           </p>
         </div>

@@ -29,11 +29,11 @@ export function LandingProofs({ segmentSlug }: LandingProofsProps) {
   });
 
   return (
-    <section className="section-padding bg-gray-50 border-y border-gray-200">
+    <section className="section-padding bg-background border-y border-border">
       <div className="container-tight">
         <div className="max-w-2xl mx-auto text-center space-y-8">
           <div className="space-y-4">
-            <h2 className="heading-2 text-gray-900">{t('title')}</h2>
+            <h2 className="heading-2 text-foreground">{t('title')}</h2>
             <p className="body-large text-muted-foreground">{t('ctaMessage')}</p>
           </div>
 
@@ -45,7 +45,7 @@ export function LandingProofs({ segmentSlug }: LandingProofsProps) {
             </Button>
           </a>
 
-          <p className="text-xs text-gray-500">{t('ctaNote')}</p>
+          <p className="text-xs text-muted-foreground">{t('ctaNote')}</p>
         </div>
       </div>
     </section>

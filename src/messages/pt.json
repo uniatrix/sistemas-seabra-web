@@ -23,7 +23,10 @@
     "sheepBeef": "Ovinos de Corte",
     "webDev": "Desenvolvimento Web",
     "smallRuminantsHub": "Pequenos Ruminantes",
-    "beefCattleHub": "Bovinos de Corte"
+    "beefCattleHub": "Bovinos de Corte",
+    "sales": "Vendas",
+    "consulting": "Consultoria",
+    "rfidProducts": "Microchips e Leitores"
   },
   "journey": {
     "badge": "Escolha sua jornada",
@@ -341,6 +344,106 @@
       "title": "Pronto para colocar seu negócio online?",
       "subtitle": "Entre em contato e receba uma proposta personalizada para o seu projeto.",
       "button": "Falar no WhatsApp"
+    }
+  },
+  "vendas": {
+    "metadata": {
+      "title": "Vendas — Consultoria e Microchips",
+      "description": "Consultoria em pequenos ruminantes e venda de microchips e leitores RFID para identificação e rastreabilidade do rebanho."
+    },
+    "hero": {
+      "badge": "Vendas",
+      "title": "Consultoria e tecnologia para o seu rebanho",
+      "subtitle": "Da orientação técnica em pequenos ruminantes aos equipamentos de identificação animal — tudo em um só lugar."
+    },
+    "offerGrid": {
+      "consultoria": {
+        "title": "Consultoria em Pequenos Ruminantes",
+        "desc": "Orientação técnica especializada em manejo, nutrição, sanidade e reprodução para caprinos e ovinos.",
+        "cta": "Conhecer a consultoria"
+      },
+      "produtos": {
+        "title": "Microchips e Leitores RFID",
+        "desc": "Equipamentos para identificação eletrônica e rastreabilidade do rebanho, com padrão ISO.",
+        "cta": "Ver produtos"
+      }
+    },
+    "cta": {
+      "title": "Não sabe por onde começar?",
+      "subtitle": "Fale com a gente no WhatsApp e receba uma orientação sem compromisso.",
+      "button": "Falar no WhatsApp"
+    },
+    "consultoria": {
+      "metaTitle": "Consultoria em Pequenos Ruminantes",
+      "metaDescription": "Consultoria especializada em caprinos e ovinos: manejo, nutrição, sanidade, reprodução e gestão do rebanho.",
+      "hero": {
+        "badge": "Consultoria",
+        "title": "Consultoria em pequenos ruminantes",
+        "subtitle": "Experiência prática no campo, ao lado do produtor, para destravar a produtividade do seu rebanho.",
+        "cta": "Falar no WhatsApp"
+      },
+      "profile": {
+        "name": "Felipe Seabra",
+        "role": "Consultor em Pequenos Ruminantes",
+        "bioTitle": "Sobre o trabalho",
+        "bio": "Atuação direta no manejo de caprinos e ovinos, unindo vivência de campo e tecnologia para apoiar o produtor em decisões mais seguras e rentáveis. (Texto provisório — edite com a sua descrição.)",
+        "curriculumTitle": "Formação e experiência",
+        "curriculum": "Adicione aqui sua formação, certificações e principais experiências. (Texto provisório.)"
+      },
+      "servicos": {
+        "title": "Serviços de consultoria",
+        "subtitle": "Atuação sob medida para a realidade da sua propriedade.",
+        "s1": { "title": "Manejo e nutrição", "desc": "Planejamento alimentar e de manejo para ganho de produtividade." },
+        "s2": { "title": "Sanidade do rebanho", "desc": "Protocolos sanitários e prevenção para um rebanho saudável." },
+        "s3": { "title": "Reprodução e melhoramento", "desc": "Estratégias reprodutivas e seleção para evoluir o plantel." },
+        "s4": { "title": "Gestão e tecnologia", "desc": "Implantação de controle e software para decisões com dados." }
+      }
+    },
+    "produtos": {
+      "metaTitle": "Microchips e Leitores RFID",
+      "metaDescription": "Microchips e leitores RFID padrão ISO para identificação eletrônica e rastreabilidade de caprinos, ovinos e bovinos.",
+      "hero": {
+        "badge": "Produtos",
+        "title": "Identificação e rastreabilidade do rebanho",
+        "subtitle": "Microchips e leitores RFID para identificar seus animais com precisão e padrão internacional."
+      },
+      "categories": {
+        "microchip": "Microchips",
+        "leitor": "Leitores"
+      },
+      "specLabels": {
+        "frequency": "Frequência",
+        "protocol": "Protocolo",
+        "size": "Dimensões",
+        "range": "Alcance",
+        "connectivity": "Conectividade",
+        "battery": "Bateria"
+      },
+      "priceFrom": "A partir de",
+      "priceOnRequest": "Sob cotação",
+      "perUnit": "por unidade",
+      "addToCart": "Adicionar",
+      "requestQuote": "Solicitar cotação",
+      "cart": {
+        "title": "Seu pedido",
+        "open": "Carrinho",
+        "empty": "Seu carrinho está vazio.",
+        "subtotal": "Subtotal",
+        "checkout": "Finalizar no WhatsApp",
+        "remove": "Remover",
+        "clear": "Limpar",
+        "note": "O pagamento e a entrega são combinados diretamente no WhatsApp."
+      },
+      "items": {
+        "microchip-fdx-b": {
+          "name": "Microchip FDX-B (134.2 kHz)",
+          "desc": "Microchip de identificação eletrônica padrão ISO, ideal para caprinos e ovinos."
+        },
+        "leitor-bastao-bluetooth": {
+          "name": "Leitor bastão Bluetooth",
+          "desc": "Leitor portátil de longo alcance com conexão Bluetooth e USB."
+        }
+      }
     }
   }
 }

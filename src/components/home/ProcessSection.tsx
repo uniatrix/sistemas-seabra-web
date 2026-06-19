@@ -61,7 +61,7 @@ export function ProcessSection() {
             <span className="text-sm font-medium text-primary">Como Funciona</span>
           </div>
 
-          <h2 className="heading-2 text-gray-900">
+          <h2 className="heading-2 font-display text-foreground">
             {t('title')}
           </h2>
           <p className="body-large max-w-2xl mx-auto text-muted-foreground">
@@ -76,7 +76,7 @@ export function ProcessSection() {
               <Card
                 key={step.key}
                 className={cn(
-                  'group h-full border-gray-200 bg-white shadow-sm overflow-visible',
+                  'group h-full shadow-sm overflow-visible',
                   'transition-all duration-300 ease-out',
                   'hover:scale-[1.02] hover:-translate-y-1',
                   'hover:shadow-xl',

@@ -15,7 +15,12 @@ export function AboutSection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="section-padding relative overflow-hidden bg-gray-50 border-y border-gray-200" id="about" ref={ref}>
+    <section className="section-padding relative overflow-hidden bg-background border-y border-border" id="about" ref={ref}>
+      {/* Glow quente sutil — humaniza a seção de história/credibilidade */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(45%_45%_at_85%_15%,rgba(245,178,90,0.06),transparent_70%)]"
+      />
       <div className="container-wide relative">
         <div className={`scroll-fade-up ${isVisible ? 'visible' : ''}`}>
           {/* Badge */}
@@ -27,7 +32,7 @@ export function AboutSection() {
           </div>
 
           {/* Title */}
-          <h2 className="heading-2 text-gray-900 text-center mb-12">
+          <h2 className="heading-2 font-display text-foreground text-center mb-12">
             {t('title')}
           </h2>
 
@@ -51,14 +56,14 @@ export function AboutSection() {
               {highlights.map((item) => (
                 <div
                   key={item.labelKey}
-                  className="inline-flex items-center gap-3 px-3 py-2.5 rounded-xl bg-gray-50 border border-gray-100"
+                  className="inline-flex items-center gap-3 px-3 py-2.5 rounded-xl bg-white/5 border border-white/10"
                 >
                   <div className="flex-shrink-0 h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center">
                     <item.icon className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <p className="text-lg font-semibold text-gray-900 leading-tight">{item.value}</p>
-                    <p className="text-[11px] text-gray-500">{t(item.labelKey)}</p>
+                    <p className="text-lg font-semibold text-foreground leading-tight">{item.value}</p>
+                    <p className="text-[11px] text-muted-foreground">{t(item.labelKey)}</p>
                   </div>
                 </div>
               ))}

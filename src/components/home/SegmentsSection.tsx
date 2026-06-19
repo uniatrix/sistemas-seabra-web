@@ -31,7 +31,7 @@ export function SegmentsSection() {
             <span className="text-sm font-medium text-primary">{t('journey.badge')}</span>
           </div>
 
-          <h2 className="heading-2 text-gray-900">{t('journey.title')}</h2>
+          <h2 className="heading-2 font-display text-foreground">{t('journey.title')}</h2>
           <p className="body-large max-w-2xl mx-auto text-muted-foreground">
             {t('journey.subtitle')}
           </p>
@@ -46,7 +46,7 @@ export function SegmentsSection() {
             <Link key={journey.key} href={journey.href} className="group">
               <Card
                 className={cn(
-                  'h-full border-gray-200 bg-white shadow-sm',
+                  'h-full shadow-sm',
                   'transition-all duration-300 ease-out',
                   'hover:scale-[1.02] hover:-translate-y-1 hover:shadow-xl',
                   journey.borderAccent,
@@ -54,7 +54,8 @@ export function SegmentsSection() {
                 )}
               >
                 <CardContent className="p-8 flex flex-col h-full min-h-[260px]">
-                  <div className="mb-6">
+                  {/* Moeda clara protege o PNG de linha escura sobre card escuro */}
+                  <div className="mb-6 inline-flex w-fit rounded-2xl bg-white/90 p-3">
                     <Image
                       src={journey.iconSrc}
                       alt={t(`journey.${journey.key}.title`)}
@@ -90,13 +91,13 @@ export function SegmentsSection() {
           }`}
         >
           <Link href="/servicos" className="group block">
-            <Card className="border-gray-200 bg-white hover:border-primary/30 transition-all duration-300 hover:shadow-md">
+            <Card className="hover:border-primary/30 transition-all duration-300 hover:shadow-md">
               <CardContent className="p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
-                <div className="h-12 w-12 rounded-xl bg-gray-50 border border-gray-200 flex items-center justify-center shrink-0 transition-colors group-hover:bg-primary/5 group-hover:border-primary/20">
-                  <Code2 className="h-6 w-6 text-gray-700 transition-colors group-hover:text-primary" />
+                <div className="h-12 w-12 rounded-xl bg-secondary border border-border flex items-center justify-center shrink-0 transition-colors group-hover:bg-primary/5 group-hover:border-primary/20">
+                  <Code2 className="h-6 w-6 text-muted-foreground transition-colors group-hover:text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
                     {t('journey.webDev.title')}
                   </h3>
                   <p className="text-sm text-muted-foreground">
