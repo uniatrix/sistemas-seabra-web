@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="750" viewBox="0 0 600 750" role="img" aria-label="Foto do consultor (provisória)">
+  <rect width="600" height="750" rx="24" fill="#f9fafb"/>
+  <rect x="0.5" y="0.5" width="599" height="749" rx="23.5" fill="none" stroke="#e5e7eb"/>
+  <g fill="none" stroke="#9ca3af" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="300" cy="310" r="90"/>
+    <path d="M170 560c0-72 58-130 130-130s130 58 130 130"/>
+  </g>
+  <text x="300" y="650" text-anchor="middle" font-family="sans-serif" font-size="26" fill="#9ca3af">Foto do consultor</text>
+</svg>

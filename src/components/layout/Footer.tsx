@@ -14,6 +14,8 @@ const solutions = [
   { href: '/solucoes/ovinos/leite', key: 'sheepDairy' },
   { href: '/solucoes/ovinos/corte', key: 'sheepBeef' },
   { href: '/servicos', key: 'webDev' },
+  { href: '/vendas/consultoria', key: 'consulting' },
+  { href: '/vendas/produtos', key: 'rfidProducts' },
 ];
 
 const socialLinks = [

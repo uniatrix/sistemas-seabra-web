@@ -20,6 +20,7 @@ import { cn } from '@/lib/utils';
 const solutions = [
   { href: '/pequenos-ruminantes', key: 'smallRuminantsHub', isHub: true },
   { href: '/servicos', key: 'webDev' },
+  { href: '/vendas', key: 'sales' },
 ] as const;
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://pr.sistemaseabra.com.br/';
@@ -128,7 +129,7 @@ export function Header() {
                 className={cn(
                   'flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full',
                   'hover:bg-gray-100 hover:text-gray-900',
-                  pathname.includes('/solucoes') || pathname.includes('/servicos') || pathname.includes('/pequenos-ruminantes')
+                  pathname.includes('/solucoes') || pathname.includes('/servicos') || pathname.includes('/pequenos-ruminantes') || pathname.includes('/vendas')
                     ? 'text-gray-900'
                     : 'text-gray-500'
                 )}

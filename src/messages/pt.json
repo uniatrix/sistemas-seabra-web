@@ -23,7 +23,10 @@
     "sheepBeef": "Ovinos de Corte",
     "webDev": "Desenvolvimento Web",
     "smallRuminantsHub": "Pequenos Ruminantes",
-    "beefCattleHub": "Bovinos de Corte"
+    "beefCattleHub": "Bovinos de Corte",
+    "sales": "Vendas",
+    "consulting": "Consultoria",
+    "rfidProducts": "Microchips e Leitores"
   },
   "journey": {
     "badge": "Escolha sua jornada",
@@ -341,6 +344,133 @@
       "title": "Pronto para colocar seu negócio online?",
       "subtitle": "Entre em contato e receba uma proposta personalizada para o seu projeto.",
       "button": "Falar no WhatsApp"
+    }
+  },
+  "vendas": {
+    "metadata": {
+      "title": "Vendas — Consultoria e Microchips",
+      "description": "Consultoria em pequenos ruminantes e venda de microchips e leitores RFID para identificação e rastreabilidade do rebanho."
+    },
+    "hero": {
+      "badge": "Vendas",
+      "title": "Consultoria e tecnologia para o seu rebanho",
+      "subtitle": "Da orientação técnica em pequenos ruminantes aos equipamentos de identificação animal — tudo em um só lugar."
+    },
+    "offerGrid": {
+      "consultoria": {
+        "title": "Consultoria em Pequenos Ruminantes",
+        "desc": "Orientação técnica especializada em manejo, nutrição, reprodução, sanidade e melhoramento — presencial ou remota.",
+        "cta": "Conhecer a consultoria"
+      },
+      "produtos": {
+        "title": "Microchips e Leitores RFID",
+        "desc": "Microchips certificados ICAR e leitores FDX-B para identificação e rastreabilidade do rebanho.",
+        "cta": "Ver produtos"
+      }
+    },
+    "cta": {
+      "title": "Não sabe por onde começar?",
+      "subtitle": "Fale com a gente no WhatsApp e receba uma orientação sem compromisso.",
+      "button": "Falar no WhatsApp"
+    },
+    "consultoria": {
+      "metaTitle": "Consultoria em Pequenos Ruminantes",
+      "metaDescription": "Consultoria especializada em caprinos e ovinos com Felipe Seabra: manejo, nutrição, reprodução, sanidade, melhoramento e gestão. Presencial e remota.",
+      "hero": {
+        "badge": "Consultoria",
+        "title": "Consultoria em pequenos ruminantes",
+        "subtitle": "Mais de 15 anos de campo em caprinovinocultura, com dezenas de consultorias no Brasil e no exterior — presencial ou à distância.",
+        "cta": "Falar com o consultor"
+      },
+      "stats": {
+        "years": "15 anos",
+        "yearsLabel": "de atuação no setor",
+        "reach": "Brasil + exterior",
+        "reachLabel": "Espanha e Portugal",
+        "count": "Dezenas",
+        "countLabel": "de consultorias realizadas"
+      },
+      "profile": {
+        "name": "Felipe Seabra",
+        "role": "Médico-veterinário · Consultor em Pequenos Ruminantes",
+        "formacaoTitle": "Formação",
+        "experienciaTitle": "Experiência",
+        "remotaTitle": "Consultoria remota disponível",
+        "remotaDesc": "Atendimento à distância com gestão de dados, análise de indicadores e treinamentos online — onde o seu rebanho estiver."
+      },
+      "servicos": {
+        "title": "Meus serviços",
+        "subtitle": "Atuação completa, do diagnóstico à gestão de dados do rebanho.",
+        "items": {
+          "projetos": "Projetos",
+          "clinica": "Clínica",
+          "reproducao": "Reprodução",
+          "nutricao": "Nutrição",
+          "qualidadeLeite": "Qualidade do leite",
+          "treinamentos": "Treinamentos",
+          "regGenealogico": "Registro genealógico",
+          "avLinear": "Avaliação linear",
+          "melhoramento": "Melhoramento genético",
+          "gestao": "Gestão — Sistema Seabra"
+        }
+      }
+    },
+    "produtos": {
+      "metaTitle": "Microchips e Leitores RFID",
+      "metaDescription": "Microchips certificados ICAR (ISO 11784/11785) e leitores RFID FDX-B para identificação eletrônica e rastreabilidade de caprinos, ovinos e bovinos.",
+      "hero": {
+        "badge": "Produtos",
+        "title": "Identificação e rastreabilidade do rebanho",
+        "subtitle": "Microchips certificados ICAR e leitores FDX-B para identificar seus animais com precisão e padrão internacional."
+      },
+      "pjNote": "Valores para PJ (CNPJ).",
+      "categories": {
+        "microchip": "Microchips",
+        "leitor": "Leitores"
+      },
+      "specLabels": {
+        "frequency": "Frequência",
+        "protocol": "Protocolo",
+        "size": "Dimensões",
+        "application": "Aplicação",
+        "range": "Alcance",
+        "connectivity": "Conectividade"
+      },
+      "priceTableTitle": "Preço por quantidade",
+      "colQty": "Qtd.",
+      "colUnit": "Valor/un.",
+      "perUnit": "por unidade",
+      "minQtyNote": "Pedido mínimo: {min} un.",
+      "addToCart": "Adicionar",
+      "requestQuote": "Solicitar cotação",
+      "cart": {
+        "open": "Carrinho",
+        "title": "Seu pedido",
+        "empty": "Seu carrinho está vazio.",
+        "subtotal": "Subtotal",
+        "checkout": "Finalizar no WhatsApp",
+        "remove": "Remover",
+        "clear": "Limpar",
+        "note": "Pagamento e entrega são combinados diretamente no WhatsApp."
+      },
+      "items": {
+        "microchip-icar": {
+          "name": "Microchip c/ seringa — ICAR",
+          "desc": "Microchip de identificação eletrônica 2,12×12mm, certificado ICAR, com seringa aplicadora. Ideal para caprinos e ovinos."
+        },
+        "leitor-rfid": {
+          "name": "Leitor RFID FDX-B",
+          "desc": "Leitor de mão para microchips FDX-B, com conexão USB."
+        },
+        "leitor-rfid-bluetooth": {
+          "name": "Leitor RFID FDX-B c/ Bluetooth",
+          "desc": "Leitor de mão FDX-B com Bluetooth para uso com celular/app."
+        },
+        "leitor-bastao": {
+          "name": "Leitor bastão RFID",
+          "desc": "Leitor tipo bastão de longo alcance para leitura à distância, com Bluetooth."
+        }
+      }
     }
   }
 }

@@ -89,20 +89,61 @@ const serviceNames: Record<Locale, Record<string, string>> = {
     tier2: 'E-commerce',
     tier3: 'Marketplace',
     geral: 'Desenvolvimento Web',
+    consultoria: 'Consultoria em Pequenos Ruminantes',
   },
   es: {
     tier1: 'Landing Page',
     tier2: 'E-commerce',
     tier3: 'Marketplace',
     geral: 'Desarrollo Web',
+    consultoria: 'Consultoría en Pequeños Rumiantes',
   },
   en: {
     tier1: 'Landing Page',
     tier2: 'E-commerce',
     tier3: 'Marketplace',
     geral: 'Web Development',
+    consultoria: 'Small Ruminant Consulting',
   },
 };
+
+// Mensagem de cabeçalho do pedido (carrinho de produtos RFID → WhatsApp).
+const orderIntro: Record<Locale, { intro: string; subtotal: string }> = {
+  pt: { intro: 'Olá! Quero finalizar este pedido na Seabra Solutions:', subtotal: 'Subtotal' },
+  es: { intro: '¡Hola! Quiero finalizar este pedido en Seabra Solutions:', subtotal: 'Subtotal' },
+  en: { intro: 'Hello! I want to place this order with Seabra Solutions:', subtotal: 'Subtotal' },
+};
+
+export interface OrderItem {
+  name: string;
+  qty: number;
+  unitPriceBRL: number;
+}
+
+function formatBRL(value: number): string {
+  return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+
+/** Monta a URL do WhatsApp com o pedido itemizado (sem gateway de pagamento). */
+export function buildWhatsAppOrderUrl(config: {
+  locale: Locale;
+  items: OrderItem[];
+  utm?: UTMParams;
+}): string {
+  const { locale, items, utm } = config;
+  const m = orderIntro[locale];
+  const lines = items.map(
+    (it) => `• ${it.qty}x ${it.name} — ${formatBRL(it.unitPriceBRL * it.qty)}`
+  );
+  const subtotal = items.reduce((acc, it) => acc + it.unitPriceBRL * it.qty, 0);
+  const origin = formatOrigin(utm, locale);
+
+  const text = [m.intro, '', ...lines, '', `${m.subtotal}: ${formatBRL(subtotal)}`, origin]
+    .join('\n')
+    .trim();
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
 
 export function buildWhatsAppMessage(config: WhatsAppMessageConfig): string {
   const { locale, segment, service, utm } = config;
