@@ -14,8 +14,7 @@ export const formacao: string[] = [
 export const experiencia: string[] = [
   '15 anos de atuação em projetos de diversos segmentos na caprinovinocultura',
   'Dezenas de consultorias realizadas no Brasil e no exterior',
-  'Experiências internacionais na Espanha e em Portugal',
-  'Idealizador do Congresso Concapri',
-  'Desenvolvedor do Sistema Seabra para gestão na pecuária leiteira',
+  'Experiências internacionais',
+  'Desenvolvedor do Sistema Seabra para gestão em pecuária',
   'Atuação em projetos nacionais de grande representatividade',
 ];
