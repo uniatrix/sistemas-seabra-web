@@ -23,10 +23,7 @@
     "sheepBeef": "Meat Sheep",
     "webDev": "Web Development",
     "smallRuminantsHub": "Small Ruminants",
-    "beefCattleHub": "Beef Cattle",
-    "sales": "Sales",
-    "consulting": "Consulting",
-    "rfidProducts": "Microchips & Readers"
+    "beefCattleHub": "Beef Cattle"
   },
   "journey": {
     "badge": "Choose your path",
@@ -344,106 +341,6 @@
       "title": "Ready to take your business online?",
       "subtitle": "Get in touch and receive a personalized proposal for your project.",
       "button": "Talk on WhatsApp"
-    }
-  },
-  "vendas": {
-    "metadata": {
-      "title": "Sales — Consulting and Microchips",
-      "description": "Small ruminant consulting and RFID microchips and readers for animal identification and herd traceability."
-    },
-    "hero": {
-      "badge": "Sales",
-      "title": "Consulting and technology for your herd",
-      "subtitle": "From expert small-ruminant guidance to animal identification equipment — all in one place."
-    },
-    "offerGrid": {
-      "consultoria": {
-        "title": "Small Ruminant Consulting",
-        "desc": "Expert technical guidance on handling, nutrition, health and reproduction for goats and sheep.",
-        "cta": "Explore consulting"
-      },
-      "produtos": {
-        "title": "RFID Microchips & Readers",
-        "desc": "Electronic identification and herd-traceability equipment, ISO standard.",
-        "cta": "View products"
-      }
-    },
-    "cta": {
-      "title": "Not sure where to start?",
-      "subtitle": "Message us on WhatsApp and get guidance with no commitment.",
-      "button": "Talk on WhatsApp"
-    },
-    "consultoria": {
-      "metaTitle": "Small Ruminant Consulting",
-      "metaDescription": "Expert consulting for goats and sheep: handling, nutrition, health, reproduction and herd management.",
-      "hero": {
-        "badge": "Consulting",
-        "title": "Small ruminant consulting",
-        "subtitle": "Hands-on field experience, alongside the producer, to unlock your herd's productivity.",
-        "cta": "Talk on WhatsApp"
-      },
-      "profile": {
-        "name": "Felipe Seabra",
-        "role": "Small Ruminant Consultant",
-        "bioTitle": "About the work",
-        "bio": "Hands-on work with goat and sheep management, combining field experience and technology to support producers in safer, more profitable decisions. (Placeholder — edit with your own description.)",
-        "curriculumTitle": "Background and experience",
-        "curriculum": "Add your education, certifications and main experience here. (Placeholder.)"
-      },
-      "servicos": {
-        "title": "Consulting services",
-        "subtitle": "Tailored to your farm's reality.",
-        "s1": { "title": "Handling & nutrition", "desc": "Feeding and handling plans to boost productivity." },
-        "s2": { "title": "Herd health", "desc": "Health protocols and prevention for a healthy herd." },
-        "s3": { "title": "Reproduction & breeding", "desc": "Reproductive strategies and selection to improve the flock." },
-        "s4": { "title": "Management & technology", "desc": "Setting up controls and software for data-driven decisions." }
-      }
-    },
-    "produtos": {
-      "metaTitle": "RFID Microchips & Readers",
-      "metaDescription": "ISO-standard RFID microchips and readers for electronic identification and traceability of goats, sheep and cattle.",
-      "hero": {
-        "badge": "Products",
-        "title": "Herd identification and traceability",
-        "subtitle": "RFID microchips and readers to identify your animals accurately, to international standards."
-      },
-      "categories": {
-        "microchip": "Microchips",
-        "leitor": "Readers"
-      },
-      "specLabels": {
-        "frequency": "Frequency",
-        "protocol": "Protocol",
-        "size": "Dimensions",
-        "range": "Range",
-        "connectivity": "Connectivity",
-        "battery": "Battery"
-      },
-      "priceFrom": "From",
-      "priceOnRequest": "On request",
-      "perUnit": "per unit",
-      "addToCart": "Add",
-      "requestQuote": "Request a quote",
-      "cart": {
-        "title": "Your order",
-        "open": "Cart",
-        "empty": "Your cart is empty.",
-        "subtotal": "Subtotal",
-        "checkout": "Finish on WhatsApp",
-        "remove": "Remove",
-        "clear": "Clear",
-        "note": "Payment and delivery are arranged directly on WhatsApp."
-      },
-      "items": {
-        "microchip-fdx-b": {
-          "name": "FDX-B Microchip (134.2 kHz)",
-          "desc": "ISO-standard electronic identification microchip, ideal for goats and sheep."
-        },
-        "leitor-bastao-bluetooth": {
-          "name": "Bluetooth Stick Reader",
-          "desc": "Portable long-range reader with Bluetooth and USB connectivity."
-        }
-      }
     }
   }
 }

@@ -17,7 +17,7 @@ export function Benefits() {
   ];
 
   return (
-    <section className="section-padding relative overflow-hidden bg-background border-y border-border">
+    <section className="section-padding relative overflow-hidden bg-gray-50 border-y border-gray-200">
 
       <div className="container-tight relative">
         <div className="text-center space-y-4 mb-16">
@@ -26,7 +26,7 @@ export function Benefits() {
             <span className="text-sm font-medium text-primary">Vantagens</span>
           </div>
 
-          <h2 className="heading-2 text-foreground">
+          <h2 className="heading-2 text-gray-900">
             {t('title')}
           </h2>
         </div>
@@ -36,9 +36,9 @@ export function Benefits() {
             <Card
               key={index}
               className={cn(
-                'group h-full border-border bg-card shadow-sm',
+                'group h-full border-gray-200 bg-white shadow-sm',
                 'transition-all duration-300 ease-out',
-                'hover:shadow-md hover:border-border hover:-translate-y-0.5',
+                'hover:shadow-md hover:border-gray-300 hover:-translate-y-0.5',
                 'fade-in-up opacity-0'
               )}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -73,7 +73,7 @@ export function Benefits() {
 
                 {/* Content */}
                 <div className="flex-1">
-                  <p className="text-foreground/90 leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                  <p className="text-gray-800 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
                     {benefit}
                   </p>
                 </div>

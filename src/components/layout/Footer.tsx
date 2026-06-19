@@ -14,8 +14,6 @@ const solutions = [
   { href: '/solucoes/ovinos/leite', key: 'sheepDairy' },
   { href: '/solucoes/ovinos/corte', key: 'sheepBeef' },
   { href: '/servicos', key: 'webDev' },
-  { href: '/vendas/consultoria', key: 'consulting' },
-  { href: '/vendas/produtos', key: 'rfidProducts' },
 ];
 
 const socialLinks = [
@@ -27,7 +25,7 @@ export function Footer() {
   const t = useTranslations();
 
   return (
-    <footer className="relative bg-background border-t border-border text-muted-foreground">
+    <footer className="relative bg-slate-900 text-gray-400">
       {/* Top gradient line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 

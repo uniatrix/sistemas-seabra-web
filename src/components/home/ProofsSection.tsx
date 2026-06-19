@@ -97,11 +97,11 @@ export function ProofsSection() {
   };
 
   return (
-    <section className="section-padding bg-surface-light border-y border-surface-light-border" id="demo" ref={ref}>
+    <section className="section-padding bg-gray-50 border-y border-gray-200" id="demo" ref={ref}>
       <div className="container-wide">
         <div className={`text-center space-y-4 mb-12 scroll-fade-up ${isVisible ? 'visible' : ''}`}>
           <div className="flex items-center justify-center gap-4">
-            <h2 className="heading-2 font-display text-surface-light-foreground">{t('title')}</h2>
+            <h2 className="heading-2 text-gray-900">{t('title')}</h2>
             <button
               type="button"
               onClick={centerIframe}
@@ -111,7 +111,7 @@ export function ProofsSection() {
               <ChevronDown className="h-5 w-5" />
             </button>
           </div>
-          <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto text-surface-light-muted">{t('subtitle')}</p>
+          <p className="body-large max-w-2xl mx-auto text-muted-foreground">{t('subtitle')}</p>
         </div>
 
         <div
@@ -131,7 +131,7 @@ export function ProofsSection() {
                 referrerPolicy="no-referrer"
                 width={461}
                 height={831}
-                className="rounded-3xl border border-surface-light-border shadow-md bg-white"
+                className="rounded-3xl border border-gray-200 shadow-md bg-white"
               />
               <button
                 type="button"
@@ -148,7 +148,7 @@ export function ProofsSection() {
             href={mobileDemoHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="lg:hidden group relative aspect-4/3 rounded-3xl border border-surface-light-border bg-white hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 flex flex-col items-center justify-center gap-7 p-10"
+            className="lg:hidden group relative aspect-4/3 rounded-3xl border border-gray-200 bg-white hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 flex flex-col items-center justify-center gap-7 p-10"
           >
             <Image
               src="/images/logo.png"
@@ -159,8 +159,8 @@ export function ProofsSection() {
             />
 
             <div className="text-center space-y-1.5">
-              <h3 className="text-2xl font-semibold text-surface-light-foreground">{t('liveCtaTitle')}</h3>
-              <p className="text-sm text-surface-light-muted">{t('liveCtaSubtitle')}</p>
+              <h3 className="text-2xl font-semibold text-gray-900">{t('liveCtaTitle')}</h3>
+              <p className="text-sm text-gray-500">{t('liveCtaSubtitle')}</p>
             </div>
 
             <span className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-linear-to-r from-primary to-blue-600 text-white text-sm font-semibold shadow-lg shadow-primary/30 group-hover:shadow-xl group-hover:shadow-primary/40 transition-all duration-300">

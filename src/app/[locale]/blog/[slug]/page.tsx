@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
+          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900 leading-tight">
             {post.title}
           </h1>
 
@@ -87,7 +87,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         </header>
 
         {/* Content */}
-        <article className="prose prose-gray max-w-none prose-headings:text-foreground prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-p:text-muted-foreground prose-p:leading-relaxed prose-li:text-muted-foreground prose-strong:text-foreground prose-ul:space-y-1">
+        <article className="prose prose-gray max-w-none prose-headings:text-gray-900 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600 prose-strong:text-gray-900 prose-ul:space-y-1">
           {post.content.split('\n').map((line, i) => {
             const trimmed = line.trim();
 
@@ -101,8 +101,8 @@ export default async function BlogPostPage({ params }: PageProps) {
                 return (
                   <div key={i} className="flex gap-2 ml-4 mb-2">
                     <span className="text-primary mt-1">·</span>
-                    <p className="text-muted-foreground m-0">
-                      <strong className="text-foreground">{match[1]}</strong>
+                    <p className="text-gray-600 m-0">
+                      <strong className="text-gray-900">{match[1]}</strong>
                       {match[2] ? `: ${match[2]}` : ''}
                     </p>
                   </div>
@@ -118,7 +118,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
         {/* Source */}
         {post.source && (
-          <div className="mt-10 p-4 rounded-xl bg-secondary border border-border">
+          <div className="mt-10 p-4 rounded-xl bg-gray-50 border border-gray-100">
             <p className="text-sm text-muted-foreground">
               {t('source')}:{' '}
               <a
@@ -136,7 +136,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
         {/* CTA */}
         <div className="mt-12 p-8 rounded-2xl bg-primary/5 border border-primary/10 text-center space-y-4">
-          <h3 className="text-xl font-semibold text-foreground">
+          <h3 className="text-xl font-semibold text-gray-900">
             {t('ctaTitle')}
           </h3>
           <p className="text-muted-foreground max-w-lg mx-auto">

@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Inter, Fraunces } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import { locales, type Locale } from '@/i18n/config';
 import { Header } from '@/components/layout/Header';
@@ -12,14 +12,6 @@ import '../globals.css';
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
-});
-
-// Fonte serifada de display (apenas headlines). display:swap evita bloqueio
-// de render em conexões lentas (público rural).
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  variable: '--font-display',
-  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -84,7 +76,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="dark">
-      <body className={`${inter.variable} ${fraunces.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} font-sans antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <div className="flex min-h-screen flex-col">
             <Header />

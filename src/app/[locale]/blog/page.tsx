@@ -38,7 +38,7 @@ export default async function BlogPage({ params }: PageProps) {
       <div className="container-wide">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl text-foreground">
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl text-gray-900">
             {t('title')}
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -50,7 +50,7 @@ export default async function BlogPage({ params }: PageProps) {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
-              <Card className="h-full border-border hover:border-primary/30 transition-all hover:shadow-md">
+              <Card className="h-full border-gray-200 hover:border-primary/30 transition-all hover:shadow-md">
                 <CardContent className="p-6 flex flex-col h-full">
                   {/* Meta */}
                   <div className="flex items-center justify-between text-xs text-muted-foreground mb-4">
@@ -63,7 +63,7 @@ export default async function BlogPage({ params }: PageProps) {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-3 leading-snug">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors mb-3 leading-snug">
                     {post.title}
                   </h3>
 
@@ -73,7 +73,7 @@ export default async function BlogPage({ params }: PageProps) {
                   </p>
 
                   {/* Read more */}
-                  <div className="flex items-center text-sm font-medium text-primary mt-5 pt-4 border-t border-border">
+                  <div className="flex items-center text-sm font-medium text-primary mt-5 pt-4 border-t border-gray-100">
                     <span>{t('readMore')}</span>
                     <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>

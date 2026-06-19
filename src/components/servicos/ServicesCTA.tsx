@@ -41,7 +41,7 @@ export function ServicesCTA() {
 
           {/* Content */}
           <div className="space-y-6">
-            <h2 className="heading-1 text-foreground">{t('title')}</h2>
+            <h2 className="heading-1 text-gray-900">{t('title')}</h2>
             <p className="body-large max-w-xl mx-auto">{t('subtitle')}</p>
           </div>
 
@@ -59,7 +59,7 @@ export function ServicesCTA() {
           </div>
 
           {/* Trust text */}
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-gray-400">
             Sem compromisso. Resposta em até 24h.
           </p>
         </div>

@@ -26,7 +26,7 @@ export function PainPoints() {
             <span className="text-sm font-medium text-red-500">Desafios</span>
           </div>
 
-          <h2 className="heading-2 text-foreground">
+          <h2 className="heading-2 text-gray-900">
             {t('title')}
           </h2>
         </div>
@@ -36,7 +36,7 @@ export function PainPoints() {
             <Card
               key={index}
               className={cn(
-                'group h-full border-border bg-card shadow-sm',
+                'group h-full border-gray-200 bg-white shadow-sm',
                 'transition-all duration-300 ease-out',
                 'hover:scale-[1.02] hover:-translate-y-1',
                 'hover:shadow-xl',
@@ -76,7 +76,7 @@ export function PainPoints() {
 
                 {/* Content */}
                 <div className="flex-1">
-                  <p className="text-foreground/90 leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                  <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
                     {pain}
                   </p>
                 </div>

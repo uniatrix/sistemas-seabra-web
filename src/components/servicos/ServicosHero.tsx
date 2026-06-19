@@ -33,7 +33,7 @@ export function ServicosHero() {
         {/* Badge */}
         <Badge
           variant="outline"
-          className="px-4 py-1.5 rounded-full border-border bg-secondary backdrop-blur-sm text-foreground/90 font-medium"
+          className="px-4 py-1.5 rounded-full border-gray-300 bg-gray-50 backdrop-blur-sm text-gray-700 font-medium"
         >
           <Globe className="h-3.5 w-3.5 mr-2 text-primary" />
           {t('badge')}

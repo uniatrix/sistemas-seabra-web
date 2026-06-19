@@ -81,7 +81,7 @@ const colorClasses: Record<
     glowShadow: 'group-hover:shadow-blue-500/10',
     ring: '',
     badgeBg: 'bg-blue-500/10',
-    badgeText: 'text-blue-400',
+    badgeText: 'text-blue-600',
   },
   emerald: {
     iconBg: 'bg-emerald-500/10',
@@ -92,7 +92,7 @@ const colorClasses: Record<
     glowShadow: 'group-hover:shadow-emerald-500/10',
     ring: 'ring-2 ring-emerald-500/30',
     badgeBg: 'bg-emerald-500/10',
-    badgeText: 'text-emerald-400',
+    badgeText: 'text-emerald-600',
   },
   purple: {
     iconBg: 'bg-purple-500/10',
@@ -103,7 +103,7 @@ const colorClasses: Record<
     glowShadow: 'group-hover:shadow-purple-500/10',
     ring: '',
     badgeBg: 'bg-purple-500/10',
-    badgeText: 'text-purple-400',
+    badgeText: 'text-purple-600',
   },
 };
 
@@ -113,7 +113,7 @@ export function ServiceTiers() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="planos" className="section-padding bg-background" ref={ref}>
+    <section id="planos" className="section-padding bg-gray-50/50" ref={ref}>
       <div className="container-wide">
         {/* Section Header */}
         <div
@@ -121,12 +121,12 @@ export function ServiceTiers() {
         >
           <Badge
             variant="outline"
-            className="px-4 py-1.5 rounded-full border-border bg-card backdrop-blur-sm text-foreground/90 font-medium"
+            className="px-4 py-1.5 rounded-full border-gray-300 bg-white backdrop-blur-sm text-gray-700 font-medium"
           >
             <Layers className="h-3.5 w-3.5 mr-2 text-primary" />
             {t('badge')}
           </Badge>
-          <h2 className="heading-2 font-display text-foreground">{t('title')}</h2>
+          <h2 className="heading-2 text-gray-900">{t('title')}</h2>
           <p className="body-large max-w-2xl mx-auto">{t('subtitle')}</p>
         </div>
 
@@ -144,13 +144,13 @@ export function ServiceTiers() {
               <div
                 key={tier.key}
                 className={cn(
-                  'group relative flex flex-col rounded-2xl border bg-card p-8 transition-all duration-300',
+                  'group relative flex flex-col rounded-2xl border bg-white p-8 transition-all duration-300',
                   'hover:scale-[1.02] hover:-translate-y-1 hover:shadow-xl',
                   colors.hoverBorder,
                   colors.glowShadow,
                   tier.highlighted
-                    ? `${colors.ring} border-emerald-500/30 shadow-lg`
-                    : 'border-border shadow-sm',
+                    ? `${colors.ring} border-emerald-200 shadow-lg`
+                    : 'border-gray-200 shadow-sm',
                   `scroll-fade-up ${isVisible ? 'visible' : ''}`
                 )}
                 style={{ animationDelay: `${index * 150}ms` }}
@@ -163,7 +163,7 @@ export function ServiceTiers() {
                         'px-4 py-1 rounded-full text-xs font-semibold',
                         colors.badgeBg,
                         colors.badgeText,
-                        'border-emerald-500/20'
+                        'border-emerald-200'
                       )}
                     >
                       {t('popular')}
@@ -183,10 +183,10 @@ export function ServiceTiers() {
                     <Icon className={cn('h-7 w-7', colors.iconText)} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground">
+                    <h3 className="text-xl font-semibold text-gray-900">
                       {t(`${tier.key}.name`)}
                     </h3>
-                    <p className="text-sm text-muted-foreground mt-1">
+                    <p className="text-sm text-gray-500 mt-1">
                       {t(`${tier.key}.description`)}
                     </p>
                   </div>
@@ -195,7 +195,7 @@ export function ServiceTiers() {
                   {tier.includesPlan && (
                     <Badge
                       variant="outline"
-                      className="text-xs border-border text-muted-foreground font-normal"
+                      className="text-xs border-gray-300 text-gray-500 font-normal"
                     >
                       <Plus className="h-3 w-3 mr-1" />
                       {t('includesPrevious', { plan: tier.includesPlan })}
@@ -223,10 +223,10 @@ export function ServiceTiers() {
                           />
                         </div>
                         <div>
-                          <span className="text-sm font-medium text-foreground">
+                          <span className="text-sm font-medium text-gray-900">
                             {t(featureKey)}
                           </span>
-                          <span className="text-xs text-muted-foreground block mt-0.5">
+                          <span className="text-xs text-gray-500 block mt-0.5">
                             {t(descKey)}
                           </span>
                         </div>
