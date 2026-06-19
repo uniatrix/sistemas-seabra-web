@@ -35,11 +35,18 @@ export function ConsultoriaHero() {
             </Button>
           </a>
         </div>
-        <div className="grid grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto pt-8">
+        <div className="grid grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto pt-8 items-stretch">
           {stats.map((s) => (
-            <div key={s} className="rounded-2xl border border-gray-200 bg-white shadow-sm p-4">
-              <p className="text-base sm:text-xl font-bold text-gray-900">{t(`stats.${s}`)}</p>
-              <p className="text-xs text-muted-foreground mt-1">{t(`stats.${s}Label`)}</p>
+            <div
+              key={s}
+              className="rounded-2xl border border-gray-200 bg-white shadow-sm p-4 min-h-[132px] flex flex-col items-center justify-center text-center"
+            >
+              <p className="text-base sm:text-lg font-bold text-gray-900 leading-snug text-balance">
+                {t(`stats.${s}`)}
+              </p>
+              <p className="text-xs text-muted-foreground mt-1.5 text-balance">
+                {t(`stats.${s}Label`)}
+              </p>
             </div>
           ))}
         </div>
