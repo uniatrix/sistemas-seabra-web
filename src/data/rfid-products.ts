@@ -44,7 +44,7 @@ export const rfidProducts: RFIDProduct[] = [
     category: 'microchip',
     nameKey: 'microchip-icar',
     descKey: 'microchip-icar',
-    image: '/images/produtos/placeholder.svg',
+    image: '/images/produtos/microchip-icar.svg',
     specs: [
       { labelKey: 'frequency', value: '134,2 kHz' },
       { labelKey: 'protocol', value: 'ISO 11784/11785 · FDX-B (ICAR)' },
@@ -69,7 +69,7 @@ export const rfidProducts: RFIDProduct[] = [
     category: 'leitor',
     nameKey: 'leitor-rfid',
     descKey: 'leitor-rfid',
-    image: '/images/produtos/placeholder.svg',
+    image: '/images/produtos/leitor-rfid.svg',
     specs: [
       { labelKey: 'protocol', value: 'FDX-B · 132,2 kHz' },
       { labelKey: 'connectivity', value: 'USB' },
@@ -82,7 +82,7 @@ export const rfidProducts: RFIDProduct[] = [
     category: 'leitor',
     nameKey: 'leitor-rfid-bluetooth',
     descKey: 'leitor-rfid-bluetooth',
-    image: '/images/produtos/placeholder.svg',
+    image: '/images/produtos/leitor-rfid-bluetooth.svg',
     specs: [
       { labelKey: 'protocol', value: 'FDX-B · 132,2 kHz' },
       { labelKey: 'connectivity', value: 'Bluetooth + USB' },
@@ -96,7 +96,7 @@ export const rfidProducts: RFIDProduct[] = [
     category: 'leitor',
     nameKey: 'leitor-bastao',
     descKey: 'leitor-bastao',
-    image: '/images/produtos/placeholder.svg',
+    image: '/images/produtos/leitor-bastao.svg',
     specs: [
       { labelKey: 'protocol', value: 'FDX-B · 132,2 kHz' },
       { labelKey: 'range', value: 'longo alcance (bastão)' },

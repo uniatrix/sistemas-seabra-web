@@ -1,0 +1,22 @@
+FOTOS DOS PRODUTOS — /vendas/produtos
+=====================================
+
+Cada produto da loja tem um arquivo nesta pasta. Hoje eles sao imagens
+provisorias (cinza, com o nome do produto). Para colocar a foto real,
+SUBSTITUA o arquivo correspondente pela sua foto, mantendo o MESMO nome.
+
+Arquivo                       Produto                          Preco
+----------------------------  -------------------------------  ----------------------------
+microchip-icar.svg            Microchip c/ seringa (ICAR)      a partir de R$ 8,50/un (faixas)
+leitor-rfid.svg               Leitor RFID FDX-B                R$ 180,00
+leitor-rfid-bluetooth.svg     Leitor RFID FDX-B c/ Bluetooth   R$ 280,00
+leitor-bastao.svg             Leitor bastao RFID               R$ 4.950,00
+
+DICAS
+-----
+- Formato ideal: JPG ou PNG, quadrado (ex.: 800x800 ou 1000x1000),
+  de preferencia com fundo claro/branco.
+- IMPORTANTE: se voce salvar a foto como .jpg ou .png (em vez de .svg),
+  o nome do arquivo muda de extensao. Nesse caso, e so me avisar aqui no
+  chat que eu atualizo o codigo (1 linha por produto) — ou me mande as
+  fotos direto no chat que eu coloco tudo no lugar certo.
