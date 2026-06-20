@@ -16,7 +16,6 @@ export function RFIDHero() {
         </div>
         <h1 className="heading-display text-gray-900 max-w-3xl mx-auto">{t('hero.title')}</h1>
         <p className="body-large max-w-2xl mx-auto text-muted-foreground">{t('hero.subtitle')}</p>
-        <p className="text-xs text-gray-500">{t('pjNote')}</p>
       </div>
     </section>
   );
