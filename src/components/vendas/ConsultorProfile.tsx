@@ -6,7 +6,7 @@ import { GraduationCap, Award, MonitorSmartphone, CheckCircle2 } from 'lucide-re
 import { formacao, experiencia } from '@/data/consultoria';
 
 // Troque pela foto real do Felipe quando enviar (mantenha o caminho ou edite aqui).
-const CONSULTANT_PHOTO = '/images/consultoria/placeholder.svg';
+const CONSULTANT_PHOTO = '/images/consultoria/foto_felipe.jpg';
 
 export function ConsultorProfile() {
   const t = useTranslations('vendas.consultoria.profile');
