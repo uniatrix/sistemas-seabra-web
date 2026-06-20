@@ -468,7 +468,7 @@
         },
         "leitor-bastao": {
           "name": "Lector bastón RFID",
-          "desc": "Lector tipo bastón de largo alcance para lectura a distancia, con Bluetooth."
+          "desc": "Lector tipo bastón, con Bluetooth."
         }
       }
     }

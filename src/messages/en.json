@@ -468,7 +468,7 @@
         },
         "leitor-bastao": {
           "name": "RFID Stick Reader",
-          "desc": "Long-range stick-type reader for reading at a distance, with Bluetooth."
+          "desc": "Stick-type reader, with Bluetooth."
         }
       }
     }
