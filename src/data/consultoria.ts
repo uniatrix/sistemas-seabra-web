@@ -7,7 +7,7 @@ export const formacao: string[] = [
   'Mestrado em Clínica e Reprodução — UFF',
   'Inspetor Técnico — ABCC',
   'Gestão — University of Illinois College of Veterinary Medicine',
-  'Gestão e Avaliação Morfológica — CAPRIGRAN',
+  'Gestão e Avaliação Morfológica Linear — CAPRIGRAN',
   'Consultoria em Pequenos Ruminantes',
 ];
 
