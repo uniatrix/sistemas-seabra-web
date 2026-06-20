@@ -456,11 +456,11 @@
       "items": {
         "microchip-icar": {
           "name": "Microchip w/ syringe — ICAR",
-          "desc": "2.12×12mm electronic ID microchip, ICAR-certified, with applicator syringe. Ideal for goats and sheep."
+          "desc": "2.12×12mm electronic ID microchip, ICAR-certified, with applicator syringe."
         },
         "leitor-rfid": {
           "name": "FDX-B RFID Reader",
-          "desc": "Handheld reader for FDX-B microchips, with USB connection."
+          "desc": "Handheld reader for FDX-B microchips, without Bluetooth."
         },
         "leitor-rfid-bluetooth": {
           "name": "FDX-B RFID Reader w/ Bluetooth",

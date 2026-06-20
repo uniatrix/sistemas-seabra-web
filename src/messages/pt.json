@@ -456,11 +456,11 @@
       "items": {
         "microchip-icar": {
           "name": "Microchip c/ seringa — ICAR",
-          "desc": "Microchip de identificação eletrônica 2,12×12mm, certificado ICAR, com seringa aplicadora. Ideal para caprinos e ovinos."
+          "desc": "Microchip de identificação eletrônica 2,12×12mm, certificado ICAR, com seringa aplicadora."
         },
         "leitor-rfid": {
           "name": "Leitor RFID FDX-B",
-          "desc": "Leitor de mão para microchips FDX-B, com conexão USB."
+          "desc": "Leitor de mão para microchips FDX-B, sem bluetooth."
         },
         "leitor-rfid-bluetooth": {
           "name": "Leitor RFID FDX-B c/ Bluetooth",
